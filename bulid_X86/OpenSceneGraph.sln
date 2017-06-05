@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgGA", "osgGA\osgGA.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgText", "osgText\osgText.vcxproj", "{1833AA52-6D39-4F92-AE2D-0071D62BA4B9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_OSG", "Demo_OSG\Demo_OSG.vcxproj", "{924E0E2C-9761-475A-910B-08D8C2C49281}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -49,6 +51,10 @@ Global
 		{1833AA52-6D39-4F92-AE2D-0071D62BA4B9}.Debug|Win32.Build.0 = Debug|Win32
 		{1833AA52-6D39-4F92-AE2D-0071D62BA4B9}.Release|Win32.ActiveCfg = Release|Win32
 		{1833AA52-6D39-4F92-AE2D-0071D62BA4B9}.Release|Win32.Build.0 = Release|Win32
+		{924E0E2C-9761-475A-910B-08D8C2C49281}.Debug|Win32.ActiveCfg = Debug|Win32
+		{924E0E2C-9761-475A-910B-08D8C2C49281}.Debug|Win32.Build.0 = Debug|Win32
+		{924E0E2C-9761-475A-910B-08D8C2C49281}.Release|Win32.ActiveCfg = Release|Win32
+		{924E0E2C-9761-475A-910B-08D8C2C49281}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
