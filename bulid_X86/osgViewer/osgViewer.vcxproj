@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\osgViewer\api\Win32\GraphicsHandleWin32" />
+    <None Include="..\..\include\osgViewer\api\Win32\GraphicsWindowWin32" />
+    <None Include="..\..\include\osgViewer\api\Win32\PixelBufferWin32" />
+    <None Include="..\..\include\osgViewer\CompositeViewer" />
+    <None Include="..\..\include\osgViewer\config\AcrossAllScreens" />
+    <None Include="..\..\include\osgViewer\config\PanoramicSphericalDisplay" />
+    <None Include="..\..\include\osgViewer\config\SingleScreen" />
+    <None Include="..\..\include\osgViewer\config\SingleWindow" />
+    <None Include="..\..\include\osgViewer\config\SphericalDisplay" />
+    <None Include="..\..\include\osgViewer\config\WoWVxDisplay" />
+    <None Include="..\..\include\osgViewer\Export" />
+    <None Include="..\..\include\osgViewer\GraphicsWindow" />
+    <None Include="..\..\include\osgViewer\Keystone" />
+    <None Include="..\..\include\osgViewer\Renderer" />
+    <None Include="..\..\include\osgViewer\Scene" />
+    <None Include="..\..\include\osgViewer\Version" />
+    <None Include="..\..\include\osgViewer\View" />
+    <None Include="..\..\include\osgViewer\Viewer" />
+    <None Include="..\..\include\osgViewer\ViewerBase" />
+    <None Include="..\..\include\osgViewer\ViewerEventHandlers" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\osgViewer\CompositeViewer.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\AcrossAllScreens.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\PanoramicSphericalDisplay.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\SingleScreen.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\SingleWindow.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\SphericalDisplay.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\config\WoWVxDisplay.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\GraphicsWindow.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\GraphicsWindowWin32.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\HelpHandler.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\Keystone.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\PixelBufferWin32.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\Renderer.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\Scene.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\ScreenCaptureHandler.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\StatsHandler.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\Version.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\View.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\Viewer.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\ViewerBase.cpp" />
+    <ClCompile Include="..\..\src\osgViewer\ViewerEventHandlers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\osgViewer\DarwinUtils.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3817837-3411-4FA0-9746-B34DD735F4A7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>osg</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;OSGVIEWER_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;OpenThreads.lib;osg.lib;osgUtil.lib;osgDB.lib;osgGA.lib;osgText.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OSG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
