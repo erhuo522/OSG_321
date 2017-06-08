@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EC471EE95728007F1C6F /* AnimationPathManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC311EE95728007F1C6F /* AnimationPathManipulator.cpp */; };
+		DF82EC481EE95728007F1C6F /* CameraManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC321EE95728007F1C6F /* CameraManipulator.cpp */; };
+		DF82EC491EE95728007F1C6F /* CameraViewSwitchManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC331EE95728007F1C6F /* CameraViewSwitchManipulator.cpp */; };
+		DF82EC4A1EE95728007F1C6F /* Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC341EE95728007F1C6F /* Device.cpp */; };
+		DF82EC4B1EE95728007F1C6F /* DriveManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC351EE95728007F1C6F /* DriveManipulator.cpp */; };
+		DF82EC4C1EE95728007F1C6F /* EventQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC361EE95728007F1C6F /* EventQueue.cpp */; };
+		DF82EC4D1EE95728007F1C6F /* EventVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC371EE95728007F1C6F /* EventVisitor.cpp */; };
+		DF82EC4E1EE95728007F1C6F /* FirstPersonManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC381EE95728007F1C6F /* FirstPersonManipulator.cpp */; };
+		DF82EC4F1EE95728007F1C6F /* FlightManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC391EE95728007F1C6F /* FlightManipulator.cpp */; };
+		DF82EC501EE95728007F1C6F /* GUIEventAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3A1EE95728007F1C6F /* GUIEventAdapter.cpp */; };
+		DF82EC511EE95728007F1C6F /* GUIEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3B1EE95728007F1C6F /* GUIEventHandler.cpp */; };
+		DF82EC521EE95728007F1C6F /* KeySwitchMatrixManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3C1EE95728007F1C6F /* KeySwitchMatrixManipulator.cpp */; };
+		DF82EC531EE95728007F1C6F /* MultiTouchTrackballManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3D1EE95728007F1C6F /* MultiTouchTrackballManipulator.cpp */; };
+		DF82EC541EE95728007F1C6F /* NodeTrackerManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3E1EE95728007F1C6F /* NodeTrackerManipulator.cpp */; };
+		DF82EC551EE95728007F1C6F /* OrbitManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC3F1EE95728007F1C6F /* OrbitManipulator.cpp */; };
+		DF82EC561EE95728007F1C6F /* SphericalManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC401EE95728007F1C6F /* SphericalManipulator.cpp */; };
+		DF82EC571EE95728007F1C6F /* StandardManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC411EE95728007F1C6F /* StandardManipulator.cpp */; };
+		DF82EC581EE95728007F1C6F /* StateSetManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC421EE95728007F1C6F /* StateSetManipulator.cpp */; };
+		DF82EC591EE95728007F1C6F /* TerrainManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC431EE95728007F1C6F /* TerrainManipulator.cpp */; };
+		DF82EC5A1EE95728007F1C6F /* TrackballManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC441EE95728007F1C6F /* TrackballManipulator.cpp */; };
+		DF82EC5B1EE95728007F1C6F /* UFOManipulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC451EE95728007F1C6F /* UFOManipulator.cpp */; };
+		DF82EC5C1EE95728007F1C6F /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC461EE95728007F1C6F /* Version.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EC291EE956BA007F1C6F /* libosgGA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libosgGA.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EC311EE95728007F1C6F /* AnimationPathManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AnimationPathManipulator.cpp; path = ../../src/osgGA/AnimationPathManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC321EE95728007F1C6F /* CameraManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraManipulator.cpp; path = ../../src/osgGA/CameraManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC331EE95728007F1C6F /* CameraViewSwitchManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CameraViewSwitchManipulator.cpp; path = ../../src/osgGA/CameraViewSwitchManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC341EE95728007F1C6F /* Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Device.cpp; path = ../../src/osgGA/Device.cpp; sourceTree = "<group>"; };
+		DF82EC351EE95728007F1C6F /* DriveManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DriveManipulator.cpp; path = ../../src/osgGA/DriveManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC361EE95728007F1C6F /* EventQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventQueue.cpp; path = ../../src/osgGA/EventQueue.cpp; sourceTree = "<group>"; };
+		DF82EC371EE95728007F1C6F /* EventVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventVisitor.cpp; path = ../../src/osgGA/EventVisitor.cpp; sourceTree = "<group>"; };
+		DF82EC381EE95728007F1C6F /* FirstPersonManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirstPersonManipulator.cpp; path = ../../src/osgGA/FirstPersonManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC391EE95728007F1C6F /* FlightManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlightManipulator.cpp; path = ../../src/osgGA/FlightManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC3A1EE95728007F1C6F /* GUIEventAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUIEventAdapter.cpp; path = ../../src/osgGA/GUIEventAdapter.cpp; sourceTree = "<group>"; };
+		DF82EC3B1EE95728007F1C6F /* GUIEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GUIEventHandler.cpp; path = ../../src/osgGA/GUIEventHandler.cpp; sourceTree = "<group>"; };
+		DF82EC3C1EE95728007F1C6F /* KeySwitchMatrixManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeySwitchMatrixManipulator.cpp; path = ../../src/osgGA/KeySwitchMatrixManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC3D1EE95728007F1C6F /* MultiTouchTrackballManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MultiTouchTrackballManipulator.cpp; path = ../../src/osgGA/MultiTouchTrackballManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC3E1EE95728007F1C6F /* NodeTrackerManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NodeTrackerManipulator.cpp; path = ../../src/osgGA/NodeTrackerManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC3F1EE95728007F1C6F /* OrbitManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OrbitManipulator.cpp; path = ../../src/osgGA/OrbitManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC401EE95728007F1C6F /* SphericalManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SphericalManipulator.cpp; path = ../../src/osgGA/SphericalManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC411EE95728007F1C6F /* StandardManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StandardManipulator.cpp; path = ../../src/osgGA/StandardManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC421EE95728007F1C6F /* StateSetManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StateSetManipulator.cpp; path = ../../src/osgGA/StateSetManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC431EE95728007F1C6F /* TerrainManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TerrainManipulator.cpp; path = ../../src/osgGA/TerrainManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC441EE95728007F1C6F /* TrackballManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TrackballManipulator.cpp; path = ../../src/osgGA/TrackballManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC451EE95728007F1C6F /* UFOManipulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UFOManipulator.cpp; path = ../../src/osgGA/UFOManipulator.cpp; sourceTree = "<group>"; };
+		DF82EC461EE95728007F1C6F /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = ../../src/osgGA/Version.cpp; sourceTree = "<group>"; };
+		DF82EC6F1EE95ADB007F1C6F /* AnimationPathManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AnimationPathManipulator; path = ../../include/osgGA/AnimationPathManipulator; sourceTree = "<group>"; };
+		DF82EC701EE95ADB007F1C6F /* CameraManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CameraManipulator; path = ../../include/osgGA/CameraManipulator; sourceTree = "<group>"; };
+		DF82EC711EE95ADB007F1C6F /* CameraViewSwitchManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CameraViewSwitchManipulator; path = ../../include/osgGA/CameraViewSwitchManipulator; sourceTree = "<group>"; };
+		DF82EC721EE95ADB007F1C6F /* Device */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Device; path = ../../include/osgGA/Device; sourceTree = "<group>"; };
+		DF82EC731EE95ADB007F1C6F /* DriveManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DriveManipulator; path = ../../include/osgGA/DriveManipulator; sourceTree = "<group>"; };
+		DF82EC741EE95ADB007F1C6F /* EventQueue */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EventQueue; path = ../../include/osgGA/EventQueue; sourceTree = "<group>"; };
+		DF82EC751EE95ADB007F1C6F /* EventVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EventVisitor; path = ../../include/osgGA/EventVisitor; sourceTree = "<group>"; };
+		DF82EC761EE95ADB007F1C6F /* Export */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Export; path = ../../include/osgGA/Export; sourceTree = "<group>"; };
+		DF82EC771EE95ADB007F1C6F /* FirstPersonManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FirstPersonManipulator; path = ../../include/osgGA/FirstPersonManipulator; sourceTree = "<group>"; };
+		DF82EC781EE95ADB007F1C6F /* FlightManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FlightManipulator; path = ../../include/osgGA/FlightManipulator; sourceTree = "<group>"; };
+		DF82EC791EE95ADB007F1C6F /* GUIActionAdapter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GUIActionAdapter; path = ../../include/osgGA/GUIActionAdapter; sourceTree = "<group>"; };
+		DF82EC7A1EE95ADB007F1C6F /* GUIEventAdapter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GUIEventAdapter; path = ../../include/osgGA/GUIEventAdapter; sourceTree = "<group>"; };
+		DF82EC7B1EE95ADB007F1C6F /* GUIEventHandler */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GUIEventHandler; path = ../../include/osgGA/GUIEventHandler; sourceTree = "<group>"; };
+		DF82EC7C1EE95ADB007F1C6F /* KeySwitchMatrixManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KeySwitchMatrixManipulator; path = ../../include/osgGA/KeySwitchMatrixManipulator; sourceTree = "<group>"; };
+		DF82EC7D1EE95ADB007F1C6F /* MultiTouchTrackballManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MultiTouchTrackballManipulator; path = ../../include/osgGA/MultiTouchTrackballManipulator; sourceTree = "<group>"; };
+		DF82EC7E1EE95ADB007F1C6F /* NodeTrackerManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NodeTrackerManipulator; path = ../../include/osgGA/NodeTrackerManipulator; sourceTree = "<group>"; };
+		DF82EC7F1EE95ADB007F1C6F /* OrbitManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OrbitManipulator; path = ../../include/osgGA/OrbitManipulator; sourceTree = "<group>"; };
+		DF82EC801EE95ADB007F1C6F /* SphericalManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SphericalManipulator; path = ../../include/osgGA/SphericalManipulator; sourceTree = "<group>"; };
+		DF82EC811EE95ADB007F1C6F /* StandardManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StandardManipulator; path = ../../include/osgGA/StandardManipulator; sourceTree = "<group>"; };
+		DF82EC821EE95ADB007F1C6F /* StateSetManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StateSetManipulator; path = ../../include/osgGA/StateSetManipulator; sourceTree = "<group>"; };
+		DF82EC831EE95ADB007F1C6F /* TerrainManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TerrainManipulator; path = ../../include/osgGA/TerrainManipulator; sourceTree = "<group>"; };
+		DF82EC841EE95ADB007F1C6F /* TrackballManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TrackballManipulator; path = ../../include/osgGA/TrackballManipulator; sourceTree = "<group>"; };
+		DF82EC851EE95ADB007F1C6F /* UFOManipulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UFOManipulator; path = ../../include/osgGA/UFOManipulator; sourceTree = "<group>"; };
+		DF82EC861EE95ADB007F1C6F /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Version; path = ../../include/osgGA/Version; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EC261EE956BA007F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EC201EE956BA007F1C6F = {
+			isa = PBXGroup;
+			children = (
+				DF82EC6E1EE95AC0007F1C6F /* include */,
+				DF82EC301EE956F3007F1C6F /* source */,
+				DF82EC2A1EE956BA007F1C6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EC2A1EE956BA007F1C6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC291EE956BA007F1C6F /* libosgGA.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EC301EE956F3007F1C6F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC311EE95728007F1C6F /* AnimationPathManipulator.cpp */,
+				DF82EC321EE95728007F1C6F /* CameraManipulator.cpp */,
+				DF82EC331EE95728007F1C6F /* CameraViewSwitchManipulator.cpp */,
+				DF82EC341EE95728007F1C6F /* Device.cpp */,
+				DF82EC351EE95728007F1C6F /* DriveManipulator.cpp */,
+				DF82EC361EE95728007F1C6F /* EventQueue.cpp */,
+				DF82EC371EE95728007F1C6F /* EventVisitor.cpp */,
+				DF82EC381EE95728007F1C6F /* FirstPersonManipulator.cpp */,
+				DF82EC391EE95728007F1C6F /* FlightManipulator.cpp */,
+				DF82EC3A1EE95728007F1C6F /* GUIEventAdapter.cpp */,
+				DF82EC3B1EE95728007F1C6F /* GUIEventHandler.cpp */,
+				DF82EC3C1EE95728007F1C6F /* KeySwitchMatrixManipulator.cpp */,
+				DF82EC3D1EE95728007F1C6F /* MultiTouchTrackballManipulator.cpp */,
+				DF82EC3E1EE95728007F1C6F /* NodeTrackerManipulator.cpp */,
+				DF82EC3F1EE95728007F1C6F /* OrbitManipulator.cpp */,
+				DF82EC401EE95728007F1C6F /* SphericalManipulator.cpp */,
+				DF82EC411EE95728007F1C6F /* StandardManipulator.cpp */,
+				DF82EC421EE95728007F1C6F /* StateSetManipulator.cpp */,
+				DF82EC431EE95728007F1C6F /* TerrainManipulator.cpp */,
+				DF82EC441EE95728007F1C6F /* TrackballManipulator.cpp */,
+				DF82EC451EE95728007F1C6F /* UFOManipulator.cpp */,
+				DF82EC461EE95728007F1C6F /* Version.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		DF82EC6E1EE95AC0007F1C6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC6F1EE95ADB007F1C6F /* AnimationPathManipulator */,
+				DF82EC701EE95ADB007F1C6F /* CameraManipulator */,
+				DF82EC711EE95ADB007F1C6F /* CameraViewSwitchManipulator */,
+				DF82EC721EE95ADB007F1C6F /* Device */,
+				DF82EC731EE95ADB007F1C6F /* DriveManipulator */,
+				DF82EC741EE95ADB007F1C6F /* EventQueue */,
+				DF82EC751EE95ADB007F1C6F /* EventVisitor */,
+				DF82EC761EE95ADB007F1C6F /* Export */,
+				DF82EC771EE95ADB007F1C6F /* FirstPersonManipulator */,
+				DF82EC781EE95ADB007F1C6F /* FlightManipulator */,
+				DF82EC791EE95ADB007F1C6F /* GUIActionAdapter */,
+				DF82EC7A1EE95ADB007F1C6F /* GUIEventAdapter */,
+				DF82EC7B1EE95ADB007F1C6F /* GUIEventHandler */,
+				DF82EC7C1EE95ADB007F1C6F /* KeySwitchMatrixManipulator */,
+				DF82EC7D1EE95ADB007F1C6F /* MultiTouchTrackballManipulator */,
+				DF82EC7E1EE95ADB007F1C6F /* NodeTrackerManipulator */,
+				DF82EC7F1EE95ADB007F1C6F /* OrbitManipulator */,
+				DF82EC801EE95ADB007F1C6F /* SphericalManipulator */,
+				DF82EC811EE95ADB007F1C6F /* StandardManipulator */,
+				DF82EC821EE95ADB007F1C6F /* StateSetManipulator */,
+				DF82EC831EE95ADB007F1C6F /* TerrainManipulator */,
+				DF82EC841EE95ADB007F1C6F /* TrackballManipulator */,
+				DF82EC851EE95ADB007F1C6F /* UFOManipulator */,
+				DF82EC861EE95ADB007F1C6F /* Version */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF82EC271EE956BA007F1C6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF82EC281EE956BA007F1C6F /* osgGA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EC2D1EE956BA007F1C6F /* Build configuration list for PBXNativeTarget "osgGA" */;
+			buildPhases = (
+				DF82EC251EE956BA007F1C6F /* Sources */,
+				DF82EC261EE956BA007F1C6F /* Frameworks */,
+				DF82EC271EE956BA007F1C6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osgGA;
+			productName = osgGA;
+			productReference = DF82EC291EE956BA007F1C6F /* libosgGA.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EC211EE956BA007F1C6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = machfe;
+				TargetAttributes = {
+					DF82EC281EE956BA007F1C6F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = DF82EC241EE956BA007F1C6F /* Build configuration list for PBXProject "osgGA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF82EC201EE956BA007F1C6F;
+			productRefGroup = DF82EC2A1EE956BA007F1C6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EC281EE956BA007F1C6F /* osgGA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EC251EE956BA007F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EC561EE95728007F1C6F /* SphericalManipulator.cpp in Sources */,
+				DF82EC5A1EE95728007F1C6F /* TrackballManipulator.cpp in Sources */,
+				DF82EC4C1EE95728007F1C6F /* EventQueue.cpp in Sources */,
+				DF82EC471EE95728007F1C6F /* AnimationPathManipulator.cpp in Sources */,
+				DF82EC5B1EE95728007F1C6F /* UFOManipulator.cpp in Sources */,
+				DF82EC501EE95728007F1C6F /* GUIEventAdapter.cpp in Sources */,
+				DF82EC4F1EE95728007F1C6F /* FlightManipulator.cpp in Sources */,
+				DF82EC491EE95728007F1C6F /* CameraViewSwitchManipulator.cpp in Sources */,
+				DF82EC541EE95728007F1C6F /* NodeTrackerManipulator.cpp in Sources */,
+				DF82EC581EE95728007F1C6F /* StateSetManipulator.cpp in Sources */,
+				DF82EC5C1EE95728007F1C6F /* Version.cpp in Sources */,
+				DF82EC4B1EE95728007F1C6F /* DriveManipulator.cpp in Sources */,
+				DF82EC4D1EE95728007F1C6F /* EventVisitor.cpp in Sources */,
+				DF82EC511EE95728007F1C6F /* GUIEventHandler.cpp in Sources */,
+				DF82EC591EE95728007F1C6F /* TerrainManipulator.cpp in Sources */,
+				DF82EC481EE95728007F1C6F /* CameraManipulator.cpp in Sources */,
+				DF82EC4E1EE95728007F1C6F /* FirstPersonManipulator.cpp in Sources */,
+				DF82EC4A1EE95728007F1C6F /* Device.cpp in Sources */,
+				DF82EC531EE95728007F1C6F /* MultiTouchTrackballManipulator.cpp in Sources */,
+				DF82EC551EE95728007F1C6F /* OrbitManipulator.cpp in Sources */,
+				DF82EC521EE95728007F1C6F /* KeySwitchMatrixManipulator.cpp in Sources */,
+				DF82EC571EE95728007F1C6F /* StandardManipulator.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EC2B1EE956BA007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF82EC2C1EE956BA007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF82EC2E1EE956BA007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF82EC2F1EE956BA007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EC241EE956BA007F1C6F /* Build configuration list for PBXProject "osgGA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EC2B1EE956BA007F1C6F /* Debug */,
+				DF82EC2C1EE956BA007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EC2D1EE956BA007F1C6F /* Build configuration list for PBXNativeTarget "osgGA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EC2E1EE956BA007F1C6F /* Debug */,
+				DF82EC2F1EE956BA007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EC211EE956BA007F1C6F /* Project object */;
+}

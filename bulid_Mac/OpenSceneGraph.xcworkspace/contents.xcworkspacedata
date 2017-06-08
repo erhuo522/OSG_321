@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:osgGA/osgGA.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:osgUtil/osgUtil.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:osgDB/osgDB.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:osgViewer/osgViewer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:OpenThreads/OpenThreads.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:osg/osg.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Demo_OSG/Demo_OSG.xcodeproj">
+   </FileRef>
+</Workspace>

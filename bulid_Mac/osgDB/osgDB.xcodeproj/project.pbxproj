@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EB6F1EE9549E007F1C6F /* Archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB4B1EE9549E007F1C6F /* Archive.cpp */; };
+		DF82EB701EE9549E007F1C6F /* AuthenticationMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB4C1EE9549E007F1C6F /* AuthenticationMap.cpp */; };
+		DF82EB711EE9549E007F1C6F /* Callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB4D1EE9549E007F1C6F /* Callbacks.cpp */; };
+		DF82EB721EE9549E007F1C6F /* Compressors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB4F1EE9549E007F1C6F /* Compressors.cpp */; };
+		DF82EB731EE9549E007F1C6F /* ConvertUTF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB501EE9549E007F1C6F /* ConvertUTF.cpp */; };
+		DF82EB741EE9549E007F1C6F /* DatabasePager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB511EE9549E007F1C6F /* DatabasePager.cpp */; };
+		DF82EB751EE9549E007F1C6F /* DatabaseRevisions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB521EE9549E007F1C6F /* DatabaseRevisions.cpp */; };
+		DF82EB761EE9549E007F1C6F /* DotOsgWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB531EE9549E007F1C6F /* DotOsgWrapper.cpp */; };
+		DF82EB771EE9549E007F1C6F /* DynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB541EE9549E007F1C6F /* DynamicLibrary.cpp */; };
+		DF82EB781EE9549E007F1C6F /* ExternalFileWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB551EE9549E007F1C6F /* ExternalFileWriter.cpp */; };
+		DF82EB791EE9549E007F1C6F /* Field.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB561EE9549E007F1C6F /* Field.cpp */; };
+		DF82EB7A1EE9549E007F1C6F /* FieldReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB571EE9549E007F1C6F /* FieldReader.cpp */; };
+		DF82EB7B1EE9549E007F1C6F /* FieldReaderIterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB581EE9549E007F1C6F /* FieldReaderIterator.cpp */; };
+		DF82EB7C1EE9549E007F1C6F /* FileCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB591EE9549E007F1C6F /* FileCache.cpp */; };
+		DF82EB7D1EE9549E007F1C6F /* FileNameUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5A1EE9549E007F1C6F /* FileNameUtils.cpp */; };
+		DF82EB7E1EE9549E007F1C6F /* FileUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5B1EE9549E007F1C6F /* FileUtils.cpp */; };
+		DF82EB7F1EE9549E007F1C6F /* fstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5C1EE9549E007F1C6F /* fstream.cpp */; };
+		DF82EB801EE9549E007F1C6F /* ImageOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5D1EE9549E007F1C6F /* ImageOptions.cpp */; };
+		DF82EB811EE9549E007F1C6F /* ImagePager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5E1EE9549E007F1C6F /* ImagePager.cpp */; };
+		DF82EB821EE9549E007F1C6F /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB5F1EE9549E007F1C6F /* Input.cpp */; };
+		DF82EB831EE9549E007F1C6F /* InputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB601EE9549E007F1C6F /* InputStream.cpp */; };
+		DF82EB841EE9549E007F1C6F /* MimeTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB611EE9549E007F1C6F /* MimeTypes.cpp */; };
+		DF82EB851EE9549E007F1C6F /* ObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB621EE9549E007F1C6F /* ObjectWrapper.cpp */; };
+		DF82EB861EE9549E007F1C6F /* Options.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB631EE9549E007F1C6F /* Options.cpp */; };
+		DF82EB871EE9549E007F1C6F /* Output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB641EE9549E007F1C6F /* Output.cpp */; };
+		DF82EB881EE9549E007F1C6F /* OutputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB651EE9549E007F1C6F /* OutputStream.cpp */; };
+		DF82EB891EE9549E007F1C6F /* PluginQuery.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB661EE9549E007F1C6F /* PluginQuery.cpp */; };
+		DF82EB8A1EE9549E007F1C6F /* ReaderWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB671EE9549E007F1C6F /* ReaderWriter.cpp */; };
+		DF82EB8B1EE9549E007F1C6F /* ReadFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB681EE9549E007F1C6F /* ReadFile.cpp */; };
+		DF82EB8C1EE9549E007F1C6F /* Registry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB691EE9549E007F1C6F /* Registry.cpp */; };
+		DF82EB8D1EE9549E007F1C6F /* SharedStateManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB6A1EE9549E007F1C6F /* SharedStateManager.cpp */; };
+		DF82EB8E1EE9549E007F1C6F /* StreamOperator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB6B1EE9549E007F1C6F /* StreamOperator.cpp */; };
+		DF82EB8F1EE9549E007F1C6F /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB6C1EE9549E007F1C6F /* Version.cpp */; };
+		DF82EB901EE9549E007F1C6F /* WriteFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB6D1EE9549E007F1C6F /* WriteFile.cpp */; };
+		DF82EB911EE9549E007F1C6F /* XmlParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB6E1EE9549E007F1C6F /* XmlParser.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EB421EE95449007F1C6F /* libosgDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libosgDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EB4B1EE9549E007F1C6F /* Archive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Archive.cpp; path = ../../src/osgDB/Archive.cpp; sourceTree = "<group>"; };
+		DF82EB4C1EE9549E007F1C6F /* AuthenticationMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AuthenticationMap.cpp; path = ../../src/osgDB/AuthenticationMap.cpp; sourceTree = "<group>"; };
+		DF82EB4D1EE9549E007F1C6F /* Callbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Callbacks.cpp; path = ../../src/osgDB/Callbacks.cpp; sourceTree = "<group>"; };
+		DF82EB4F1EE9549E007F1C6F /* Compressors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Compressors.cpp; path = ../../src/osgDB/Compressors.cpp; sourceTree = "<group>"; };
+		DF82EB501EE9549E007F1C6F /* ConvertUTF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConvertUTF.cpp; path = ../../src/osgDB/ConvertUTF.cpp; sourceTree = "<group>"; };
+		DF82EB511EE9549E007F1C6F /* DatabasePager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DatabasePager.cpp; path = ../../src/osgDB/DatabasePager.cpp; sourceTree = "<group>"; };
+		DF82EB521EE9549E007F1C6F /* DatabaseRevisions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DatabaseRevisions.cpp; path = ../../src/osgDB/DatabaseRevisions.cpp; sourceTree = "<group>"; };
+		DF82EB531EE9549E007F1C6F /* DotOsgWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DotOsgWrapper.cpp; path = ../../src/osgDB/DotOsgWrapper.cpp; sourceTree = "<group>"; };
+		DF82EB541EE9549E007F1C6F /* DynamicLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary.cpp; path = ../../src/osgDB/DynamicLibrary.cpp; sourceTree = "<group>"; };
+		DF82EB551EE9549E007F1C6F /* ExternalFileWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExternalFileWriter.cpp; path = ../../src/osgDB/ExternalFileWriter.cpp; sourceTree = "<group>"; };
+		DF82EB561EE9549E007F1C6F /* Field.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Field.cpp; path = ../../src/osgDB/Field.cpp; sourceTree = "<group>"; };
+		DF82EB571EE9549E007F1C6F /* FieldReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldReader.cpp; path = ../../src/osgDB/FieldReader.cpp; sourceTree = "<group>"; };
+		DF82EB581EE9549E007F1C6F /* FieldReaderIterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FieldReaderIterator.cpp; path = ../../src/osgDB/FieldReaderIterator.cpp; sourceTree = "<group>"; };
+		DF82EB591EE9549E007F1C6F /* FileCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileCache.cpp; path = ../../src/osgDB/FileCache.cpp; sourceTree = "<group>"; };
+		DF82EB5A1EE9549E007F1C6F /* FileNameUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileNameUtils.cpp; path = ../../src/osgDB/FileNameUtils.cpp; sourceTree = "<group>"; };
+		DF82EB5B1EE9549E007F1C6F /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileUtils.cpp; path = ../../src/osgDB/FileUtils.cpp; sourceTree = "<group>"; };
+		DF82EB5C1EE9549E007F1C6F /* fstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fstream.cpp; path = ../../src/osgDB/fstream.cpp; sourceTree = "<group>"; };
+		DF82EB5D1EE9549E007F1C6F /* ImageOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImageOptions.cpp; path = ../../src/osgDB/ImageOptions.cpp; sourceTree = "<group>"; };
+		DF82EB5E1EE9549E007F1C6F /* ImagePager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ImagePager.cpp; path = ../../src/osgDB/ImagePager.cpp; sourceTree = "<group>"; };
+		DF82EB5F1EE9549E007F1C6F /* Input.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Input.cpp; path = ../../src/osgDB/Input.cpp; sourceTree = "<group>"; };
+		DF82EB601EE9549E007F1C6F /* InputStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InputStream.cpp; path = ../../src/osgDB/InputStream.cpp; sourceTree = "<group>"; };
+		DF82EB611EE9549E007F1C6F /* MimeTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MimeTypes.cpp; path = ../../src/osgDB/MimeTypes.cpp; sourceTree = "<group>"; };
+		DF82EB621EE9549E007F1C6F /* ObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectWrapper.cpp; path = ../../src/osgDB/ObjectWrapper.cpp; sourceTree = "<group>"; };
+		DF82EB631EE9549E007F1C6F /* Options.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Options.cpp; path = ../../src/osgDB/Options.cpp; sourceTree = "<group>"; };
+		DF82EB641EE9549E007F1C6F /* Output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Output.cpp; path = ../../src/osgDB/Output.cpp; sourceTree = "<group>"; };
+		DF82EB651EE9549E007F1C6F /* OutputStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OutputStream.cpp; path = ../../src/osgDB/OutputStream.cpp; sourceTree = "<group>"; };
+		DF82EB661EE9549E007F1C6F /* PluginQuery.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PluginQuery.cpp; path = ../../src/osgDB/PluginQuery.cpp; sourceTree = "<group>"; };
+		DF82EB671EE9549E007F1C6F /* ReaderWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReaderWriter.cpp; path = ../../src/osgDB/ReaderWriter.cpp; sourceTree = "<group>"; };
+		DF82EB681EE9549E007F1C6F /* ReadFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReadFile.cpp; path = ../../src/osgDB/ReadFile.cpp; sourceTree = "<group>"; };
+		DF82EB691EE9549E007F1C6F /* Registry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Registry.cpp; path = ../../src/osgDB/Registry.cpp; sourceTree = "<group>"; };
+		DF82EB6A1EE9549E007F1C6F /* SharedStateManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SharedStateManager.cpp; path = ../../src/osgDB/SharedStateManager.cpp; sourceTree = "<group>"; };
+		DF82EB6B1EE9549E007F1C6F /* StreamOperator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StreamOperator.cpp; path = ../../src/osgDB/StreamOperator.cpp; sourceTree = "<group>"; };
+		DF82EB6C1EE9549E007F1C6F /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = ../../src/osgDB/Version.cpp; sourceTree = "<group>"; };
+		DF82EB6D1EE9549E007F1C6F /* WriteFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WriteFile.cpp; path = ../../src/osgDB/WriteFile.cpp; sourceTree = "<group>"; };
+		DF82EB6E1EE9549E007F1C6F /* XmlParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XmlParser.cpp; path = ../../src/osgDB/XmlParser.cpp; sourceTree = "<group>"; };
+		DF82EB921EE954B8007F1C6F /* Archive */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Archive; path = ../../include/osgDB/Archive; sourceTree = "<group>"; };
+		DF82EB931EE954B8007F1C6F /* AuthenticationMap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AuthenticationMap; path = ../../include/osgDB/AuthenticationMap; sourceTree = "<group>"; };
+		DF82EB941EE954B8007F1C6F /* Callbacks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Callbacks; path = ../../include/osgDB/Callbacks; sourceTree = "<group>"; };
+		DF82EB951EE954B8007F1C6F /* ConvertUTF */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ConvertUTF; path = ../../include/osgDB/ConvertUTF; sourceTree = "<group>"; };
+		DF82EB961EE954B8007F1C6F /* DatabasePager */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DatabasePager; path = ../../include/osgDB/DatabasePager; sourceTree = "<group>"; };
+		DF82EB971EE954B8007F1C6F /* DatabaseRevisions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DatabaseRevisions; path = ../../include/osgDB/DatabaseRevisions; sourceTree = "<group>"; };
+		DF82EB981EE954B8007F1C6F /* DataTypes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DataTypes; path = ../../include/osgDB/DataTypes; sourceTree = "<group>"; };
+		DF82EB991EE954B8007F1C6F /* DotOsgWrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DotOsgWrapper; path = ../../include/osgDB/DotOsgWrapper; sourceTree = "<group>"; };
+		DF82EB9A1EE954B8007F1C6F /* DynamicLibrary */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DynamicLibrary; path = ../../include/osgDB/DynamicLibrary; sourceTree = "<group>"; };
+		DF82EB9B1EE954B8007F1C6F /* Export */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Export; path = ../../include/osgDB/Export; sourceTree = "<group>"; };
+		DF82EB9C1EE954B8007F1C6F /* ExternalFileWriter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ExternalFileWriter; path = ../../include/osgDB/ExternalFileWriter; sourceTree = "<group>"; };
+		DF82EB9D1EE954B8007F1C6F /* FileCache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FileCache; path = ../../include/osgDB/FileCache; sourceTree = "<group>"; };
+		DF82EB9E1EE954B8007F1C6F /* FileNameUtils */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FileNameUtils; path = ../../include/osgDB/FileNameUtils; sourceTree = "<group>"; };
+		DF82EB9F1EE954B8007F1C6F /* FileUtils */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FileUtils; path = ../../include/osgDB/FileUtils; sourceTree = "<group>"; };
+		DF82EBA01EE954B8007F1C6F /* fstream */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = fstream; path = ../../include/osgDB/fstream; sourceTree = "<group>"; };
+		DF82EBA11EE954B8007F1C6F /* ImageOptions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ImageOptions; path = ../../include/osgDB/ImageOptions; sourceTree = "<group>"; };
+		DF82EBA21EE954B8007F1C6F /* ImagePager */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ImagePager; path = ../../include/osgDB/ImagePager; sourceTree = "<group>"; };
+		DF82EBA31EE954B8007F1C6F /* ImageProcessor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ImageProcessor; path = ../../include/osgDB/ImageProcessor; sourceTree = "<group>"; };
+		DF82EBA41EE954B8007F1C6F /* Input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Input; path = ../../include/osgDB/Input; sourceTree = "<group>"; };
+		DF82EBA51EE954B8007F1C6F /* InputStream */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = InputStream; path = ../../include/osgDB/InputStream; sourceTree = "<group>"; };
+		DF82EBA61EE954B8007F1C6F /* ObjectWrapper */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ObjectWrapper; path = ../../include/osgDB/ObjectWrapper; sourceTree = "<group>"; };
+		DF82EBA71EE954B8007F1C6F /* Options */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Options; path = ../../include/osgDB/Options; sourceTree = "<group>"; };
+		DF82EBA81EE954B8007F1C6F /* Output */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Output; path = ../../include/osgDB/Output; sourceTree = "<group>"; };
+		DF82EBA91EE954B8007F1C6F /* OutputStream */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OutputStream; path = ../../include/osgDB/OutputStream; sourceTree = "<group>"; };
+		DF82EBAA1EE954B8007F1C6F /* ParameterOutput */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ParameterOutput; path = ../../include/osgDB/ParameterOutput; sourceTree = "<group>"; };
+		DF82EBAB1EE954B8007F1C6F /* PluginQuery */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PluginQuery; path = ../../include/osgDB/PluginQuery; sourceTree = "<group>"; };
+		DF82EBAC1EE954B8007F1C6F /* ReaderWriter */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReaderWriter; path = ../../include/osgDB/ReaderWriter; sourceTree = "<group>"; };
+		DF82EBAD1EE954B8007F1C6F /* ReadFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReadFile; path = ../../include/osgDB/ReadFile; sourceTree = "<group>"; };
+		DF82EBAE1EE954B8007F1C6F /* Registry */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Registry; path = ../../include/osgDB/Registry; sourceTree = "<group>"; };
+		DF82EBAF1EE954B8007F1C6F /* Serializer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Serializer; path = ../../include/osgDB/Serializer; sourceTree = "<group>"; };
+		DF82EBB01EE954B8007F1C6F /* SharedStateManager */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SharedStateManager; path = ../../include/osgDB/SharedStateManager; sourceTree = "<group>"; };
+		DF82EBB11EE954B8007F1C6F /* StreamOperator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StreamOperator; path = ../../include/osgDB/StreamOperator; sourceTree = "<group>"; };
+		DF82EBB21EE954B8007F1C6F /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Version; path = ../../include/osgDB/Version; sourceTree = "<group>"; };
+		DF82EBB31EE954B8007F1C6F /* WriteFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WriteFile; path = ../../include/osgDB/WriteFile; sourceTree = "<group>"; };
+		DF82EBB41EE954B8007F1C6F /* XmlParser */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XmlParser; path = ../../include/osgDB/XmlParser; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EB3F1EE95449007F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EB391EE95449007F1C6F = {
+			isa = PBXGroup;
+			children = (
+				DF82EB4A1EE95482007F1C6F /* include */,
+				DF82EB491EE9547C007F1C6F /* source */,
+				DF82EB431EE95449007F1C6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EB431EE95449007F1C6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB421EE95449007F1C6F /* libosgDB.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EB491EE9547C007F1C6F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB4B1EE9549E007F1C6F /* Archive.cpp */,
+				DF82EB4C1EE9549E007F1C6F /* AuthenticationMap.cpp */,
+				DF82EB4D1EE9549E007F1C6F /* Callbacks.cpp */,
+				DF82EB4F1EE9549E007F1C6F /* Compressors.cpp */,
+				DF82EB501EE9549E007F1C6F /* ConvertUTF.cpp */,
+				DF82EB511EE9549E007F1C6F /* DatabasePager.cpp */,
+				DF82EB521EE9549E007F1C6F /* DatabaseRevisions.cpp */,
+				DF82EB531EE9549E007F1C6F /* DotOsgWrapper.cpp */,
+				DF82EB541EE9549E007F1C6F /* DynamicLibrary.cpp */,
+				DF82EB551EE9549E007F1C6F /* ExternalFileWriter.cpp */,
+				DF82EB561EE9549E007F1C6F /* Field.cpp */,
+				DF82EB571EE9549E007F1C6F /* FieldReader.cpp */,
+				DF82EB581EE9549E007F1C6F /* FieldReaderIterator.cpp */,
+				DF82EB591EE9549E007F1C6F /* FileCache.cpp */,
+				DF82EB5A1EE9549E007F1C6F /* FileNameUtils.cpp */,
+				DF82EB5B1EE9549E007F1C6F /* FileUtils.cpp */,
+				DF82EB5C1EE9549E007F1C6F /* fstream.cpp */,
+				DF82EB5D1EE9549E007F1C6F /* ImageOptions.cpp */,
+				DF82EB5E1EE9549E007F1C6F /* ImagePager.cpp */,
+				DF82EB5F1EE9549E007F1C6F /* Input.cpp */,
+				DF82EB601EE9549E007F1C6F /* InputStream.cpp */,
+				DF82EB611EE9549E007F1C6F /* MimeTypes.cpp */,
+				DF82EB621EE9549E007F1C6F /* ObjectWrapper.cpp */,
+				DF82EB631EE9549E007F1C6F /* Options.cpp */,
+				DF82EB641EE9549E007F1C6F /* Output.cpp */,
+				DF82EB651EE9549E007F1C6F /* OutputStream.cpp */,
+				DF82EB661EE9549E007F1C6F /* PluginQuery.cpp */,
+				DF82EB671EE9549E007F1C6F /* ReaderWriter.cpp */,
+				DF82EB681EE9549E007F1C6F /* ReadFile.cpp */,
+				DF82EB691EE9549E007F1C6F /* Registry.cpp */,
+				DF82EB6A1EE9549E007F1C6F /* SharedStateManager.cpp */,
+				DF82EB6B1EE9549E007F1C6F /* StreamOperator.cpp */,
+				DF82EB6C1EE9549E007F1C6F /* Version.cpp */,
+				DF82EB6D1EE9549E007F1C6F /* WriteFile.cpp */,
+				DF82EB6E1EE9549E007F1C6F /* XmlParser.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		DF82EB4A1EE95482007F1C6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB921EE954B8007F1C6F /* Archive */,
+				DF82EB931EE954B8007F1C6F /* AuthenticationMap */,
+				DF82EB941EE954B8007F1C6F /* Callbacks */,
+				DF82EB951EE954B8007F1C6F /* ConvertUTF */,
+				DF82EB961EE954B8007F1C6F /* DatabasePager */,
+				DF82EB971EE954B8007F1C6F /* DatabaseRevisions */,
+				DF82EB981EE954B8007F1C6F /* DataTypes */,
+				DF82EB991EE954B8007F1C6F /* DotOsgWrapper */,
+				DF82EB9A1EE954B8007F1C6F /* DynamicLibrary */,
+				DF82EB9B1EE954B8007F1C6F /* Export */,
+				DF82EB9C1EE954B8007F1C6F /* ExternalFileWriter */,
+				DF82EB9D1EE954B8007F1C6F /* FileCache */,
+				DF82EB9E1EE954B8007F1C6F /* FileNameUtils */,
+				DF82EB9F1EE954B8007F1C6F /* FileUtils */,
+				DF82EBA01EE954B8007F1C6F /* fstream */,
+				DF82EBA11EE954B8007F1C6F /* ImageOptions */,
+				DF82EBA21EE954B8007F1C6F /* ImagePager */,
+				DF82EBA31EE954B8007F1C6F /* ImageProcessor */,
+				DF82EBA41EE954B8007F1C6F /* Input */,
+				DF82EBA51EE954B8007F1C6F /* InputStream */,
+				DF82EBA61EE954B8007F1C6F /* ObjectWrapper */,
+				DF82EBA71EE954B8007F1C6F /* Options */,
+				DF82EBA81EE954B8007F1C6F /* Output */,
+				DF82EBA91EE954B8007F1C6F /* OutputStream */,
+				DF82EBAA1EE954B8007F1C6F /* ParameterOutput */,
+				DF82EBAB1EE954B8007F1C6F /* PluginQuery */,
+				DF82EBAC1EE954B8007F1C6F /* ReaderWriter */,
+				DF82EBAD1EE954B8007F1C6F /* ReadFile */,
+				DF82EBAE1EE954B8007F1C6F /* Registry */,
+				DF82EBAF1EE954B8007F1C6F /* Serializer */,
+				DF82EBB01EE954B8007F1C6F /* SharedStateManager */,
+				DF82EBB11EE954B8007F1C6F /* StreamOperator */,
+				DF82EBB21EE954B8007F1C6F /* Version */,
+				DF82EBB31EE954B8007F1C6F /* WriteFile */,
+				DF82EBB41EE954B8007F1C6F /* XmlParser */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF82EB401EE95449007F1C6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF82EB411EE95449007F1C6F /* osgDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EB461EE95449007F1C6F /* Build configuration list for PBXNativeTarget "osgDB" */;
+			buildPhases = (
+				DF82EB3E1EE95449007F1C6F /* Sources */,
+				DF82EB3F1EE95449007F1C6F /* Frameworks */,
+				DF82EB401EE95449007F1C6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osgDB;
+			productName = osgDB;
+			productReference = DF82EB421EE95449007F1C6F /* libosgDB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EB3A1EE95449007F1C6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = machfe;
+				TargetAttributes = {
+					DF82EB411EE95449007F1C6F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = DF82EB3D1EE95449007F1C6F /* Build configuration list for PBXProject "osgDB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF82EB391EE95449007F1C6F;
+			productRefGroup = DF82EB431EE95449007F1C6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EB411EE95449007F1C6F /* osgDB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EB3E1EE95449007F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EB741EE9549E007F1C6F /* DatabasePager.cpp in Sources */,
+				DF82EB771EE9549E007F1C6F /* DynamicLibrary.cpp in Sources */,
+				DF82EB801EE9549E007F1C6F /* ImageOptions.cpp in Sources */,
+				DF82EB851EE9549E007F1C6F /* ObjectWrapper.cpp in Sources */,
+				DF82EB721EE9549E007F1C6F /* Compressors.cpp in Sources */,
+				DF82EB7A1EE9549E007F1C6F /* FieldReader.cpp in Sources */,
+				DF82EB811EE9549E007F1C6F /* ImagePager.cpp in Sources */,
+				DF82EB751EE9549E007F1C6F /* DatabaseRevisions.cpp in Sources */,
+				DF82EB861EE9549E007F1C6F /* Options.cpp in Sources */,
+				DF82EB791EE9549E007F1C6F /* Field.cpp in Sources */,
+				DF82EB761EE9549E007F1C6F /* DotOsgWrapper.cpp in Sources */,
+				DF82EB781EE9549E007F1C6F /* ExternalFileWriter.cpp in Sources */,
+				DF82EB7F1EE9549E007F1C6F /* fstream.cpp in Sources */,
+				DF82EB8D1EE9549E007F1C6F /* SharedStateManager.cpp in Sources */,
+				DF82EB8A1EE9549E007F1C6F /* ReaderWriter.cpp in Sources */,
+				DF82EB7C1EE9549E007F1C6F /* FileCache.cpp in Sources */,
+				DF82EB911EE9549E007F1C6F /* XmlParser.cpp in Sources */,
+				DF82EB711EE9549E007F1C6F /* Callbacks.cpp in Sources */,
+				DF82EB7D1EE9549E007F1C6F /* FileNameUtils.cpp in Sources */,
+				DF82EB821EE9549E007F1C6F /* Input.cpp in Sources */,
+				DF82EB8C1EE9549E007F1C6F /* Registry.cpp in Sources */,
+				DF82EB701EE9549E007F1C6F /* AuthenticationMap.cpp in Sources */,
+				DF82EB6F1EE9549E007F1C6F /* Archive.cpp in Sources */,
+				DF82EB731EE9549E007F1C6F /* ConvertUTF.cpp in Sources */,
+				DF82EB7B1EE9549E007F1C6F /* FieldReaderIterator.cpp in Sources */,
+				DF82EB871EE9549E007F1C6F /* Output.cpp in Sources */,
+				DF82EB881EE9549E007F1C6F /* OutputStream.cpp in Sources */,
+				DF82EB831EE9549E007F1C6F /* InputStream.cpp in Sources */,
+				DF82EB8E1EE9549E007F1C6F /* StreamOperator.cpp in Sources */,
+				DF82EB891EE9549E007F1C6F /* PluginQuery.cpp in Sources */,
+				DF82EB8B1EE9549E007F1C6F /* ReadFile.cpp in Sources */,
+				DF82EB7E1EE9549E007F1C6F /* FileUtils.cpp in Sources */,
+				DF82EB901EE9549E007F1C6F /* WriteFile.cpp in Sources */,
+				DF82EB841EE9549E007F1C6F /* MimeTypes.cpp in Sources */,
+				DF82EB8F1EE9549E007F1C6F /* Version.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EB441EE95449007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF82EB451EE95449007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF82EB471EE95449007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF82EB481EE95449007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EB3D1EE95449007F1C6F /* Build configuration list for PBXProject "osgDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EB441EE95449007F1C6F /* Debug */,
+				DF82EB451EE95449007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EB461EE95449007F1C6F /* Build configuration list for PBXNativeTarget "osgDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EB471EE95449007F1C6F /* Debug */,
+				DF82EB481EE95449007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EB3A1EE95449007F1C6F /* Project object */;
+}

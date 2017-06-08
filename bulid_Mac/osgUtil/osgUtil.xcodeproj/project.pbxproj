@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EBED1EE95550007F1C6F /* CubeMapGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBC71EE95550007F1C6F /* CubeMapGenerator.cpp */; };
+		DF82EBEE1EE95550007F1C6F /* CullVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBC81EE95550007F1C6F /* CullVisitor.cpp */; };
+		DF82EBEF1EE95550007F1C6F /* DelaunayTriangulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBC91EE95550007F1C6F /* DelaunayTriangulator.cpp */; };
+		DF82EBF01EE95550007F1C6F /* DisplayRequirementsVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCA1EE95550007F1C6F /* DisplayRequirementsVisitor.cpp */; };
+		DF82EBF11EE95550007F1C6F /* DrawElementTypeSimplifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCB1EE95550007F1C6F /* DrawElementTypeSimplifier.cpp */; };
+		DF82EBF21EE95550007F1C6F /* EdgeCollector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCC1EE95550007F1C6F /* EdgeCollector.cpp */; };
+		DF82EBF31EE95550007F1C6F /* GLObjectsVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCD1EE95550007F1C6F /* GLObjectsVisitor.cpp */; };
+		DF82EBF41EE95550007F1C6F /* HalfWayMapGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCE1EE95550007F1C6F /* HalfWayMapGenerator.cpp */; };
+		DF82EBF51EE95550007F1C6F /* HighlightMapGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBCF1EE95550007F1C6F /* HighlightMapGenerator.cpp */; };
+		DF82EBF61EE95550007F1C6F /* IncrementalCompileOperation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD01EE95550007F1C6F /* IncrementalCompileOperation.cpp */; };
+		DF82EBF71EE95550007F1C6F /* IntersectionVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD11EE95550007F1C6F /* IntersectionVisitor.cpp */; };
+		DF82EBF81EE95550007F1C6F /* IntersectVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD21EE95550007F1C6F /* IntersectVisitor.cpp */; };
+		DF82EBF91EE95550007F1C6F /* LineSegmentIntersector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD31EE95550007F1C6F /* LineSegmentIntersector.cpp */; };
+		DF82EBFA1EE95550007F1C6F /* MeshOptimizers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD41EE95550007F1C6F /* MeshOptimizers.cpp */; };
+		DF82EBFB1EE95550007F1C6F /* Optimizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD51EE95550007F1C6F /* Optimizer.cpp */; };
+		DF82EBFC1EE95550007F1C6F /* PerlinNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD61EE95550007F1C6F /* PerlinNoise.cpp */; };
+		DF82EBFD1EE95550007F1C6F /* PlaneIntersector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD71EE95550007F1C6F /* PlaneIntersector.cpp */; };
+		DF82EBFE1EE95550007F1C6F /* PolytopeIntersector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD81EE95550007F1C6F /* PolytopeIntersector.cpp */; };
+		DF82EBFF1EE95550007F1C6F /* PositionalStateContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBD91EE95550007F1C6F /* PositionalStateContainer.cpp */; };
+		DF82EC001EE95550007F1C6F /* PrintVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDA1EE95550007F1C6F /* PrintVisitor.cpp */; };
+		DF82EC011EE95550007F1C6F /* RenderBin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDB1EE95550007F1C6F /* RenderBin.cpp */; };
+		DF82EC021EE95550007F1C6F /* RenderLeaf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDC1EE95550007F1C6F /* RenderLeaf.cpp */; };
+		DF82EC031EE95550007F1C6F /* RenderStage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDD1EE95550007F1C6F /* RenderStage.cpp */; };
+		DF82EC041EE95550007F1C6F /* ReversePrimitiveFunctor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDE1EE95550007F1C6F /* ReversePrimitiveFunctor.cpp */; };
+		DF82EC051EE95550007F1C6F /* SceneGraphBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBDF1EE95550007F1C6F /* SceneGraphBuilder.cpp */; };
+		DF82EC061EE95550007F1C6F /* SceneView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE01EE95550007F1C6F /* SceneView.cpp */; };
+		DF82EC071EE95550007F1C6F /* ShaderGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE11EE95550007F1C6F /* ShaderGen.cpp */; };
+		DF82EC081EE95550007F1C6F /* Simplifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE21EE95550007F1C6F /* Simplifier.cpp */; };
+		DF82EC091EE95550007F1C6F /* SmoothingVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE31EE95550007F1C6F /* SmoothingVisitor.cpp */; };
+		DF82EC0A1EE95550007F1C6F /* StateGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE41EE95550007F1C6F /* StateGraph.cpp */; };
+		DF82EC0B1EE95550007F1C6F /* Statistics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE51EE95550007F1C6F /* Statistics.cpp */; };
+		DF82EC0C1EE95550007F1C6F /* TangentSpaceGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE61EE95550007F1C6F /* TangentSpaceGenerator.cpp */; };
+		DF82EC0D1EE95550007F1C6F /* Tessellator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE71EE95550007F1C6F /* Tessellator.cpp */; };
+		DF82EC0E1EE95550007F1C6F /* TransformAttributeFunctor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE81EE95550007F1C6F /* TransformAttributeFunctor.cpp */; };
+		DF82EC0F1EE95550007F1C6F /* TransformCallback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBE91EE95550007F1C6F /* TransformCallback.cpp */; };
+		DF82EC101EE95550007F1C6F /* TriStripVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBEA1EE95550007F1C6F /* TriStripVisitor.cpp */; };
+		DF82EC111EE95550007F1C6F /* UpdateVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBEB1EE95550007F1C6F /* UpdateVisitor.cpp */; };
+		DF82EC121EE95550007F1C6F /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EBEC1EE95550007F1C6F /* Version.cpp */; };
+		DF82EC171EE95573007F1C6F /* connectivity_graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC141EE95573007F1C6F /* connectivity_graph.cpp */; };
+		DF82EC181EE95573007F1C6F /* policy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC151EE95573007F1C6F /* policy.cpp */; };
+		DF82EC191EE95573007F1C6F /* tri_stripper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC161EE95573007F1C6F /* tri_stripper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EBBE1EE954F1007F1C6F /* libosgUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libosgUtil.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EBC71EE95550007F1C6F /* CubeMapGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CubeMapGenerator.cpp; path = ../../src/osgUtil/CubeMapGenerator.cpp; sourceTree = "<group>"; };
+		DF82EBC81EE95550007F1C6F /* CullVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CullVisitor.cpp; path = ../../src/osgUtil/CullVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBC91EE95550007F1C6F /* DelaunayTriangulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DelaunayTriangulator.cpp; path = ../../src/osgUtil/DelaunayTriangulator.cpp; sourceTree = "<group>"; };
+		DF82EBCA1EE95550007F1C6F /* DisplayRequirementsVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DisplayRequirementsVisitor.cpp; path = ../../src/osgUtil/DisplayRequirementsVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBCB1EE95550007F1C6F /* DrawElementTypeSimplifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawElementTypeSimplifier.cpp; path = ../../src/osgUtil/DrawElementTypeSimplifier.cpp; sourceTree = "<group>"; };
+		DF82EBCC1EE95550007F1C6F /* EdgeCollector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EdgeCollector.cpp; path = ../../src/osgUtil/EdgeCollector.cpp; sourceTree = "<group>"; };
+		DF82EBCD1EE95550007F1C6F /* GLObjectsVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLObjectsVisitor.cpp; path = ../../src/osgUtil/GLObjectsVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBCE1EE95550007F1C6F /* HalfWayMapGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HalfWayMapGenerator.cpp; path = ../../src/osgUtil/HalfWayMapGenerator.cpp; sourceTree = "<group>"; };
+		DF82EBCF1EE95550007F1C6F /* HighlightMapGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HighlightMapGenerator.cpp; path = ../../src/osgUtil/HighlightMapGenerator.cpp; sourceTree = "<group>"; };
+		DF82EBD01EE95550007F1C6F /* IncrementalCompileOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IncrementalCompileOperation.cpp; path = ../../src/osgUtil/IncrementalCompileOperation.cpp; sourceTree = "<group>"; };
+		DF82EBD11EE95550007F1C6F /* IntersectionVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntersectionVisitor.cpp; path = ../../src/osgUtil/IntersectionVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBD21EE95550007F1C6F /* IntersectVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntersectVisitor.cpp; path = ../../src/osgUtil/IntersectVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBD31EE95550007F1C6F /* LineSegmentIntersector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LineSegmentIntersector.cpp; path = ../../src/osgUtil/LineSegmentIntersector.cpp; sourceTree = "<group>"; };
+		DF82EBD41EE95550007F1C6F /* MeshOptimizers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MeshOptimizers.cpp; path = ../../src/osgUtil/MeshOptimizers.cpp; sourceTree = "<group>"; };
+		DF82EBD51EE95550007F1C6F /* Optimizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Optimizer.cpp; path = ../../src/osgUtil/Optimizer.cpp; sourceTree = "<group>"; };
+		DF82EBD61EE95550007F1C6F /* PerlinNoise.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PerlinNoise.cpp; path = ../../src/osgUtil/PerlinNoise.cpp; sourceTree = "<group>"; };
+		DF82EBD71EE95550007F1C6F /* PlaneIntersector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlaneIntersector.cpp; path = ../../src/osgUtil/PlaneIntersector.cpp; sourceTree = "<group>"; };
+		DF82EBD81EE95550007F1C6F /* PolytopeIntersector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PolytopeIntersector.cpp; path = ../../src/osgUtil/PolytopeIntersector.cpp; sourceTree = "<group>"; };
+		DF82EBD91EE95550007F1C6F /* PositionalStateContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PositionalStateContainer.cpp; path = ../../src/osgUtil/PositionalStateContainer.cpp; sourceTree = "<group>"; };
+		DF82EBDA1EE95550007F1C6F /* PrintVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PrintVisitor.cpp; path = ../../src/osgUtil/PrintVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBDB1EE95550007F1C6F /* RenderBin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderBin.cpp; path = ../../src/osgUtil/RenderBin.cpp; sourceTree = "<group>"; };
+		DF82EBDC1EE95550007F1C6F /* RenderLeaf.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderLeaf.cpp; path = ../../src/osgUtil/RenderLeaf.cpp; sourceTree = "<group>"; };
+		DF82EBDD1EE95550007F1C6F /* RenderStage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RenderStage.cpp; path = ../../src/osgUtil/RenderStage.cpp; sourceTree = "<group>"; };
+		DF82EBDE1EE95550007F1C6F /* ReversePrimitiveFunctor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReversePrimitiveFunctor.cpp; path = ../../src/osgUtil/ReversePrimitiveFunctor.cpp; sourceTree = "<group>"; };
+		DF82EBDF1EE95550007F1C6F /* SceneGraphBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneGraphBuilder.cpp; path = ../../src/osgUtil/SceneGraphBuilder.cpp; sourceTree = "<group>"; };
+		DF82EBE01EE95550007F1C6F /* SceneView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneView.cpp; path = ../../src/osgUtil/SceneView.cpp; sourceTree = "<group>"; };
+		DF82EBE11EE95550007F1C6F /* ShaderGen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderGen.cpp; path = ../../src/osgUtil/ShaderGen.cpp; sourceTree = "<group>"; };
+		DF82EBE21EE95550007F1C6F /* Simplifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Simplifier.cpp; path = ../../src/osgUtil/Simplifier.cpp; sourceTree = "<group>"; };
+		DF82EBE31EE95550007F1C6F /* SmoothingVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SmoothingVisitor.cpp; path = ../../src/osgUtil/SmoothingVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBE41EE95550007F1C6F /* StateGraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StateGraph.cpp; path = ../../src/osgUtil/StateGraph.cpp; sourceTree = "<group>"; };
+		DF82EBE51EE95550007F1C6F /* Statistics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Statistics.cpp; path = ../../src/osgUtil/Statistics.cpp; sourceTree = "<group>"; };
+		DF82EBE61EE95550007F1C6F /* TangentSpaceGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TangentSpaceGenerator.cpp; path = ../../src/osgUtil/TangentSpaceGenerator.cpp; sourceTree = "<group>"; };
+		DF82EBE71EE95550007F1C6F /* Tessellator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tessellator.cpp; path = ../../src/osgUtil/Tessellator.cpp; sourceTree = "<group>"; };
+		DF82EBE81EE95550007F1C6F /* TransformAttributeFunctor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransformAttributeFunctor.cpp; path = ../../src/osgUtil/TransformAttributeFunctor.cpp; sourceTree = "<group>"; };
+		DF82EBE91EE95550007F1C6F /* TransformCallback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransformCallback.cpp; path = ../../src/osgUtil/TransformCallback.cpp; sourceTree = "<group>"; };
+		DF82EBEA1EE95550007F1C6F /* TriStripVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TriStripVisitor.cpp; path = ../../src/osgUtil/TriStripVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBEB1EE95550007F1C6F /* UpdateVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UpdateVisitor.cpp; path = ../../src/osgUtil/UpdateVisitor.cpp; sourceTree = "<group>"; };
+		DF82EBEC1EE95550007F1C6F /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = ../../src/osgUtil/Version.cpp; sourceTree = "<group>"; };
+		DF82EC141EE95573007F1C6F /* connectivity_graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = connectivity_graph.cpp; path = ../../src/osgUtil/tristripper/src/connectivity_graph.cpp; sourceTree = "<group>"; };
+		DF82EC151EE95573007F1C6F /* policy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = policy.cpp; path = ../../src/osgUtil/tristripper/src/policy.cpp; sourceTree = "<group>"; };
+		DF82EC161EE95573007F1C6F /* tri_stripper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = tri_stripper.cpp; path = ../../src/osgUtil/tristripper/src/tri_stripper.cpp; sourceTree = "<group>"; };
+		DF82EC871EE95C12007F1C6F /* ConvertVec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ConvertVec; path = ../../include/osgUtil/ConvertVec; sourceTree = "<group>"; };
+		DF82EC881EE95C12007F1C6F /* CubeMapGenerator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CubeMapGenerator; path = ../../include/osgUtil/CubeMapGenerator; sourceTree = "<group>"; };
+		DF82EC891EE95C12007F1C6F /* CullVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CullVisitor; path = ../../include/osgUtil/CullVisitor; sourceTree = "<group>"; };
+		DF82EC8A1EE95C12007F1C6F /* DelaunayTriangulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DelaunayTriangulator; path = ../../include/osgUtil/DelaunayTriangulator; sourceTree = "<group>"; };
+		DF82EC8B1EE95C12007F1C6F /* DisplayRequirementsVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DisplayRequirementsVisitor; path = ../../include/osgUtil/DisplayRequirementsVisitor; sourceTree = "<group>"; };
+		DF82EC8C1EE95C12007F1C6F /* DrawElementTypeSimplifier */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DrawElementTypeSimplifier; path = ../../include/osgUtil/DrawElementTypeSimplifier; sourceTree = "<group>"; };
+		DF82EC8D1EE95C12007F1C6F /* EdgeCollector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = EdgeCollector; path = ../../include/osgUtil/EdgeCollector; sourceTree = "<group>"; };
+		DF82EC8E1EE95C12007F1C6F /* Export */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Export; path = ../../include/osgUtil/Export; sourceTree = "<group>"; };
+		DF82EC8F1EE95C12007F1C6F /* GLObjectsVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GLObjectsVisitor; path = ../../include/osgUtil/GLObjectsVisitor; sourceTree = "<group>"; };
+		DF82EC901EE95C12007F1C6F /* HalfWayMapGenerator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HalfWayMapGenerator; path = ../../include/osgUtil/HalfWayMapGenerator; sourceTree = "<group>"; };
+		DF82EC911EE95C12007F1C6F /* HighlightMapGenerator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = HighlightMapGenerator; path = ../../include/osgUtil/HighlightMapGenerator; sourceTree = "<group>"; };
+		DF82EC921EE95C12007F1C6F /* IncrementalCompileOperation */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IncrementalCompileOperation; path = ../../include/osgUtil/IncrementalCompileOperation; sourceTree = "<group>"; };
+		DF82EC931EE95C12007F1C6F /* IntersectionVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IntersectionVisitor; path = ../../include/osgUtil/IntersectionVisitor; sourceTree = "<group>"; };
+		DF82EC941EE95C12007F1C6F /* IntersectVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IntersectVisitor; path = ../../include/osgUtil/IntersectVisitor; sourceTree = "<group>"; };
+		DF82EC951EE95C12007F1C6F /* LineSegmentIntersector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LineSegmentIntersector; path = ../../include/osgUtil/LineSegmentIntersector; sourceTree = "<group>"; };
+		DF82EC961EE95C12007F1C6F /* MeshOptimizers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MeshOptimizers; path = ../../include/osgUtil/MeshOptimizers; sourceTree = "<group>"; };
+		DF82EC971EE95C12007F1C6F /* OperationArrayFunctor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OperationArrayFunctor; path = ../../include/osgUtil/OperationArrayFunctor; sourceTree = "<group>"; };
+		DF82EC981EE95C12007F1C6F /* Optimizer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Optimizer; path = ../../include/osgUtil/Optimizer; sourceTree = "<group>"; };
+		DF82EC991EE95C12007F1C6F /* PerlinNoise */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PerlinNoise; path = ../../include/osgUtil/PerlinNoise; sourceTree = "<group>"; };
+		DF82EC9A1EE95C12007F1C6F /* PlaneIntersector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PlaneIntersector; path = ../../include/osgUtil/PlaneIntersector; sourceTree = "<group>"; };
+		DF82EC9B1EE95C12007F1C6F /* PolytopeIntersector */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PolytopeIntersector; path = ../../include/osgUtil/PolytopeIntersector; sourceTree = "<group>"; };
+		DF82EC9C1EE95C12007F1C6F /* PositionalStateContainer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PositionalStateContainer; path = ../../include/osgUtil/PositionalStateContainer; sourceTree = "<group>"; };
+		DF82EC9D1EE95C12007F1C6F /* PrintVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PrintVisitor; path = ../../include/osgUtil/PrintVisitor; sourceTree = "<group>"; };
+		DF82EC9E1EE95C12007F1C6F /* ReflectionMapGenerator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReflectionMapGenerator; path = ../../include/osgUtil/ReflectionMapGenerator; sourceTree = "<group>"; };
+		DF82EC9F1EE95C12007F1C6F /* RenderBin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RenderBin; path = ../../include/osgUtil/RenderBin; sourceTree = "<group>"; };
+		DF82ECA01EE95C12007F1C6F /* RenderLeaf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RenderLeaf; path = ../../include/osgUtil/RenderLeaf; sourceTree = "<group>"; };
+		DF82ECA11EE95C12007F1C6F /* RenderStage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RenderStage; path = ../../include/osgUtil/RenderStage; sourceTree = "<group>"; };
+		DF82ECA21EE95C12007F1C6F /* ReversePrimitiveFunctor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReversePrimitiveFunctor; path = ../../include/osgUtil/ReversePrimitiveFunctor; sourceTree = "<group>"; };
+		DF82ECA31EE95C12007F1C6F /* SceneGraphBuilder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SceneGraphBuilder; path = ../../include/osgUtil/SceneGraphBuilder; sourceTree = "<group>"; };
+		DF82ECA41EE95C12007F1C6F /* SceneView */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SceneView; path = ../../include/osgUtil/SceneView; sourceTree = "<group>"; };
+		DF82ECA51EE95C12007F1C6F /* ShaderGen */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ShaderGen; path = ../../include/osgUtil/ShaderGen; sourceTree = "<group>"; };
+		DF82ECA61EE95C12007F1C6F /* Simplifier */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Simplifier; path = ../../include/osgUtil/Simplifier; sourceTree = "<group>"; };
+		DF82ECA71EE95C12007F1C6F /* SmoothingVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SmoothingVisitor; path = ../../include/osgUtil/SmoothingVisitor; sourceTree = "<group>"; };
+		DF82ECA81EE95C12007F1C6F /* StateGraph */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = StateGraph; path = ../../include/osgUtil/StateGraph; sourceTree = "<group>"; };
+		DF82ECA91EE95C12007F1C6F /* Statistics */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Statistics; path = ../../include/osgUtil/Statistics; sourceTree = "<group>"; };
+		DF82ECAA1EE95C12007F1C6F /* TangentSpaceGenerator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TangentSpaceGenerator; path = ../../include/osgUtil/TangentSpaceGenerator; sourceTree = "<group>"; };
+		DF82ECAB1EE95C12007F1C6F /* Tessellator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Tessellator; path = ../../include/osgUtil/Tessellator; sourceTree = "<group>"; };
+		DF82ECAC1EE95C12007F1C6F /* TransformAttributeFunctor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TransformAttributeFunctor; path = ../../include/osgUtil/TransformAttributeFunctor; sourceTree = "<group>"; };
+		DF82ECAD1EE95C12007F1C6F /* TransformCallback */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TransformCallback; path = ../../include/osgUtil/TransformCallback; sourceTree = "<group>"; };
+		DF82ECAE1EE95C12007F1C6F /* TriStripVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TriStripVisitor; path = ../../include/osgUtil/TriStripVisitor; sourceTree = "<group>"; };
+		DF82ECAF1EE95C12007F1C6F /* UpdateVisitor */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UpdateVisitor; path = ../../include/osgUtil/UpdateVisitor; sourceTree = "<group>"; };
+		DF82ECB01EE95C12007F1C6F /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Version; path = ../../include/osgUtil/Version; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EBBB1EE954F1007F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EBB51EE954F1007F1C6F = {
+			isa = PBXGroup;
+			children = (
+				DF82EBC61EE95527007F1C6F /* include */,
+				DF82EBC51EE95521007F1C6F /* source */,
+				DF82EBBF1EE954F1007F1C6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EBBF1EE954F1007F1C6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EBBE1EE954F1007F1C6F /* libosgUtil.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EBC51EE95521007F1C6F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC131EE95560007F1C6F /* tristripper */,
+				DF82EBC71EE95550007F1C6F /* CubeMapGenerator.cpp */,
+				DF82EBC81EE95550007F1C6F /* CullVisitor.cpp */,
+				DF82EBC91EE95550007F1C6F /* DelaunayTriangulator.cpp */,
+				DF82EBCA1EE95550007F1C6F /* DisplayRequirementsVisitor.cpp */,
+				DF82EBCB1EE95550007F1C6F /* DrawElementTypeSimplifier.cpp */,
+				DF82EBCC1EE95550007F1C6F /* EdgeCollector.cpp */,
+				DF82EBCD1EE95550007F1C6F /* GLObjectsVisitor.cpp */,
+				DF82EBCE1EE95550007F1C6F /* HalfWayMapGenerator.cpp */,
+				DF82EBCF1EE95550007F1C6F /* HighlightMapGenerator.cpp */,
+				DF82EBD01EE95550007F1C6F /* IncrementalCompileOperation.cpp */,
+				DF82EBD11EE95550007F1C6F /* IntersectionVisitor.cpp */,
+				DF82EBD21EE95550007F1C6F /* IntersectVisitor.cpp */,
+				DF82EBD31EE95550007F1C6F /* LineSegmentIntersector.cpp */,
+				DF82EBD41EE95550007F1C6F /* MeshOptimizers.cpp */,
+				DF82EBD51EE95550007F1C6F /* Optimizer.cpp */,
+				DF82EBD61EE95550007F1C6F /* PerlinNoise.cpp */,
+				DF82EBD71EE95550007F1C6F /* PlaneIntersector.cpp */,
+				DF82EBD81EE95550007F1C6F /* PolytopeIntersector.cpp */,
+				DF82EBD91EE95550007F1C6F /* PositionalStateContainer.cpp */,
+				DF82EBDA1EE95550007F1C6F /* PrintVisitor.cpp */,
+				DF82EBDB1EE95550007F1C6F /* RenderBin.cpp */,
+				DF82EBDC1EE95550007F1C6F /* RenderLeaf.cpp */,
+				DF82EBDD1EE95550007F1C6F /* RenderStage.cpp */,
+				DF82EBDE1EE95550007F1C6F /* ReversePrimitiveFunctor.cpp */,
+				DF82EBDF1EE95550007F1C6F /* SceneGraphBuilder.cpp */,
+				DF82EBE01EE95550007F1C6F /* SceneView.cpp */,
+				DF82EBE11EE95550007F1C6F /* ShaderGen.cpp */,
+				DF82EBE21EE95550007F1C6F /* Simplifier.cpp */,
+				DF82EBE31EE95550007F1C6F /* SmoothingVisitor.cpp */,
+				DF82EBE41EE95550007F1C6F /* StateGraph.cpp */,
+				DF82EBE51EE95550007F1C6F /* Statistics.cpp */,
+				DF82EBE61EE95550007F1C6F /* TangentSpaceGenerator.cpp */,
+				DF82EBE71EE95550007F1C6F /* Tessellator.cpp */,
+				DF82EBE81EE95550007F1C6F /* TransformAttributeFunctor.cpp */,
+				DF82EBE91EE95550007F1C6F /* TransformCallback.cpp */,
+				DF82EBEA1EE95550007F1C6F /* TriStripVisitor.cpp */,
+				DF82EBEB1EE95550007F1C6F /* UpdateVisitor.cpp */,
+				DF82EBEC1EE95550007F1C6F /* Version.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		DF82EBC61EE95527007F1C6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC871EE95C12007F1C6F /* ConvertVec */,
+				DF82EC881EE95C12007F1C6F /* CubeMapGenerator */,
+				DF82EC891EE95C12007F1C6F /* CullVisitor */,
+				DF82EC8A1EE95C12007F1C6F /* DelaunayTriangulator */,
+				DF82EC8B1EE95C12007F1C6F /* DisplayRequirementsVisitor */,
+				DF82EC8C1EE95C12007F1C6F /* DrawElementTypeSimplifier */,
+				DF82EC8D1EE95C12007F1C6F /* EdgeCollector */,
+				DF82EC8E1EE95C12007F1C6F /* Export */,
+				DF82EC8F1EE95C12007F1C6F /* GLObjectsVisitor */,
+				DF82EC901EE95C12007F1C6F /* HalfWayMapGenerator */,
+				DF82EC911EE95C12007F1C6F /* HighlightMapGenerator */,
+				DF82EC921EE95C12007F1C6F /* IncrementalCompileOperation */,
+				DF82EC931EE95C12007F1C6F /* IntersectionVisitor */,
+				DF82EC941EE95C12007F1C6F /* IntersectVisitor */,
+				DF82EC951EE95C12007F1C6F /* LineSegmentIntersector */,
+				DF82EC961EE95C12007F1C6F /* MeshOptimizers */,
+				DF82EC971EE95C12007F1C6F /* OperationArrayFunctor */,
+				DF82EC981EE95C12007F1C6F /* Optimizer */,
+				DF82EC991EE95C12007F1C6F /* PerlinNoise */,
+				DF82EC9A1EE95C12007F1C6F /* PlaneIntersector */,
+				DF82EC9B1EE95C12007F1C6F /* PolytopeIntersector */,
+				DF82EC9C1EE95C12007F1C6F /* PositionalStateContainer */,
+				DF82EC9D1EE95C12007F1C6F /* PrintVisitor */,
+				DF82EC9E1EE95C12007F1C6F /* ReflectionMapGenerator */,
+				DF82EC9F1EE95C12007F1C6F /* RenderBin */,
+				DF82ECA01EE95C12007F1C6F /* RenderLeaf */,
+				DF82ECA11EE95C12007F1C6F /* RenderStage */,
+				DF82ECA21EE95C12007F1C6F /* ReversePrimitiveFunctor */,
+				DF82ECA31EE95C12007F1C6F /* SceneGraphBuilder */,
+				DF82ECA41EE95C12007F1C6F /* SceneView */,
+				DF82ECA51EE95C12007F1C6F /* ShaderGen */,
+				DF82ECA61EE95C12007F1C6F /* Simplifier */,
+				DF82ECA71EE95C12007F1C6F /* SmoothingVisitor */,
+				DF82ECA81EE95C12007F1C6F /* StateGraph */,
+				DF82ECA91EE95C12007F1C6F /* Statistics */,
+				DF82ECAA1EE95C12007F1C6F /* TangentSpaceGenerator */,
+				DF82ECAB1EE95C12007F1C6F /* Tessellator */,
+				DF82ECAC1EE95C12007F1C6F /* TransformAttributeFunctor */,
+				DF82ECAD1EE95C12007F1C6F /* TransformCallback */,
+				DF82ECAE1EE95C12007F1C6F /* TriStripVisitor */,
+				DF82ECAF1EE95C12007F1C6F /* UpdateVisitor */,
+				DF82ECB01EE95C12007F1C6F /* Version */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		DF82EC131EE95560007F1C6F /* tristripper */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC141EE95573007F1C6F /* connectivity_graph.cpp */,
+				DF82EC151EE95573007F1C6F /* policy.cpp */,
+				DF82EC161EE95573007F1C6F /* tri_stripper.cpp */,
+			);
+			name = tristripper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF82EBBC1EE954F1007F1C6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF82EBBD1EE954F1007F1C6F /* osgUtil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EBC21EE954F1007F1C6F /* Build configuration list for PBXNativeTarget "osgUtil" */;
+			buildPhases = (
+				DF82EBBA1EE954F1007F1C6F /* Sources */,
+				DF82EBBB1EE954F1007F1C6F /* Frameworks */,
+				DF82EBBC1EE954F1007F1C6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osgUtil;
+			productName = osgUtil;
+			productReference = DF82EBBE1EE954F1007F1C6F /* libosgUtil.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EBB61EE954F1007F1C6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = machfe;
+				TargetAttributes = {
+					DF82EBBD1EE954F1007F1C6F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = DF82EBB91EE954F1007F1C6F /* Build configuration list for PBXProject "osgUtil" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF82EBB51EE954F1007F1C6F;
+			productRefGroup = DF82EBBF1EE954F1007F1C6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EBBD1EE954F1007F1C6F /* osgUtil */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EBBA1EE954F1007F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EC071EE95550007F1C6F /* ShaderGen.cpp in Sources */,
+				DF82EC171EE95573007F1C6F /* connectivity_graph.cpp in Sources */,
+				DF82EC0B1EE95550007F1C6F /* Statistics.cpp in Sources */,
+				DF82EC031EE95550007F1C6F /* RenderStage.cpp in Sources */,
+				DF82EC051EE95550007F1C6F /* SceneGraphBuilder.cpp in Sources */,
+				DF82EBF21EE95550007F1C6F /* EdgeCollector.cpp in Sources */,
+				DF82EBF41EE95550007F1C6F /* HalfWayMapGenerator.cpp in Sources */,
+				DF82EBEE1EE95550007F1C6F /* CullVisitor.cpp in Sources */,
+				DF82EC191EE95573007F1C6F /* tri_stripper.cpp in Sources */,
+				DF82EBF01EE95550007F1C6F /* DisplayRequirementsVisitor.cpp in Sources */,
+				DF82EBF71EE95550007F1C6F /* IntersectionVisitor.cpp in Sources */,
+				DF82EBF51EE95550007F1C6F /* HighlightMapGenerator.cpp in Sources */,
+				DF82EC181EE95573007F1C6F /* policy.cpp in Sources */,
+				DF82EBFA1EE95550007F1C6F /* MeshOptimizers.cpp in Sources */,
+				DF82EBF81EE95550007F1C6F /* IntersectVisitor.cpp in Sources */,
+				DF82EBFC1EE95550007F1C6F /* PerlinNoise.cpp in Sources */,
+				DF82EC0F1EE95550007F1C6F /* TransformCallback.cpp in Sources */,
+				DF82EC041EE95550007F1C6F /* ReversePrimitiveFunctor.cpp in Sources */,
+				DF82EC0C1EE95550007F1C6F /* TangentSpaceGenerator.cpp in Sources */,
+				DF82EC021EE95550007F1C6F /* RenderLeaf.cpp in Sources */,
+				DF82EBED1EE95550007F1C6F /* CubeMapGenerator.cpp in Sources */,
+				DF82EC081EE95550007F1C6F /* Simplifier.cpp in Sources */,
+				DF82EC0A1EE95550007F1C6F /* StateGraph.cpp in Sources */,
+				DF82EC001EE95550007F1C6F /* PrintVisitor.cpp in Sources */,
+				DF82EC101EE95550007F1C6F /* TriStripVisitor.cpp in Sources */,
+				DF82EBFD1EE95550007F1C6F /* PlaneIntersector.cpp in Sources */,
+				DF82EBF61EE95550007F1C6F /* IncrementalCompileOperation.cpp in Sources */,
+				DF82EC111EE95550007F1C6F /* UpdateVisitor.cpp in Sources */,
+				DF82EBF11EE95550007F1C6F /* DrawElementTypeSimplifier.cpp in Sources */,
+				DF82EBF31EE95550007F1C6F /* GLObjectsVisitor.cpp in Sources */,
+				DF82EBF91EE95550007F1C6F /* LineSegmentIntersector.cpp in Sources */,
+				DF82EBFF1EE95550007F1C6F /* PositionalStateContainer.cpp in Sources */,
+				DF82EBEF1EE95550007F1C6F /* DelaunayTriangulator.cpp in Sources */,
+				DF82EBFE1EE95550007F1C6F /* PolytopeIntersector.cpp in Sources */,
+				DF82EC0D1EE95550007F1C6F /* Tessellator.cpp in Sources */,
+				DF82EBFB1EE95550007F1C6F /* Optimizer.cpp in Sources */,
+				DF82EC011EE95550007F1C6F /* RenderBin.cpp in Sources */,
+				DF82EC0E1EE95550007F1C6F /* TransformAttributeFunctor.cpp in Sources */,
+				DF82EC091EE95550007F1C6F /* SmoothingVisitor.cpp in Sources */,
+				DF82EC121EE95550007F1C6F /* Version.cpp in Sources */,
+				DF82EC061EE95550007F1C6F /* SceneView.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EBC01EE954F1007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF82EBC11EE954F1007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF82EBC31EE954F1007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+					../../src/osgUtil/tristripper/include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF82EBC41EE954F1007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+					../../src/osgUtil/tristripper/include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EBB91EE954F1007F1C6F /* Build configuration list for PBXProject "osgUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EBC01EE954F1007F1C6F /* Debug */,
+				DF82EBC11EE954F1007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EBC21EE954F1007F1C6F /* Build configuration list for PBXNativeTarget "osgUtil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EBC31EE954F1007F1C6F /* Debug */,
+				DF82EBC41EE954F1007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EBB61EE954F1007F1C6F /* Project object */;
+}

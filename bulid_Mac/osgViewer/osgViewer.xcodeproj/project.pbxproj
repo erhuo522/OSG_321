@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EB061EE94F99007F1C6F /* CompositeViewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAEC1EE94F99007F1C6F /* CompositeViewer.cpp */; };
+		DF82EB091EE94F99007F1C6F /* GraphicsWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAEF1EE94F99007F1C6F /* GraphicsWindow.cpp */; };
+		DF82EB0B1EE94F99007F1C6F /* GraphicsWindowCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAF11EE94F99007F1C6F /* GraphicsWindowCocoa.mm */; };
+		DF82EB0F1EE94F99007F1C6F /* HelpHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAF51EE94F99007F1C6F /* HelpHandler.cpp */; };
+		DF82EB121EE94F99007F1C6F /* Keystone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAF81EE94F99007F1C6F /* Keystone.cpp */; };
+		DF82EB141EE94F99007F1C6F /* PixelBufferCocoa.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAFA1EE94F99007F1C6F /* PixelBufferCocoa.mm */; };
+		DF82EB171EE94F99007F1C6F /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAFD1EE94F99007F1C6F /* Renderer.cpp */; };
+		DF82EB181EE94F99007F1C6F /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAFE1EE94F99007F1C6F /* Scene.cpp */; };
+		DF82EB191EE94F99007F1C6F /* ScreenCaptureHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAFF1EE94F99007F1C6F /* ScreenCaptureHandler.cpp */; };
+		DF82EB1A1EE94F99007F1C6F /* StatsHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB001EE94F99007F1C6F /* StatsHandler.cpp */; };
+		DF82EB1B1EE94F99007F1C6F /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB011EE94F99007F1C6F /* Version.cpp */; };
+		DF82EB1C1EE94F99007F1C6F /* View.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB021EE94F99007F1C6F /* View.cpp */; };
+		DF82EB1D1EE94F99007F1C6F /* Viewer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB031EE94F99007F1C6F /* Viewer.cpp */; };
+		DF82EB1E1EE94F99007F1C6F /* ViewerBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB041EE94F99007F1C6F /* ViewerBase.cpp */; };
+		DF82EB1F1EE94F99007F1C6F /* ViewerEventHandlers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EB051EE94F99007F1C6F /* ViewerEventHandlers.cpp */; };
+		DF82EC681EE95833007F1C6F /* AcrossAllScreens.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC621EE95833007F1C6F /* AcrossAllScreens.cpp */; };
+		DF82EC691EE95833007F1C6F /* PanoramicSphericalDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC631EE95833007F1C6F /* PanoramicSphericalDisplay.cpp */; };
+		DF82EC6A1EE95833007F1C6F /* SingleScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC641EE95833007F1C6F /* SingleScreen.cpp */; };
+		DF82EC6B1EE95833007F1C6F /* SingleWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC651EE95833007F1C6F /* SingleWindow.cpp */; };
+		DF82EC6C1EE95833007F1C6F /* SphericalDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC661EE95833007F1C6F /* SphericalDisplay.cpp */; };
+		DF82EC6D1EE95833007F1C6F /* WoWVxDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EC671EE95833007F1C6F /* WoWVxDisplay.cpp */; };
+		DF82ECB91EE97650007F1C6F /* DarwinUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = DF82ECB71EE97650007F1C6F /* DarwinUtils.h */; };
+		DF82ECBA1EE97650007F1C6F /* DarwinUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = DF82ECB81EE97650007F1C6F /* DarwinUtils.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EAE41EE94F60007F1C6F /* libosgViewer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libosgViewer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EAEC1EE94F99007F1C6F /* CompositeViewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CompositeViewer.cpp; path = ../../src/osgViewer/CompositeViewer.cpp; sourceTree = "<group>"; };
+		DF82EAEF1EE94F99007F1C6F /* GraphicsWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsWindow.cpp; path = ../../src/osgViewer/GraphicsWindow.cpp; sourceTree = "<group>"; };
+		DF82EAF11EE94F99007F1C6F /* GraphicsWindowCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GraphicsWindowCocoa.mm; path = ../../src/osgViewer/GraphicsWindowCocoa.mm; sourceTree = "<group>"; };
+		DF82EAF51EE94F99007F1C6F /* HelpHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpHandler.cpp; path = ../../src/osgViewer/HelpHandler.cpp; sourceTree = "<group>"; };
+		DF82EAF81EE94F99007F1C6F /* Keystone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Keystone.cpp; path = ../../src/osgViewer/Keystone.cpp; sourceTree = "<group>"; };
+		DF82EAFA1EE94F99007F1C6F /* PixelBufferCocoa.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PixelBufferCocoa.mm; path = ../../src/osgViewer/PixelBufferCocoa.mm; sourceTree = "<group>"; };
+		DF82EAFD1EE94F99007F1C6F /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Renderer.cpp; path = ../../src/osgViewer/Renderer.cpp; sourceTree = "<group>"; };
+		DF82EAFE1EE94F99007F1C6F /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Scene.cpp; path = ../../src/osgViewer/Scene.cpp; sourceTree = "<group>"; };
+		DF82EAFF1EE94F99007F1C6F /* ScreenCaptureHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScreenCaptureHandler.cpp; path = ../../src/osgViewer/ScreenCaptureHandler.cpp; sourceTree = "<group>"; };
+		DF82EB001EE94F99007F1C6F /* StatsHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StatsHandler.cpp; path = ../../src/osgViewer/StatsHandler.cpp; sourceTree = "<group>"; };
+		DF82EB011EE94F99007F1C6F /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = ../../src/osgViewer/Version.cpp; sourceTree = "<group>"; };
+		DF82EB021EE94F99007F1C6F /* View.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = View.cpp; path = ../../src/osgViewer/View.cpp; sourceTree = "<group>"; };
+		DF82EB031EE94F99007F1C6F /* Viewer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Viewer.cpp; path = ../../src/osgViewer/Viewer.cpp; sourceTree = "<group>"; };
+		DF82EB041EE94F99007F1C6F /* ViewerBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewerBase.cpp; path = ../../src/osgViewer/ViewerBase.cpp; sourceTree = "<group>"; };
+		DF82EB051EE94F99007F1C6F /* ViewerEventHandlers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ViewerEventHandlers.cpp; path = ../../src/osgViewer/ViewerEventHandlers.cpp; sourceTree = "<group>"; };
+		DF82EB211EE95078007F1C6F /* Export */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Export; path = ../../include/osgViewer/Export; sourceTree = "<group>"; };
+		DF82EB221EE95079007F1C6F /* GraphicsWindow */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GraphicsWindow; path = ../../include/osgViewer/GraphicsWindow; sourceTree = "<group>"; };
+		DF82EB231EE95079007F1C6F /* Keystone */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Keystone; path = ../../include/osgViewer/Keystone; sourceTree = "<group>"; };
+		DF82EB241EE95079007F1C6F /* Renderer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Renderer; path = ../../include/osgViewer/Renderer; sourceTree = "<group>"; };
+		DF82EB251EE95079007F1C6F /* Scene */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Scene; path = ../../include/osgViewer/Scene; sourceTree = "<group>"; };
+		DF82EB261EE95079007F1C6F /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Version; path = ../../include/osgViewer/Version; sourceTree = "<group>"; };
+		DF82EB271EE95079007F1C6F /* View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = View; path = ../../include/osgViewer/View; sourceTree = "<group>"; };
+		DF82EB281EE95079007F1C6F /* Viewer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Viewer; path = ../../include/osgViewer/Viewer; sourceTree = "<group>"; };
+		DF82EB291EE95079007F1C6F /* ViewerBase */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewerBase; path = ../../include/osgViewer/ViewerBase; sourceTree = "<group>"; };
+		DF82EB2A1EE95079007F1C6F /* ViewerEventHandlers */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ViewerEventHandlers; path = ../../include/osgViewer/ViewerEventHandlers; sourceTree = "<group>"; };
+		DF82EB2C1EE9509E007F1C6F /* GraphicsHandleCocoa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GraphicsHandleCocoa; path = ../../include/osgViewer/api/Cocoa/GraphicsHandleCocoa; sourceTree = "<group>"; };
+		DF82EB2D1EE9509E007F1C6F /* GraphicsWindowCocoa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = GraphicsWindowCocoa; path = ../../include/osgViewer/api/Cocoa/GraphicsWindowCocoa; sourceTree = "<group>"; };
+		DF82EB2E1EE9509E007F1C6F /* PixelBufferCocoa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PixelBufferCocoa; path = ../../include/osgViewer/api/Cocoa/PixelBufferCocoa; sourceTree = "<group>"; };
+		DF82EB301EE950B9007F1C6F /* AcrossAllScreens */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AcrossAllScreens; path = ../../include/osgViewer/config/AcrossAllScreens; sourceTree = "<group>"; };
+		DF82EB311EE950B9007F1C6F /* PanoramicSphericalDisplay */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PanoramicSphericalDisplay; path = ../../include/osgViewer/config/PanoramicSphericalDisplay; sourceTree = "<group>"; };
+		DF82EB321EE950B9007F1C6F /* SingleScreen */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SingleScreen; path = ../../include/osgViewer/config/SingleScreen; sourceTree = "<group>"; };
+		DF82EB331EE950B9007F1C6F /* SingleWindow */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SingleWindow; path = ../../include/osgViewer/config/SingleWindow; sourceTree = "<group>"; };
+		DF82EB341EE950B9007F1C6F /* SphericalDisplay */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SphericalDisplay; path = ../../include/osgViewer/config/SphericalDisplay; sourceTree = "<group>"; };
+		DF82EB351EE950B9007F1C6F /* WoWVxDisplay */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WoWVxDisplay; path = ../../include/osgViewer/config/WoWVxDisplay; sourceTree = "<group>"; };
+		DF82EB361EE950CB007F1C6F /* CompositeViewer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CompositeViewer; path = ../../include/osgViewer/CompositeViewer; sourceTree = "<group>"; };
+		DF82EC621EE95833007F1C6F /* AcrossAllScreens.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AcrossAllScreens.cpp; path = ../../src/osgViewer/config/AcrossAllScreens.cpp; sourceTree = "<group>"; };
+		DF82EC631EE95833007F1C6F /* PanoramicSphericalDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PanoramicSphericalDisplay.cpp; path = ../../src/osgViewer/config/PanoramicSphericalDisplay.cpp; sourceTree = "<group>"; };
+		DF82EC641EE95833007F1C6F /* SingleScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleScreen.cpp; path = ../../src/osgViewer/config/SingleScreen.cpp; sourceTree = "<group>"; };
+		DF82EC651EE95833007F1C6F /* SingleWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SingleWindow.cpp; path = ../../src/osgViewer/config/SingleWindow.cpp; sourceTree = "<group>"; };
+		DF82EC661EE95833007F1C6F /* SphericalDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SphericalDisplay.cpp; path = ../../src/osgViewer/config/SphericalDisplay.cpp; sourceTree = "<group>"; };
+		DF82EC671EE95833007F1C6F /* WoWVxDisplay.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WoWVxDisplay.cpp; path = ../../src/osgViewer/config/WoWVxDisplay.cpp; sourceTree = "<group>"; };
+		DF82ECB71EE97650007F1C6F /* DarwinUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DarwinUtils.h; path = ../../src/osgViewer/DarwinUtils.h; sourceTree = "<group>"; };
+		DF82ECB81EE97650007F1C6F /* DarwinUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DarwinUtils.mm; path = ../../src/osgViewer/DarwinUtils.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EAE11EE94F60007F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EADB1EE94F60007F1C6F = {
+			isa = PBXGroup;
+			children = (
+				DF82EB201EE95061007F1C6F /* include */,
+				DF82EAEB1EE94F7D007F1C6F /* source */,
+				DF82EAE51EE94F60007F1C6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EAE51EE94F60007F1C6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EAE41EE94F60007F1C6F /* libosgViewer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EAEB1EE94F7D007F1C6F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC611EE95821007F1C6F /* config */,
+				DF82EAEC1EE94F99007F1C6F /* CompositeViewer.cpp */,
+				DF82ECB71EE97650007F1C6F /* DarwinUtils.h */,
+				DF82ECB81EE97650007F1C6F /* DarwinUtils.mm */,
+				DF82EAEF1EE94F99007F1C6F /* GraphicsWindow.cpp */,
+				DF82EAF11EE94F99007F1C6F /* GraphicsWindowCocoa.mm */,
+				DF82EAF51EE94F99007F1C6F /* HelpHandler.cpp */,
+				DF82EAF81EE94F99007F1C6F /* Keystone.cpp */,
+				DF82EAFA1EE94F99007F1C6F /* PixelBufferCocoa.mm */,
+				DF82EAFD1EE94F99007F1C6F /* Renderer.cpp */,
+				DF82EAFE1EE94F99007F1C6F /* Scene.cpp */,
+				DF82EAFF1EE94F99007F1C6F /* ScreenCaptureHandler.cpp */,
+				DF82EB001EE94F99007F1C6F /* StatsHandler.cpp */,
+				DF82EB011EE94F99007F1C6F /* Version.cpp */,
+				DF82EB021EE94F99007F1C6F /* View.cpp */,
+				DF82EB031EE94F99007F1C6F /* Viewer.cpp */,
+				DF82EB041EE94F99007F1C6F /* ViewerBase.cpp */,
+				DF82EB051EE94F99007F1C6F /* ViewerEventHandlers.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		DF82EB201EE95061007F1C6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB2F1EE950A3007F1C6F /* config */,
+				DF82EB2B1EE9508A007F1C6F /* api */,
+				DF82EB211EE95078007F1C6F /* Export */,
+				DF82EB221EE95079007F1C6F /* GraphicsWindow */,
+				DF82EB361EE950CB007F1C6F /* CompositeViewer */,
+				DF82EB231EE95079007F1C6F /* Keystone */,
+				DF82EB241EE95079007F1C6F /* Renderer */,
+				DF82EB251EE95079007F1C6F /* Scene */,
+				DF82EB261EE95079007F1C6F /* Version */,
+				DF82EB271EE95079007F1C6F /* View */,
+				DF82EB281EE95079007F1C6F /* Viewer */,
+				DF82EB291EE95079007F1C6F /* ViewerBase */,
+				DF82EB2A1EE95079007F1C6F /* ViewerEventHandlers */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		DF82EB2B1EE9508A007F1C6F /* api */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB2C1EE9509E007F1C6F /* GraphicsHandleCocoa */,
+				DF82EB2D1EE9509E007F1C6F /* GraphicsWindowCocoa */,
+				DF82EB2E1EE9509E007F1C6F /* PixelBufferCocoa */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		DF82EB2F1EE950A3007F1C6F /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EB301EE950B9007F1C6F /* AcrossAllScreens */,
+				DF82EB311EE950B9007F1C6F /* PanoramicSphericalDisplay */,
+				DF82EB321EE950B9007F1C6F /* SingleScreen */,
+				DF82EB331EE950B9007F1C6F /* SingleWindow */,
+				DF82EB341EE950B9007F1C6F /* SphericalDisplay */,
+				DF82EB351EE950B9007F1C6F /* WoWVxDisplay */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		DF82EC611EE95821007F1C6F /* config */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EC621EE95833007F1C6F /* AcrossAllScreens.cpp */,
+				DF82EC631EE95833007F1C6F /* PanoramicSphericalDisplay.cpp */,
+				DF82EC641EE95833007F1C6F /* SingleScreen.cpp */,
+				DF82EC651EE95833007F1C6F /* SingleWindow.cpp */,
+				DF82EC661EE95833007F1C6F /* SphericalDisplay.cpp */,
+				DF82EC671EE95833007F1C6F /* WoWVxDisplay.cpp */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF82EAE21EE94F60007F1C6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82ECB91EE97650007F1C6F /* DarwinUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF82EAE31EE94F60007F1C6F /* osgViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EAE81EE94F60007F1C6F /* Build configuration list for PBXNativeTarget "osgViewer" */;
+			buildPhases = (
+				DF82EAE01EE94F60007F1C6F /* Sources */,
+				DF82EAE11EE94F60007F1C6F /* Frameworks */,
+				DF82EAE21EE94F60007F1C6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osgViewer;
+			productName = osgViewer;
+			productReference = DF82EAE41EE94F60007F1C6F /* libosgViewer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EADC1EE94F60007F1C6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = machfe;
+				TargetAttributes = {
+					DF82EAE31EE94F60007F1C6F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = DF82EADF1EE94F60007F1C6F /* Build configuration list for PBXProject "osgViewer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF82EADB1EE94F60007F1C6F;
+			productRefGroup = DF82EAE51EE94F60007F1C6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EAE31EE94F60007F1C6F /* osgViewer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EAE01EE94F60007F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82ECBA1EE97650007F1C6F /* DarwinUtils.mm in Sources */,
+				DF82EB1C1EE94F99007F1C6F /* View.cpp in Sources */,
+				DF82EB121EE94F99007F1C6F /* Keystone.cpp in Sources */,
+				DF82EB181EE94F99007F1C6F /* Scene.cpp in Sources */,
+				DF82EB091EE94F99007F1C6F /* GraphicsWindow.cpp in Sources */,
+				DF82EB171EE94F99007F1C6F /* Renderer.cpp in Sources */,
+				DF82EB1B1EE94F99007F1C6F /* Version.cpp in Sources */,
+				DF82EB0F1EE94F99007F1C6F /* HelpHandler.cpp in Sources */,
+				DF82EC6A1EE95833007F1C6F /* SingleScreen.cpp in Sources */,
+				DF82EB141EE94F99007F1C6F /* PixelBufferCocoa.mm in Sources */,
+				DF82EB1E1EE94F99007F1C6F /* ViewerBase.cpp in Sources */,
+				DF82EB061EE94F99007F1C6F /* CompositeViewer.cpp in Sources */,
+				DF82EB1F1EE94F99007F1C6F /* ViewerEventHandlers.cpp in Sources */,
+				DF82EB0B1EE94F99007F1C6F /* GraphicsWindowCocoa.mm in Sources */,
+				DF82EC681EE95833007F1C6F /* AcrossAllScreens.cpp in Sources */,
+				DF82EB1A1EE94F99007F1C6F /* StatsHandler.cpp in Sources */,
+				DF82EC6D1EE95833007F1C6F /* WoWVxDisplay.cpp in Sources */,
+				DF82EC6C1EE95833007F1C6F /* SphericalDisplay.cpp in Sources */,
+				DF82EB191EE94F99007F1C6F /* ScreenCaptureHandler.cpp in Sources */,
+				DF82EB1D1EE94F99007F1C6F /* Viewer.cpp in Sources */,
+				DF82EC691EE95833007F1C6F /* PanoramicSphericalDisplay.cpp in Sources */,
+				DF82EC6B1EE95833007F1C6F /* SingleWindow.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EAE61EE94F60007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF82EAE71EE94F60007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF82EAE91EE94F60007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF82EAEA1EE94F60007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OSG_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EADF1EE94F60007F1C6F /* Build configuration list for PBXProject "osgViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EAE61EE94F60007F1C6F /* Debug */,
+				DF82EAE71EE94F60007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EAE81EE94F60007F1C6F /* Build configuration list for PBXNativeTarget "osgViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EAE91EE94F60007F1C6F /* Debug */,
+				DF82EAEA1EE94F60007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EADC1EE94F60007F1C6F /* Project object */;
+}

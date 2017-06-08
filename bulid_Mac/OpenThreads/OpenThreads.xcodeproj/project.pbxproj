@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF82EAB81EE94B76007F1C6F /* Atomic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAB61EE94B76007F1C6F /* Atomic.cpp */; };
+		DF82EAB91EE94B76007F1C6F /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAB71EE94B76007F1C6F /* Version.cpp */; };
+		DF82EAC41EE94B9C007F1C6F /* PThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EABC1EE94B9C007F1C6F /* PThread.cpp */; };
+		DF82EAC51EE94B9C007F1C6F /* PThreadBarrier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EABD1EE94B9C007F1C6F /* PThreadBarrier.cpp */; };
+		DF82EAC61EE94B9C007F1C6F /* PThreadBarrierPrivateData.h in Headers */ = {isa = PBXBuildFile; fileRef = DF82EABE1EE94B9C007F1C6F /* PThreadBarrierPrivateData.h */; };
+		DF82EAC71EE94B9C007F1C6F /* PThreadCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EABF1EE94B9C007F1C6F /* PThreadCondition.cpp */; };
+		DF82EAC81EE94B9C007F1C6F /* PThreadConditionPrivateData.h in Headers */ = {isa = PBXBuildFile; fileRef = DF82EAC01EE94B9C007F1C6F /* PThreadConditionPrivateData.h */; };
+		DF82EAC91EE94B9C007F1C6F /* PThreadMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF82EAC11EE94B9C007F1C6F /* PThreadMutex.cpp */; };
+		DF82EACA1EE94B9C007F1C6F /* PThreadMutexPrivateData.h in Headers */ = {isa = PBXBuildFile; fileRef = DF82EAC21EE94B9C007F1C6F /* PThreadMutexPrivateData.h */; };
+		DF82EACB1EE94B9C007F1C6F /* PThreadPrivateData.h in Headers */ = {isa = PBXBuildFile; fileRef = DF82EAC31EE94B9C007F1C6F /* PThreadPrivateData.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF82EAAE1EE94B3A007F1C6F /* libOpenThreads.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOpenThreads.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF82EAB61EE94B76007F1C6F /* Atomic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Atomic.cpp; path = ../../src/OpenThreads/common/Atomic.cpp; sourceTree = "<group>"; };
+		DF82EAB71EE94B76007F1C6F /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Version.cpp; path = ../../src/OpenThreads/common/Version.cpp; sourceTree = "<group>"; };
+		DF82EABC1EE94B9C007F1C6F /* PThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PThread.cpp; path = ../../src/OpenThreads/pthreads/PThread.cpp; sourceTree = "<group>"; };
+		DF82EABD1EE94B9C007F1C6F /* PThreadBarrier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PThreadBarrier.cpp; path = ../../src/OpenThreads/pthreads/PThreadBarrier.cpp; sourceTree = "<group>"; };
+		DF82EABE1EE94B9C007F1C6F /* PThreadBarrierPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PThreadBarrierPrivateData.h; path = ../../src/OpenThreads/pthreads/PThreadBarrierPrivateData.h; sourceTree = "<group>"; };
+		DF82EABF1EE94B9C007F1C6F /* PThreadCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PThreadCondition.cpp; path = ../../src/OpenThreads/pthreads/PThreadCondition.cpp; sourceTree = "<group>"; };
+		DF82EAC01EE94B9C007F1C6F /* PThreadConditionPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PThreadConditionPrivateData.h; path = ../../src/OpenThreads/pthreads/PThreadConditionPrivateData.h; sourceTree = "<group>"; };
+		DF82EAC11EE94B9C007F1C6F /* PThreadMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PThreadMutex.cpp; path = ../../src/OpenThreads/pthreads/PThreadMutex.cpp; sourceTree = "<group>"; };
+		DF82EAC21EE94B9C007F1C6F /* PThreadMutexPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PThreadMutexPrivateData.h; path = ../../src/OpenThreads/pthreads/PThreadMutexPrivateData.h; sourceTree = "<group>"; };
+		DF82EAC31EE94B9C007F1C6F /* PThreadPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PThreadPrivateData.h; path = ../../src/OpenThreads/pthreads/PThreadPrivateData.h; sourceTree = "<group>"; };
+		DF82EACD1EE94BF8007F1C6F /* Atomic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Atomic; path = ../../include/OpenThreads/Atomic; sourceTree = "<group>"; };
+		DF82EACE1EE94BF8007F1C6F /* Barrier */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Barrier; path = ../../include/OpenThreads/Barrier; sourceTree = "<group>"; };
+		DF82EACF1EE94BF8007F1C6F /* Block */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Block; path = ../../include/OpenThreads/Block; sourceTree = "<group>"; };
+		DF82EAD01EE94BF8007F1C6F /* Condition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Condition; path = ../../include/OpenThreads/Condition; sourceTree = "<group>"; };
+		DF82EAD11EE94BF8007F1C6F /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Config; path = ../../include/OpenThreads/Config; sourceTree = "<group>"; };
+		DF82EAD21EE94BF8007F1C6F /* Exports */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Exports; path = ../../include/OpenThreads/Exports; sourceTree = "<group>"; };
+		DF82EAD31EE94BF8007F1C6F /* Mutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mutex; path = ../../include/OpenThreads/Mutex; sourceTree = "<group>"; };
+		DF82EAD41EE94BF8007F1C6F /* ReadWriteMutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReadWriteMutex; path = ../../include/OpenThreads/ReadWriteMutex; sourceTree = "<group>"; };
+		DF82EAD51EE94BF8007F1C6F /* ReentrantMutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ReentrantMutex; path = ../../include/OpenThreads/ReentrantMutex; sourceTree = "<group>"; };
+		DF82EAD61EE94BF8007F1C6F /* ScopedLock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ScopedLock; path = ../../include/OpenThreads/ScopedLock; sourceTree = "<group>"; };
+		DF82EAD71EE94BF8007F1C6F /* Thread */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Thread; path = ../../include/OpenThreads/Thread; sourceTree = "<group>"; };
+		DF82EAD81EE94BF8007F1C6F /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Version; path = ../../include/OpenThreads/Version; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF82EAAB1EE94B3A007F1C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF82EAA51EE94B3A007F1C6F = {
+			isa = PBXGroup;
+			children = (
+				DF82EACC1EE94BE7007F1C6F /* include */,
+				DF82EAB51EE94B5E007F1C6F /* source */,
+				DF82EAAF1EE94B3A007F1C6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF82EAAF1EE94B3A007F1C6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EAAE1EE94B3A007F1C6F /* libOpenThreads.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF82EAB51EE94B5E007F1C6F /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EABB1EE94B89007F1C6F /* pthreads */,
+				DF82EABA1EE94B7C007F1C6F /* common */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		DF82EABA1EE94B7C007F1C6F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EAB61EE94B76007F1C6F /* Atomic.cpp */,
+				DF82EAB71EE94B76007F1C6F /* Version.cpp */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		DF82EABB1EE94B89007F1C6F /* pthreads */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EABC1EE94B9C007F1C6F /* PThread.cpp */,
+				DF82EABD1EE94B9C007F1C6F /* PThreadBarrier.cpp */,
+				DF82EABE1EE94B9C007F1C6F /* PThreadBarrierPrivateData.h */,
+				DF82EABF1EE94B9C007F1C6F /* PThreadCondition.cpp */,
+				DF82EAC01EE94B9C007F1C6F /* PThreadConditionPrivateData.h */,
+				DF82EAC11EE94B9C007F1C6F /* PThreadMutex.cpp */,
+				DF82EAC21EE94B9C007F1C6F /* PThreadMutexPrivateData.h */,
+				DF82EAC31EE94B9C007F1C6F /* PThreadPrivateData.h */,
+			);
+			name = pthreads;
+			sourceTree = "<group>";
+		};
+		DF82EACC1EE94BE7007F1C6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DF82EACD1EE94BF8007F1C6F /* Atomic */,
+				DF82EACE1EE94BF8007F1C6F /* Barrier */,
+				DF82EACF1EE94BF8007F1C6F /* Block */,
+				DF82EAD01EE94BF8007F1C6F /* Condition */,
+				DF82EAD11EE94BF8007F1C6F /* Config */,
+				DF82EAD21EE94BF8007F1C6F /* Exports */,
+				DF82EAD31EE94BF8007F1C6F /* Mutex */,
+				DF82EAD41EE94BF8007F1C6F /* ReadWriteMutex */,
+				DF82EAD51EE94BF8007F1C6F /* ReentrantMutex */,
+				DF82EAD61EE94BF8007F1C6F /* ScopedLock */,
+				DF82EAD71EE94BF8007F1C6F /* Thread */,
+				DF82EAD81EE94BF8007F1C6F /* Version */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DF82EAAC1EE94B3A007F1C6F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EAC61EE94B9C007F1C6F /* PThreadBarrierPrivateData.h in Headers */,
+				DF82EACA1EE94B9C007F1C6F /* PThreadMutexPrivateData.h in Headers */,
+				DF82EAC81EE94B9C007F1C6F /* PThreadConditionPrivateData.h in Headers */,
+				DF82EACB1EE94B9C007F1C6F /* PThreadPrivateData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DF82EAAD1EE94B3A007F1C6F /* OpenThreads */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF82EAB21EE94B3A007F1C6F /* Build configuration list for PBXNativeTarget "OpenThreads" */;
+			buildPhases = (
+				DF82EAAA1EE94B3A007F1C6F /* Sources */,
+				DF82EAAB1EE94B3A007F1C6F /* Frameworks */,
+				DF82EAAC1EE94B3A007F1C6F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenThreads;
+			productName = OpenThreads;
+			productReference = DF82EAAE1EE94B3A007F1C6F /* libOpenThreads.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF82EAA61EE94B3A007F1C6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = machfe;
+				TargetAttributes = {
+					DF82EAAD1EE94B3A007F1C6F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = DF82EAA91EE94B3A007F1C6F /* Build configuration list for PBXProject "OpenThreads" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF82EAA51EE94B3A007F1C6F;
+			productRefGroup = DF82EAAF1EE94B3A007F1C6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF82EAAD1EE94B3A007F1C6F /* OpenThreads */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF82EAAA1EE94B3A007F1C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF82EAC91EE94B9C007F1C6F /* PThreadMutex.cpp in Sources */,
+				DF82EAB91EE94B76007F1C6F /* Version.cpp in Sources */,
+				DF82EAC41EE94B9C007F1C6F /* PThread.cpp in Sources */,
+				DF82EAC51EE94B9C007F1C6F /* PThreadBarrier.cpp in Sources */,
+				DF82EAB81EE94B76007F1C6F /* Atomic.cpp in Sources */,
+				DF82EAC71EE94B9C007F1C6F /* PThreadCondition.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF82EAB01EE94B3A007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF82EAB11EE94B3A007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF82EAB31EE94B3A007F1C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OT_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF82EAB41EE94B3A007F1C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = ../../bin/debug;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = OT_LIBRARY_STATIC;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../include,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF82EAA91EE94B3A007F1C6F /* Build configuration list for PBXProject "OpenThreads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EAB01EE94B3A007F1C6F /* Debug */,
+				DF82EAB11EE94B3A007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF82EAB21EE94B3A007F1C6F /* Build configuration list for PBXNativeTarget "OpenThreads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF82EAB31EE94B3A007F1C6F /* Debug */,
+				DF82EAB41EE94B3A007F1C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF82EAA61EE94B3A007F1C6F /* Project object */;
+}
