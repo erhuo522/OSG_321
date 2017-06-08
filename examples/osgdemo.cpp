@@ -21,6 +21,12 @@
 #include <osgUtil/Optimizer>
 #include <osgViewer/Viewer>
 
+//USE_OSGPLUGIN(freetype)
+
+//USE_DOTOSGWRAPPER_LIBRARY(osg)
+//USE_SERIALIZER_WRAPPER_LIBRARY(osg)
+
+USE_GRAPHICSWINDOW()
 
 osg::ref_ptr<osg::Geode> CreateShape()
 {
