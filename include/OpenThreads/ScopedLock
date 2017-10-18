@@ -21,6 +21,7 @@
 
 namespace OpenThreads{
 
+//自动释放或者加锁封装
 template <class M> class ScopedLock
 {
     private:
