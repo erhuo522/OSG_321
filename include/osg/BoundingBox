@@ -29,6 +29,7 @@ class BoundingSphereImpl;
   * Bounds leaf objects in a scene such as osg::Drawable objects. Used for frustum
   * culling etc.
 */
+//轴对齐的AABB包围盒。
 template<typename VT>
 class BoundingBoxImpl
 {
@@ -129,6 +130,7 @@ class BoundingBoxImpl
         }
 
         /** Calculates and returns the bounding box radius. */
+		//包围盒半径
         inline value_type radius() const
         {
             return sqrt(radius2());
@@ -136,6 +138,7 @@ class BoundingBoxImpl
 
         /** Calculates and returns the squared length of the bounding box radius.
           * Note, radius2() is faster to calculate than radius(). */
+		//包围盒半径的平方
         inline value_type radius2() const
         {
             return 0.25*((_max-_min).length2());
@@ -146,6 +149,7 @@ class BoundingBoxImpl
           * Each bit selects an axis, X, Y, or Z from least- to
           * most-significant. Unset bits select the minimum value
           * for that axis, and set bits select the maximum. */
+		//求包围盒的角向量，pos[0-7].3bit的整数，每一位表示选择一个轴xyz，1表示最大，表示最小
         inline const vec_type corner(unsigned int pos) const
         {
             return vec_type(pos&1?_max.x():_min.x(),pos&2?_max.y():_min.y(),pos&4?_max.z():_min.z());
@@ -153,6 +157,7 @@ class BoundingBoxImpl
 
         /** Expands the bounding box to include the given coordinate.
           * If the box is uninitialized, set its min and max extents to v. */
+		//包围盒和向量求并集
         inline void expandBy(const vec_type& v)
         {
             if(v.x()<_min.x()) _min.x() = v.x();
@@ -168,6 +173,7 @@ class BoundingBoxImpl
         /** Expands the bounding box to include the given coordinate.
           * If the box is uninitialized, set its min and max extents to
           * Vec3(x,y,z). */
+		//AABB包围盒和向量求并集
         inline void expandBy(value_type x,value_type y,value_type z)
         {
             if(x<_min.x()) _min.x() = x;
@@ -182,6 +188,7 @@ class BoundingBoxImpl
 
         /** Expands this bounding box to include the given bounding box.
           * If this box is uninitialized, set it equal to bb. */
+		//两个AABB包围盒求并集
         void expandBy(const BoundingBoxImpl& bb)
         {
             if (!bb.valid()) return;
@@ -198,6 +205,7 @@ class BoundingBoxImpl
 
         /** Expands this bounding box to include the given sphere.
           * If this box is uninitialized, set it to include sh. */
+		//AABB包围盒和包围球求并集
         template<typename BST>
         void expandBy(const BoundingSphereImpl<BST>& sh)
         {
@@ -215,6 +223,7 @@ class BoundingBoxImpl
 
 
         /** Returns the intersection of this bounding box and the specified bounding box. */
+		//两个AABB包围盒求交集
         BoundingBoxImpl intersect(const BoundingBoxImpl& bb) const
         {    return BoundingBoxImpl(osg::maximum(xMin(),bb.xMin()),osg::maximum(yMin(),bb.yMin()),osg::maximum(zMin(),bb.zMin()),
                                      osg::minimum(xMax(),bb.xMax()),osg::minimum(yMax(),bb.yMax()),osg::minimum(zMax(),bb.zMax()));
@@ -222,6 +231,7 @@ class BoundingBoxImpl
         }
 
         /** Return true if this bounding box intersects the specified bounding box. */
+		//判断两个AABB包围盒是否相交.
         bool intersects(const BoundingBoxImpl& bb) const
         {    return osg::maximum(xMin(),bb.xMin()) <= osg::minimum(xMax(),bb.xMax()) &&
                     osg::maximum(yMin(),bb.yMin()) <= osg::minimum(yMax(),bb.yMax()) &&
@@ -230,6 +240,7 @@ class BoundingBoxImpl
         }
 
         /** Returns true if this bounding box contains the specified coordinate. */
+		//判断两个AABB包围盒是否包含，v包含this.
         inline bool contains(const vec_type& v) const
         {
             return valid() &&
@@ -239,6 +250,7 @@ class BoundingBoxImpl
         }
 
         /** Returns true if this bounding box contains the specified coordinate allowing for specific epsilon. */
+		//判断两个AABB包围盒是否包含，可以指定精度。v包含this.
         inline bool contains(const vec_type& v, value_type epsilon) const
         {
             return valid() &&
