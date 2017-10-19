@@ -102,6 +102,7 @@ class ElapsedTime
             _startTick = _timer->tick();
         }
 
+		//返回超时的时间，以下四个函数返回的时间仅仅是单位不同
         /** elapsed time in seconds. */
         inline double elapsedTime() const
         {
@@ -126,11 +127,15 @@ class ElapsedTime
             return _timer->delta_n(_startTick, _timer->tick());
         }
 
+		//结束
         inline void finish()
         {
+			//获得结束时间
             Timer_t endTick = _timer->tick();
-            if (_time) *_time += _timer->delta_s(_startTick, endTick);
-            _startTick = endTick;
+            //累计时间，_time好像没啥用
+			if (_time) *_time += _timer->delta_s(_startTick, endTick);
+            
+			_startTick = endTick; //重新开始计时
         }
 
     protected:
@@ -143,9 +148,9 @@ class ElapsedTime
             _startTick = _timer->tick();
         }
 
-        double* _time;
-        Timer*  _timer;
-        Timer_t _startTick;
+        double* _time;  //计时器超时的总时间
+        Timer*  _timer; //计时器
+        Timer_t _startTick;//起始时间
 
 };
 

@@ -25,7 +25,7 @@ using namespace osg;
 //
 // all the rest of the timer methods are implemented within the header.
 
-
+//单例模式
 Timer* Timer::instance()
 {
     static Timer s_timer;
@@ -38,6 +38,13 @@ Timer* Timer::instance()
     #include <fcntl.h>
     #include <windows.h>
     #include <winbase.h>
+ /*
+  *  返回硬件支持的高精度计数器的频率。
+  *  BOOL QueryPerformanceFrequency(LARGE_INTEGER *lpFrequency);
+  *
+  * 
+  *
+  */
     Timer::Timer()
     {
         LARGE_INTEGER frequency;
@@ -58,6 +65,7 @@ Timer* Timer::instance()
     Timer_t Timer::tick() const
     {
         LARGE_INTEGER qpc;
+		//得到高精度计时器的值
         if (QueryPerformanceCounter(&qpc))
         {
             return qpc.QuadPart;
