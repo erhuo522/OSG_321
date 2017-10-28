@@ -33,7 +33,4 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\serializers_osg\osgdb_serializers_osg.vcxproj" />
-  </ItemGroup>
 </Project>

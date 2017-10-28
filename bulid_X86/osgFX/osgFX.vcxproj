@@ -11,16 +11,36 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\plugins\osg\AsciiStreamOperator.h" />
-    <ClInclude Include="..\..\..\plugins\osg\BinaryStreamOperator.h" />
-    <ClInclude Include="..\..\..\plugins\osg\XmlStreamOperator.h" />
+    <None Include="..\..\include\osgFX\AnisotropicLighting" />
+    <None Include="..\..\include\osgFX\BumpMapping" />
+    <None Include="..\..\include\osgFX\Cartoon" />
+    <None Include="..\..\include\osgFX\Effect" />
+    <None Include="..\..\include\osgFX\Export" />
+    <None Include="..\..\include\osgFX\MultiTextureControl" />
+    <None Include="..\..\include\osgFX\Outline" />
+    <None Include="..\..\include\osgFX\Registry" />
+    <None Include="..\..\include\osgFX\Scribe" />
+    <None Include="..\..\include\osgFX\SpecularHighlights" />
+    <None Include="..\..\include\osgFX\Technique" />
+    <None Include="..\..\include\osgFX\Validator" />
+    <None Include="..\..\include\osgFX\Version" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\plugins\osg\ReaderWriterOSG.cpp" />
-    <ClCompile Include="..\..\..\plugins\osg\ReaderWriterOSG2.cpp" />
+    <ClCompile Include="..\..\src\osgFX\AnisotropicLighting.cpp" />
+    <ClCompile Include="..\..\src\osgFX\BumpMapping.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Cartoon.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Effect.cpp" />
+    <ClCompile Include="..\..\src\osgFX\MultiTextureControl.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Outline.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Registry.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Scribe.cpp" />
+    <ClCompile Include="..\..\src\osgFX\SpecularHighlights.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Technique.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Validator.cpp" />
+    <ClCompile Include="..\..\src\osgFX\Version.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF1E3EFE-4271-4CCE-8567-40DF88439E95}</ProjectGuid>
+    <ProjectGuid>{0CAF5853-FE62-446F-967E-83C37A360D87}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>osg</RootNamespace>
   </PropertyGroup>
@@ -28,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -48,7 +68,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\..\bin\$(Configuration)\osgPlugins-3.2.1\</OutDir>
+    <OutDir>..\..\bin\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -59,14 +79,14 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../../include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;OSGFX_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenThreads.lib;osg.lib;osgDB.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\bin\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;OpenThreads.lib;osg.lib;osgUtil.lib;osgDB.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
