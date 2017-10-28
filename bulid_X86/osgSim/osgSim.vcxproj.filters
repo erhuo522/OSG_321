@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\osgSim\BlinkSequence">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\VisibilityGroup">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ColorRange">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\DOFTransform">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ElevationSlice">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\Export">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\GeographicLocation">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\HeightAboveTerrain">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\Impostor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ImpostorSprite">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\InsertImpostorsVisitor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\LightPoint">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\LightPointNode">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\LightPointSystem">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\LineOfSight">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\MultiSwitch">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ObjectRecordData">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\OverlayNode">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ScalarBar">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ScalarsToColors">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\Sector">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\ShapeAttribute">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\SphereSegment">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgSim\Version">
+      <Filter>头文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\osgSim\BlinkSequence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ColorRange.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\DOFTransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ElevationSlice.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\HeightAboveTerrain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\Impostor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ImpostorSprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\InsertImpostorsVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\LightPoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\LightPointDrawable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\LightPointNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\LightPointSpriteDrawable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\LineOfSight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\MultiSwitch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\OverlayNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ScalarBar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ScalarsToColors.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\Sector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\ShapeAttribute.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\SphereSegment.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\Version.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgSim\VisibilityGroup.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\osgSim\LightPointDrawable.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\osgSim\LightPointSpriteDrawable.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
