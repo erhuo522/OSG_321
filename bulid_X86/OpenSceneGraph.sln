@@ -17,6 +17,22 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgText", "osgText\osgText.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo_OSG", "Demo_OSG\Demo_OSG.vcxproj", "{924E0E2C-9761-475A-910B-08D8C2C49281}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgdb_rgb", "osgPlugins\rgb\osgdb_rgb.vcxproj", "{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "osgPlugins", "osgPlugins", "{F713753F-E8FE-4D39-95E7-F9E174DE0C8E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgdb_osg", "osgPlugins\osg\osgdb_osg.vcxproj", "{DF1E3EFE-4271-4CCE-8567-40DF88439E95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgdb_serializers_osg", "osgPlugins\serializers_osg\osgdb_serializers_osg.vcxproj", "{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgdb_deprecated_osg", "osgPlugins\deprecated_osg\osgdb_deprecated_osg.vcxproj", "{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgSim", "osgSim\osgSim.vcxproj", "{930938E2-1D7C-41D5-B9CF-0C13331BB9FA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgFX", "osgFX\osgFX.vcxproj", "{0CAF5853-FE62-446F-967E-83C37A360D87}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "osgdb_jpeg", "osgPlugins\jpeg\osgdb_jpeg.vcxproj", "{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -55,8 +71,43 @@ Global
 		{924E0E2C-9761-475A-910B-08D8C2C49281}.Debug|Win32.Build.0 = Debug|Win32
 		{924E0E2C-9761-475A-910B-08D8C2C49281}.Release|Win32.ActiveCfg = Release|Win32
 		{924E0E2C-9761-475A-910B-08D8C2C49281}.Release|Win32.Build.0 = Release|Win32
+		{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53}.Debug|Win32.Build.0 = Debug|Win32
+		{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53}.Release|Win32.ActiveCfg = Release|Win32
+		{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53}.Release|Win32.Build.0 = Release|Win32
+		{DF1E3EFE-4271-4CCE-8567-40DF88439E95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF1E3EFE-4271-4CCE-8567-40DF88439E95}.Debug|Win32.Build.0 = Debug|Win32
+		{DF1E3EFE-4271-4CCE-8567-40DF88439E95}.Release|Win32.ActiveCfg = Release|Win32
+		{DF1E3EFE-4271-4CCE-8567-40DF88439E95}.Release|Win32.Build.0 = Release|Win32
+		{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A}.Debug|Win32.Build.0 = Debug|Win32
+		{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A}.Release|Win32.ActiveCfg = Release|Win32
+		{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A}.Release|Win32.Build.0 = Release|Win32
+		{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7}.Debug|Win32.Build.0 = Debug|Win32
+		{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7}.Release|Win32.ActiveCfg = Release|Win32
+		{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7}.Release|Win32.Build.0 = Release|Win32
+		{930938E2-1D7C-41D5-B9CF-0C13331BB9FA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{930938E2-1D7C-41D5-B9CF-0C13331BB9FA}.Debug|Win32.Build.0 = Debug|Win32
+		{930938E2-1D7C-41D5-B9CF-0C13331BB9FA}.Release|Win32.ActiveCfg = Release|Win32
+		{930938E2-1D7C-41D5-B9CF-0C13331BB9FA}.Release|Win32.Build.0 = Release|Win32
+		{0CAF5853-FE62-446F-967E-83C37A360D87}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0CAF5853-FE62-446F-967E-83C37A360D87}.Debug|Win32.Build.0 = Debug|Win32
+		{0CAF5853-FE62-446F-967E-83C37A360D87}.Release|Win32.ActiveCfg = Release|Win32
+		{0CAF5853-FE62-446F-967E-83C37A360D87}.Release|Win32.Build.0 = Release|Win32
+		{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB}.Debug|Win32.Build.0 = Debug|Win32
+		{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB}.Release|Win32.ActiveCfg = Release|Win32
+		{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A3EFDBC5-D1FF-44A2-9A18-F0B1EFDDFE53} = {F713753F-E8FE-4D39-95E7-F9E174DE0C8E}
+		{DF1E3EFE-4271-4CCE-8567-40DF88439E95} = {F713753F-E8FE-4D39-95E7-F9E174DE0C8E}
+		{7BF4D33A-2C83-47CC-AA55-6A9F32122C5A} = {F713753F-E8FE-4D39-95E7-F9E174DE0C8E}
+		{F0531F89-0E3E-4FB2-8D6A-9F64AF4C14B7} = {F713753F-E8FE-4D39-95E7-F9E174DE0C8E}
+		{45464CDA-FC88-4FD8-8427-0EE78E7CBEFB} = {F713753F-E8FE-4D39-95E7-F9E174DE0C8E}
 	EndGlobalSection
 EndGlobal
