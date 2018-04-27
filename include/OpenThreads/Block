@@ -22,6 +22,7 @@
 namespace OpenThreads {
 
 /** Block is a block that can be used to halt a thread that is waiting another thread to release it.*/
+	//Block封装类，用来暂停一个线程，等待另一个线程释放它
 class Block
 {
     public:
@@ -76,6 +77,7 @@ class Block
             _released = false;
         }
 
+		//doRelease为true表示释放，false表示阻塞
         inline void set(bool doRelease)
         {
             if (doRelease!=_released)
@@ -96,7 +98,11 @@ class Block
         Block(const Block&) {}
 };
 
-/** BlockCount is a block that can be used to halt a thread that is waiting for a specified number of operations to be completed.*/
+/* 
+ * 计数阻塞器类。block()阻塞线程，release()释放线程；不过除此之外， BlockCount的
+ * 构造函数还可以设置一个阻塞计数值。计数的作用是：每当阻塞器对象的completed()函
+ * 数被执行一次，计数器就减一，直至减到零就释放被阻塞的线程。
+ */
 class BlockCount
 {
     public:
@@ -121,18 +127,19 @@ class BlockCount
                 if (_currentCount==0)
                 {
                     // osg::notify(osg::NOTICE)<<"Released"<<std::endl;
+					//所有操作完成，发送广播，唤醒其它线程
                     _cond.broadcast();
                 }
             }
         }
-
+		//操作数量大于零是，阻塞当前线程等待。
         inline void block()
         {
             OpenThreads::ScopedLock<OpenThreads::Mutex> mutlock(_mut);
             if (_currentCount)
                 _cond.wait(&_mut);
         }
-
+		//操作的数量重置为最大
         inline void reset()
         {
             OpenThreads::ScopedLock<OpenThreads::Mutex> mutlock(_mut);
@@ -142,7 +149,7 @@ class BlockCount
                 _currentCount = _blockCount;
             }
         }
-
+		//操作数量清零，发送广播，唤醒其它线程
         inline void release()
         {
             OpenThreads::ScopedLock<OpenThreads::Mutex> mutlock(_mut);
@@ -163,8 +170,8 @@ class BlockCount
 
         OpenThreads::Mutex _mut;
         OpenThreads::Condition _cond;
-        unsigned int _blockCount;
-        unsigned int _currentCount;
+        unsigned int _blockCount;   //阻塞变量
+        unsigned int _currentCount; //当前变量
 
     private:
 

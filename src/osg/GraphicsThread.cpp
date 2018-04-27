@@ -47,9 +47,11 @@ void GraphicsThread::run()
 
 }
 
+//--------------------------------------------
 void GraphicsOperation::operator () (Object* object)
 {
     osg::GraphicsContext* context = dynamic_cast<osg::GraphicsContext*>(object);
+	//µ÷ÓÃoperator () (GraphicsContext* context)º¯Êý
     if (context) operator() (context);
 }
 
@@ -59,6 +61,7 @@ void SwapBuffersOperation::operator () (GraphicsContext* context)
     context->clear();
 }
 
+//-----------------------------
 void BarrierOperation::release()
 {
     Barrier::release();
@@ -74,6 +77,8 @@ void BarrierOperation::operator () (Object* /*object*/)
 
     block();
 }
+
+//-----------------------------------
 
 void ReleaseContext_Block_MakeCurrentOperation::release()
 {
@@ -96,7 +101,7 @@ void ReleaseContext_Block_MakeCurrentOperation::operator () (GraphicsContext* co
     context->makeCurrent();
 }
 
-
+//-------------------------------------------
 BlockAndFlushOperation::BlockAndFlushOperation():
     GraphicsOperation("Block",false)
 {
@@ -114,6 +119,8 @@ void BlockAndFlushOperation::operator () (GraphicsContext*)
     Block::release();
 }
 
+//-----------------------------
+
 FlushDeletedGLObjectsOperation::FlushDeletedGLObjectsOperation(double availableTime, bool keep):
     GraphicsOperation("FlushDeletedGLObjectsOperation",keep),
     _availableTime(availableTime)
@@ -130,6 +137,8 @@ void FlushDeletedGLObjectsOperation::operator () (GraphicsContext* context)
 
     flushDeletedGLObjects(contextID, currentTime, availableTime);
 }
+
+//--------------------------------
 
 
 void RunOperations::operator () (osg::GraphicsContext* context)

@@ -32,6 +32,7 @@ class OSG_EXPORT GraphicsThread : public osg::OperationThread
         virtual void run();
 };
 
+//graphics操作
 struct OSG_EXPORT GraphicsOperation : public Operation
 {
     GraphicsOperation(const std::string& name, bool keep):
@@ -46,6 +47,7 @@ struct OSG_EXPORT GraphicsOperation : public Operation
 
 
 /** SwapBufferOperation calls swap buffers on the GraphicsContext.*/
+//SwapBuffer操作
 struct OSG_EXPORT SwapBuffersOperation : public GraphicsOperation
 {
     SwapBuffersOperation():
@@ -54,14 +56,15 @@ struct OSG_EXPORT SwapBuffersOperation : public GraphicsOperation
     virtual void operator () (GraphicsContext* context);
 };
 
-/** BarrierOperation allows one to synchronize multiple GraphicsThreads with each other.*/
+//同步绘图线程的操作
 struct OSG_EXPORT BarrierOperation : public Operation, public OpenThreads::Barrier
 {
+	//阻塞线程前需要做的操作
     enum PreBlockOp
     {
-        NO_OPERATION,
-        GL_FLUSH,
-        GL_FINISH
+        NO_OPERATION, //无操作
+        GL_FLUSH,     //执行glFlush,发送完绘图命令，立即返回
+        GL_FINISH     //执行glFinsh,发送完绘图命令，显卡完成命令后返回
     };
 
     BarrierOperation(int numThreads, PreBlockOp op=NO_OPERATION, bool keep=true):
@@ -97,7 +100,7 @@ struct OSG_EXPORT BlockAndFlushOperation : public GraphicsOperation, public Open
     virtual void operator () (GraphicsContext*);
 };
 
-
+//删除GL对象的操作
 struct OSG_EXPORT FlushDeletedGLObjectsOperation : public GraphicsOperation
 {
     FlushDeletedGLObjectsOperation(double availableTime, bool keep=false);
@@ -107,6 +110,7 @@ struct OSG_EXPORT FlushDeletedGLObjectsOperation : public GraphicsOperation
     double _availableTime;
 };
 
+//run操作，
 class OSG_EXPORT RunOperations : public osg::GraphicsOperation
 {
 public:
