@@ -121,6 +121,15 @@ void Node::accept(NodeVisitor& nv)
 
 void Node::ascend(NodeVisitor& nv)
 {
+	/*
+	template<class _InIt, class _Fn1> 
+	_Fn1 _For_each(_InIt _First, _InIt _Last, _Fn1 _Func)
+	{	 
+		for (; _First != _Last; ++_First)
+			_Func(*_First);
+		return (_Func);
+	}
+	*/
     std::for_each(_parents.begin(),_parents.end(),NodeAcceptOp(nv));
 }
 
@@ -532,9 +541,11 @@ void Node::dirtyBound()
 {
     if (_boundingSphereComputed)
     {
+		//设置节点包围脏，需要重新计算
         _boundingSphereComputed = false;
 
         // dirty parent bounding sphere's to ensure that all are valid.
+		//确保所有父节点的包围盒也为脏，需要重新计算
         for(ParentList::iterator itr=_parents.begin();
             itr!=_parents.end();
             ++itr)
