@@ -33,17 +33,20 @@ private:
 
     ~Win32BarrierPrivateData();
 
+	//控制栅栏的信号量
     Condition cond;            // cv for waiters at barrier
 
+	//更新变量时用的互斥锁
     Mutex    lock;            // mutex for waiters at barrier
 
+	//需要等待的线程数量
     volatile int       maxcnt;          // number of threads to wait for
 
+	//当前等待的数量
     volatile int       cnt;             // number of waiting threads
-
+	
+	//区分栅栏两次的周期标志
     volatile int       phase;           // flag to seperate two barriers
-
-
 };
 
 

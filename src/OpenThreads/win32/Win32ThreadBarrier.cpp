@@ -66,7 +66,8 @@ void Barrier::reset() {
 // Description: Block until numThreads threads have entered the barrier.
 //
 // Use: public.
-//
+// 
+// numThreads的默认值为0，如果不为0则从新设定最大的阻塞值
 void Barrier::block(unsigned int numThreads) {
 
     Win32BarrierPrivateData *pd =
@@ -79,14 +80,18 @@ void Barrier::block(unsigned int numThreads) {
     if( _valid )
     {
         my_phase = pd->phase;
-        ++pd->cnt;
+        ++pd->cnt;         //阻塞线程数+1                
 
-        if (pd->cnt == pd->maxcnt) {             // I am the last one
-            pd->cnt = 0;                         // reset for next use
-            pd->phase = 1 - my_phase;            // toggle phase
+        if (pd->cnt == pd->maxcnt)               // 最后一个线程，则发送广播，释放所有线程的阻塞
+		{            
+            pd->cnt = 0;                         // 清空阻塞数量，准备下一次用
+            pd->phase = 1 - my_phase;            // 切换周期
             pd->cond.broadcast();
-        }else{ 
-            while (pd->phase == my_phase ) {
+        }
+		else
+		{ 
+            while (pd->phase == my_phase ) 
+			{
                 pd->cond.wait(&pd->lock);
             }
         }
@@ -121,8 +126,8 @@ void Barrier::release() {
     ScopedLock<Mutex> lock(pd->lock);
     my_phase = pd->phase;
     
-    pd->cnt = 0;                         // reset for next use
-    pd->phase = 1 - my_phase;            // toggle phase
+    pd->cnt = 0;                         //  清空阻塞数量，准备下一次用
+    pd->phase = 1 - my_phase;            //  切换周期
     pd->cond.broadcast();
     
 }

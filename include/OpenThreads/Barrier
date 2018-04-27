@@ -26,31 +26,24 @@ namespace OpenThreads {
 
 
 /**
- *  @class Barrier
- *  @brief This class provides an object-oriented thread barrier interface
- *
- *  @warning It is unwise to use the construct "Barrier barrier" in the
- *           global namespace on sgi's.  The object "barrier"
- *           will confilict with the c-library sproc function "barrier" and
- *           unpredictable results may occur. You have been warned.
- */
+  * 线程栅栏类。这是一个对于线程同步颇为重要的阻塞器接口，它的构造函
+  * 数与BlockCount 类似，可以设置一个整数值，我们可以把这个值理解成栅栏的“强度”。每
+  * 个执行了Barrier::block()函数的线程都将被阻塞；当被阻塞在栅栏处的线程达到指定的数目
+  * 时，就好比栅栏无法支撑那么大的强度一样，栅栏将被冲开，所有的线程将被释放。重要的
+  * 是，这些线程是几乎同时释放的，也就保证了线程执行的同步性。
+  */
+
 class OPENTHREAD_EXPORT_DIRECTIVE Barrier {
 
 public:
 
-    /**
-     *  Constructor
-     */
+    //构造函数，numThreads可以阻塞的最大线程数量
     Barrier(int numThreads=0);
 
-    /**
-     *  Destructor
-     */
+    //析构
     virtual ~Barrier();
 
-    /**
-     *  Reset the barrier to it's original state.
-     */
+    //重置，回到初始状态
     virtual void reset();
 
     /**
@@ -58,18 +51,13 @@ public:
      */
     virtual void block(unsigned int numThreads=0);
 
-    /**
-     *  Release the barrier, now.
-     */
+    //无视阻塞数量，直接释放当前栅栏。
     virtual void release();
 
-    /**
-     *  Return the number of threads currently blocked in the barrier,
-     *  Return -1 if error.
-     */
+    //获取当前阻塞的线程数量
     virtual int numThreadsCurrentlyBlocked();
 
-
+	//将栅栏置为不可用
     void invalidate();
 
 private:
@@ -89,7 +77,7 @@ private:
      */
     void *_prvData;
 
-
+	//表示栅栏是否可用
     bool _valid;
 
 };
