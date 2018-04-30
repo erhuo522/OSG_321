@@ -61,25 +61,26 @@ class OSGVIEWER_EXPORT ViewerBase : public virtual osg::Object
 
         enum ThreadingModel
         {
-            SingleThreaded,
-            CullDrawThreadPerContext,
-            ThreadPerContext = CullDrawThreadPerContext,
-            DrawThreadPerContext,
-            CullThreadPerCameraDrawThreadPerContext,
-            ThreadPerCamera = CullThreadPerCameraDrawThreadPerContext,
-            AutomaticSelection
+            SingleThreaded,                                             //1. 单线程，主线程执行渲染，裁剪功能
+            CullDrawThreadPerContext,                                   //2. 每个GraphicsContext一个渲染线程，同时执行相机裁剪功能 
+            ThreadPerContext = CullDrawThreadPerContext,                //2. 每个GraphicsContext一个渲染线程，同时执行相机裁剪功能 
+            DrawThreadPerContext,                                       //3. 每个GraphicsContext一个渲染线程，主线程执行裁剪功能。
+            CullThreadPerCameraDrawThreadPerContext,                    //4. 每个GraphicsContext一个渲染线程，每个摄像机一个裁剪线程。
+            ThreadPerCamera = CullThreadPerCameraDrawThreadPerContext,  //4. 每个GraphicsContext一个渲染线程，每个摄像机一个裁剪线程。
+            AutomaticSelection                                          //5. 自动选择选择线程模型
         };
 
-        /** Set the threading model the rendering traversals will use.*/
+		//设置线程模型
         virtual void setThreadingModel(ThreadingModel threadingModel);
 
-        /** Get the threading model the rendering traversals will use.*/
-        ThreadingModel getThreadingModel() const { return _threadingModel; }
+        //获取线程模型
+		ThreadingModel getThreadingModel() const { return _threadingModel; }
 
-        /** Let the viewer suggest the best threading model for the viewers camera/window setup and the hardware available.*/
+		//建议线程模型
         virtual ThreadingModel suggestBestThreadingModel();
 
         /** Set up the threading and processor affinity as per the viewers threading model.*/
+
         virtual void setUpThreading();
 
         /** Return true if viewer threads are running. */
@@ -243,6 +244,7 @@ class OSGVIEWER_EXPORT ViewerBase : public virtual osg::Object
         typedef std::vector<osg::Camera*> Cameras;
         virtual void getCameras(Cameras& cameras, bool onlyActive=true) = 0;
 
+		//获取所有GraphicsContext
         typedef std::vector<osg::GraphicsContext*> Contexts;
         virtual void getContexts(Contexts& contexts, bool onlyValid=true) = 0;
 

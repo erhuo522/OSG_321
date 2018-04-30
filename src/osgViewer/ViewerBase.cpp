@@ -205,6 +205,7 @@ void ViewerBase::stopThreading()
     Contexts::iterator gcitr;
     Cameras::iterator citr;
 
+	//先释放渲染线程的阻塞
     for(Cameras::iterator camItr = cameras.begin();
         camItr != cameras.end();
         ++camItr)
@@ -214,7 +215,7 @@ void ViewerBase::stopThreading()
         if (renderer) renderer->release();
     }
 
-    // delete all the graphics threads.
+    // 删除所有渲染线程
     for(gcitr = contexts.begin();
         gcitr != contexts.end();
         ++gcitr)
@@ -222,7 +223,7 @@ void ViewerBase::stopThreading()
         (*gcitr)->setGraphicsThread(0);
     }
 
-    // delete all the camera threads.
+    // 删除所有相机线程
     for(citr = cameras.begin();
         citr != cameras.end();
         ++citr)
@@ -251,7 +252,10 @@ void ViewerBase::stopThreading()
 
     OSG_INFO<<"Viewer::stopThreading() - stopped threading."<<std::endl;
 }
-
+/**  一个GraphicsThread线程可以渲染出多个Camera相机对应的画面；
+  *  GraphicsThread进行渲染时，需要针对每个相机，进行一次数据裁剪；
+  *  为了提高效率，osg支持每个相机创建一个自己的CameraThread线程，用来做裁剪工作。
+  */
 void ViewerBase::startThreading()
 {
     if (_threadsRunning) return;
@@ -261,13 +265,16 @@ void ViewerBase::startThreading()
     // release any context held by the main thread.
     releaseContext();
 
+	//获取线程模型
     _threadingModel = _threadingModel==AutomaticSelection ? suggestBestThreadingModel() : _threadingModel;
 
+	//获取所有context
     Contexts contexts;
     getContexts(contexts);
 
     OSG_INFO<<"Viewer::startThreading() - contexts.size()="<<contexts.size()<<std::endl;
 
+	//获取所有相机
     Cameras cameras;
     getCameras(cameras);
 
@@ -280,7 +287,7 @@ void ViewerBase::startThreading()
             numThreadsOnEndBarrier = 1;
             return;
         case(CullDrawThreadPerContext):
-            numThreadsOnStartBarrier = contexts.size()+1;
+            numThreadsOnStartBarrier = contexts.size()+1; //context线程数量+主线程
             numThreadsOnEndBarrier = contexts.size()+1;
             break;
         case(DrawThreadPerContext):
@@ -297,6 +304,7 @@ void ViewerBase::startThreading()
     }
 
     // using multi-threading so make sure that new objects are allocated with thread safe ref/unref
+	//设置线程安全模式计数器
     osg::Referenced::setThreadSafeReferenceCounting(true);
 
     Scenes scenes;
@@ -317,13 +325,16 @@ void ViewerBase::startThreading()
         }
     }
 
+	//获取处理器数量
     int numProcessors = OpenThreads::GetNumberOfProcessors();
+	//是否多核的CPU
     bool affinity = numProcessors>1;
 
     Contexts::iterator citr;
 
     unsigned int numViewerDoubleBufferedRenderingOperation = 0;
 
+	//CullDrawThreadPerContext 和 SingleThreaded模式，裁剪和渲染共用一个线程
     bool graphicsThreadsDoesCull = _threadingModel == CullDrawThreadPerContext || _threadingModel==SingleThreaded;
 
     for(Cameras::iterator camItr = cameras.begin();
@@ -362,22 +373,26 @@ void ViewerBase::startThreading()
 
     if (numThreadsOnStartBarrier>1)
     {
+		//开始渲染的线程同步栅栏
         _startRenderingBarrier = new osg::BarrierOperation(numThreadsOnStartBarrier, osg::BarrierOperation::NO_OPERATION);
     }
 
     if (numThreadsOnEndBarrier>1)
     {
+		//渲染完成的线程同步栅栏
         _endRenderingDispatchBarrier = new osg::BarrierOperation(numThreadsOnEndBarrier, _endBarrierOperation);
     }
 
-
+	//渲染前后台切换的线程同步栅栏
     osg::ref_ptr<osg::BarrierOperation> swapReadyBarrier = contexts.empty() ? 0 : new osg::BarrierOperation(contexts.size(), osg::BarrierOperation::NO_OPERATION);
 
+	//swap操作对象
     osg::ref_ptr<osg::SwapBuffersOperation> swapOp = new osg::SwapBuffersOperation();
 
     typedef std::map<OpenThreads::Thread*, int> ThreadAffinityMap;
     ThreadAffinityMap threadAffinityMap;
 
+	//根据context数量创建渲染线程
     unsigned int processNum = 1;
     for(citr = contexts.begin();
         citr != contexts.end();
@@ -394,15 +409,22 @@ void ViewerBase::startThreading()
         gc->getState()->setDynamicObjectRenderingCompletedCallback(_endDynamicDrawBlock.get());
 
         // create the a graphics thread for this context
+		//创建渲染线程
         gc->createGraphicsThread();
-
-        if (affinity) gc->getGraphicsThread()->setProcessorAffinity(processNum % numProcessors);
+		//如果是多核处理器，则设置CPU相关性
+        if (affinity)
+		{
+				gc->getGraphicsThread()->setProcessorAffinity(processNum % numProcessors);
+		}
         threadAffinityMap[gc->getGraphicsThread()] = processNum % numProcessors;
 
         // add the startRenderingBarrier
-        if (_threadingModel==CullDrawThreadPerContext && _startRenderingBarrier.valid()) gc->getGraphicsThread()->add(_startRenderingBarrier.get());
-
+        if (_threadingModel==CullDrawThreadPerContext && _startRenderingBarrier.valid())
+		{
+				gc->getGraphicsThread()->add(_startRenderingBarrier.get());
+		}
         // add the rendering operation itself.
+		//添加渲染操作
         gc->getGraphicsThread()->add(new osg::RunOperations());
 
         if (_threadingModel==CullDrawThreadPerContext && _endBarrierPosition==BeforeSwapBuffers && _endRenderingDispatchBarrier.valid())
@@ -410,10 +432,14 @@ void ViewerBase::startThreading()
             // add the endRenderingDispatchBarrier
             gc->getGraphicsThread()->add(_endRenderingDispatchBarrier.get());
         }
-
-        if (swapReadyBarrier.valid()) gc->getGraphicsThread()->add(swapReadyBarrier.get());
+		//多个渲染线程同步栅栏，防止多个GraphicsThread渲染的画面不一致。
+        if (swapReadyBarrier.valid()) 
+		{
+			gc->getGraphicsThread()->add(swapReadyBarrier.get());
+		}
 
         // add the swap buffers
+		//添加SwapBuffer操作
         gc->getGraphicsThread()->add(swapOp.get());
 
         if (_threadingModel==CullDrawThreadPerContext && _endBarrierPosition==AfterSwapBuffers && _endRenderingDispatchBarrier.valid())
@@ -434,27 +460,35 @@ void ViewerBase::startThreading()
         {
             osg::Camera* camera = *camItr;
             camera->createCameraThread();
-
-            if (affinity) camera->getCameraThread()->setProcessorAffinity(processNum % numProcessors);
-            threadAffinityMap[camera->getCameraThread()] = processNum % numProcessors;
+			
+			//为线程分配处理器
+            if (affinity) 
+			{
+				camera->getCameraThread()->setProcessorAffinity(processNum % numProcessors);
+			}
+			threadAffinityMap[camera->getCameraThread()] = processNum % numProcessors;
 
             osg::GraphicsContext* gc = camera->getGraphicsContext();
 
-            // add the startRenderingBarrier
-            if (_startRenderingBarrier.valid()) camera->getCameraThread()->add(_startRenderingBarrier.get());
-
+            // 添加startRenderingBarrier线程同步栅栏，所有相机裁剪完成后，GraphicsThread线程开始渲染
+            if (_startRenderingBarrier.valid()) 
+			{
+					camera->getCameraThread()->add(_startRenderingBarrier.get());
+			}
+			//设置渲染线程不裁剪数据，
             Renderer* renderer = dynamic_cast<Renderer*>(camera->getRenderer());
             renderer->setGraphicsThreadDoesCull(false);
+
             camera->getCameraThread()->add(renderer);
 
             if (_endRenderingDispatchBarrier.valid())
             {
-                // add the endRenderingDispatchBarrier
+                // 添加endRenderingDispatchBarrier线程同步栅栏
                 gc->getGraphicsThread()->add(_endRenderingDispatchBarrier.get());
             }
 
         }
-
+		//启动相机的裁剪线程
         for(camItr = cameras.begin();
             camItr != cameras.end();
             ++camItr)
@@ -495,7 +529,7 @@ void ViewerBase::startThreading()
     }
 #endif
 
-
+	//启动GraphicsThread裁剪线程
     for(citr = contexts.begin();
         citr != contexts.end();
         ++citr)
@@ -590,7 +624,7 @@ void ViewerBase::setIncrementalCompileOperation(osgUtil::IncrementalCompileOpera
 
     if (_incrementalCompileOperation) _incrementalCompileOperation->assignContexts(contexts);
 }
-
+//主线程的run循环
 int ViewerBase::run()
 {
     if (!isRealized())
@@ -657,7 +691,7 @@ void ViewerBase::frame(double simulationTime)
     renderingTraversals();
 }
 
-
+//完成数据的裁剪和场景渲染工作
 void ViewerBase::renderingTraversals()
 {
     bool _outputMasterCameraLocation = false;
@@ -791,7 +825,7 @@ void ViewerBase::renderingTraversals()
     // dispatch the rendering threads
     if (_startRenderingBarrier.valid()) _startRenderingBarrier->block();
 
-    // reset any double buffer graphics objects
+    // 主线程执行裁剪工作
     for(Cameras::iterator camItr = cameras.begin();
         camItr != cameras.end();
         ++camItr)
@@ -807,6 +841,8 @@ void ViewerBase::renderingTraversals()
         }
     }
 
+
+	//主线程执行渲染操作
     for(itr = contexts.begin();
         itr != contexts.end() && !_done;
         ++itr)
@@ -824,6 +860,7 @@ void ViewerBase::renderingTraversals()
     // wait till the rendering dispatch is done.
     if (_endRenderingDispatchBarrier.valid()) _endRenderingDispatchBarrier->block();
 
+	//主线程执行swap操作
     for(itr = contexts.begin();
         itr != contexts.end() && !_done;
         ++itr)
@@ -861,7 +898,8 @@ void ViewerBase::renderingTraversals()
         //OSG_NOTICE<<"Doing release context"<<std::endl;
         releaseContext();
     }
-
+	
+	//打印相关的时间log信息
     if (getViewerStats() && getViewerStats()->collectStats("update"))
     {
         double endRenderingTraversals = elapsedTime();
