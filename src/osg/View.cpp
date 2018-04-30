@@ -168,6 +168,7 @@ bool View::addSlave(osg::Camera* camera, const osg::Matrix& projectionOffset, co
 
     if (useMastersSceneData)
     {
+	    //添加主相机的数据给从相机
         camera->removeChildren(0,camera->getNumChildren());
 
         if (_camera.valid())

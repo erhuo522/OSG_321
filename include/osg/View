@@ -80,7 +80,7 @@ class OSG_EXPORT View : public virtual osg::Object
         /** Get the master camera of the view. */
         osg::Camera* getCamera() { return _camera.get(); }
 
-        /** Get the const master camera of the view. */
+        ///获取view的主相机
         const osg::Camera* getCamera() const { return _camera.get(); }
 
         /** Set the frame stamp of the view. */
@@ -146,6 +146,7 @@ class OSG_EXPORT View : public virtual osg::Object
 
         bool addSlave(osg::Camera* camera, bool useMastersSceneData=true) { return addSlave(camera, osg::Matrix::identity(), osg::Matrix::identity(), useMastersSceneData); }
 
+		//添加从相机时，会自动创建一个renderer，与之关联
         bool addSlave(osg::Camera* camera, const osg::Matrix& projectionOffset, const osg::Matrix& viewOffset, bool useMastersSceneData=true);
 
         bool removeSlave(unsigned int pos);
@@ -172,8 +173,10 @@ class OSG_EXPORT View : public virtual osg::Object
         LightingMode                    _lightingMode;
         osg::ref_ptr<osg::Light>        _light;
 
+		//主相机
         osg::ref_ptr<osg::Camera>       _camera;
 
+		//从相机
         typedef std::vector<Slave>      Slaves;
         Slaves                          _slaves;
 
