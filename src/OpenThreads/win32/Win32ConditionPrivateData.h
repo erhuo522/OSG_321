@@ -24,6 +24,7 @@
 #include "Win32ThreadPrivateData.h"
 #include "HandleHolder.h"
 
+//原子加法操作，这里加0，相当于原子返回x
 #define InterlockedGet(x) InterlockedExchangeAdd(x,0)
 
 namespace OpenThreads {
@@ -36,6 +37,21 @@ public:
     /// number of waiters.
     long waiters_;
 
+    /*  
+    *  LPSECURITY_ATTRIBUTES lpSemaphoreAttributes  //安全属性，如果为NULL则是默认安全属性 
+    *         LONG lInitialCount,                  //初始信号量的数量，要>=0且<=信号量的最大格式
+    *         LONG lMaximumCount,                  //信号量数量的最大个数 
+    *         LPCTSTR lpName                       //信号量的名称,如果与已存在的重名，返回存在的信号量
+	*
+	*
+	* HANDLE WINAPI CreateEvent(
+    *    LPSECURITY_ATTRIBUTES lpEventAttributes, //安全属性，如果为NULL则是默认安全属性 
+    *    BOOL                  bManualReset,      //是否手工重置状态，true表示手工重置，false表示自动重置
+    *    BOOL                  bInitialState,     //初始状态，true表示有信号，false表示无信号。
+    *    LPCTSTR               lpName             //事件的名称,如果与已存在的重名，返回存在的事件量
+    * );
+	*
+	*/
     Win32ConditionPrivateData ()
         :waiters_(0), 
          sema_(CreateSemaphore(NULL,0,0x7fffffff,NULL)),
@@ -46,6 +62,7 @@ public:
 
     ~Win32ConditionPrivateData ();
 
+	//向所有信号量都发送信号
     inline int broadcast ()
     {
         int have_waiters = 0;
@@ -72,6 +89,14 @@ public:
         return result;
     }
 
+	/*
+	 * BOOL WINAPI ReleaseSemaphore(
+     *	    HANDLE hSemaphore,     //信号量句柄
+     *	    LONG   lReleaseCount,  //释放的信号对象数量，释放后导致当前信号量总数大于最大值时，数返回FALSE;
+     *	    LPLONG lpPreviousCount //返回上一次的信号对象数量
+     * );
+     */
+	// 发送信号
     inline int signal()
     {
         long w = InterlockedGet(&waiters_);
@@ -86,11 +111,12 @@ public:
         }
         return result;
     }
-
+	//等待超时
     inline int wait (Mutex& external_mutex, long timeout_ms)
     {
     
         // Prevent race conditions on the <waiters_> count.
+		//等待的原子加一
         InterlockedIncrement(&waiters_);
 
         int result = 0;

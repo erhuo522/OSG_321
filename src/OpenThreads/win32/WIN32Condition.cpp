@@ -54,6 +54,7 @@ Condition::~Condition() {
 //
 // Use: public.
 //
+//等待一个信号量
 int Condition::wait(Mutex *mutex) {
 
     Win32ConditionPrivateData *pd =
@@ -67,6 +68,7 @@ int Condition::wait(Mutex *mutex) {
 //
 // Use: public.
 //
+//在一段时间等待一个信号量
 int Condition::wait(Mutex *mutex, unsigned long ms) {
 
     Win32ConditionPrivateData *pd =
@@ -80,6 +82,7 @@ int Condition::wait(Mutex *mutex, unsigned long ms) {
 //
 // Use: public.
 //
+//向一个线程发送信号，唤醒它
 int Condition::signal() {
 
     Win32ConditionPrivateData *pd =
@@ -91,7 +94,8 @@ int Condition::signal() {
 // Description: signal many threads to wake up.
 //
 // Use: public.
-//
+// 
+//向多个线程发送信号，唤醒它们
 int Condition::broadcast() {
 
     Win32ConditionPrivateData *pd =
