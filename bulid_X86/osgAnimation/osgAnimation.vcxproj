@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\osgAnimation\Action" />
+    <None Include="..\..\include\osgAnimation\ActionAnimation" />
+    <None Include="..\..\include\osgAnimation\ActionBlendIn" />
+    <None Include="..\..\include\osgAnimation\ActionBlendOut" />
+    <None Include="..\..\include\osgAnimation\ActionCallback" />
+    <None Include="..\..\include\osgAnimation\ActionStripAnimation" />
+    <None Include="..\..\include\osgAnimation\ActionVisitor" />
+    <None Include="..\..\include\osgAnimation\Animation" />
+    <None Include="..\..\include\osgAnimation\AnimationManagerBase" />
+    <None Include="..\..\include\osgAnimation\AnimationUpdateCallback" />
+    <None Include="..\..\include\osgAnimation\BasicAnimationManager" />
+    <None Include="..\..\include\osgAnimation\Bone" />
+    <None Include="..\..\include\osgAnimation\BoneMapVisitor" />
+    <None Include="..\..\include\osgAnimation\Channel" />
+    <None Include="..\..\include\osgAnimation\CubicBezier" />
+    <None Include="..\..\include\osgAnimation\EaseMotion" />
+    <None Include="..\..\include\osgAnimation\Export" />
+    <None Include="..\..\include\osgAnimation\FrameAction" />
+    <None Include="..\..\include\osgAnimation\Interpolator" />
+    <None Include="..\..\include\osgAnimation\Keyframe" />
+    <None Include="..\..\include\osgAnimation\LinkVisitor" />
+    <None Include="..\..\include\osgAnimation\MorphGeometry" />
+    <None Include="..\..\include\osgAnimation\RigGeometry" />
+    <None Include="..\..\include\osgAnimation\RigTransform" />
+    <None Include="..\..\include\osgAnimation\RigTransformHardware" />
+    <None Include="..\..\include\osgAnimation\RigTransformSoftware" />
+    <None Include="..\..\include\osgAnimation\Sampler" />
+    <None Include="..\..\include\osgAnimation\Skeleton" />
+    <None Include="..\..\include\osgAnimation\StackedMatrixElement" />
+    <None Include="..\..\include\osgAnimation\StackedQuaternionElement" />
+    <None Include="..\..\include\osgAnimation\StackedRotateAxisElement" />
+    <None Include="..\..\include\osgAnimation\StackedScaleElement" />
+    <None Include="..\..\include\osgAnimation\StackedTransform" />
+    <None Include="..\..\include\osgAnimation\StackedTransformElement" />
+    <None Include="..\..\include\osgAnimation\StackedTranslateElement" />
+    <None Include="..\..\include\osgAnimation\StatsHandler" />
+    <None Include="..\..\include\osgAnimation\StatsVisitor" />
+    <None Include="..\..\include\osgAnimation\Target" />
+    <None Include="..\..\include\osgAnimation\Timeline" />
+    <None Include="..\..\include\osgAnimation\TimelineAnimationManager" />
+    <None Include="..\..\include\osgAnimation\UpdateBone" />
+    <None Include="..\..\include\osgAnimation\UpdateMaterial" />
+    <None Include="..\..\include\osgAnimation\UpdateMatrixTransform" />
+    <None Include="..\..\include\osgAnimation\Vec3Packed" />
+    <None Include="..\..\include\osgAnimation\VertexInfluence" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\osgAnimation\Action.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionAnimation.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionBlendIn.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionBlendOut.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionCallback.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionStripAnimation.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\ActionVisitor.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Animation.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\AnimationManagerBase.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\BasicAnimationManager.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Bone.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\BoneMapVisitor.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Channel.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\LinkVisitor.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\MorphGeometry.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\RigGeometry.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\RigTransformHardware.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\RigTransformSoftware.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Skeleton.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedMatrixElement.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedQuaternionElement.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedRotateAxisElement.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedScaleElement.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedTransform.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StackedTranslateElement.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StatsHandler.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\StatsVisitor.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Target.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\Timeline.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\TimelineAnimationManager.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\UpdateBone.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\UpdateMaterial.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\UpdateMatrixTransform.cpp" />
+    <ClCompile Include="..\..\src\osgAnimation\VertexInfluence.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{150C5416-0FEB-4B0A-883D-93BE7A246FB9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>osg</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;OSGANIMATION_LIBRARY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>OpenThreads.lib;osg.lib;osgUtil.lib;osgDB.lib;osgText.lib;osgGA.lib;osgViewer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\bin\$(Configuration)\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OSG_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

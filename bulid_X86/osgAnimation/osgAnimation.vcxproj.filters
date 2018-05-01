@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\include\osgAnimation\Action">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionAnimation">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionBlendIn">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionBlendOut">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionCallback">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionStripAnimation">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\ActionVisitor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Animation">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\AnimationManagerBase">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\AnimationUpdateCallback">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\BasicAnimationManager">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Bone">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\BoneMapVisitor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Channel">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\CubicBezier">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\EaseMotion">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Export">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\FrameAction">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Interpolator">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Keyframe">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\LinkVisitor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\MorphGeometry">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\RigGeometry">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\RigTransform">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\RigTransformHardware">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\RigTransformSoftware">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Sampler">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Skeleton">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedMatrixElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedQuaternionElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedRotateAxisElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedScaleElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedTransform">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedTransformElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StackedTranslateElement">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StatsHandler">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\StatsVisitor">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Target">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Timeline">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\TimelineAnimationManager">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\UpdateBone">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\UpdateMaterial">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\UpdateMatrixTransform">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\Vec3Packed">
+      <Filter>头文件</Filter>
+    </None>
+    <None Include="..\..\include\osgAnimation\VertexInfluence">
+      <Filter>头文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\osgAnimation\Action.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionAnimation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionBlendIn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionBlendOut.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionCallback.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionStripAnimation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\ActionVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Animation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\AnimationManagerBase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\BasicAnimationManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Bone.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\BoneMapVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Channel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\LinkVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\MorphGeometry.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\RigGeometry.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\RigTransformHardware.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\RigTransformSoftware.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Skeleton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedMatrixElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedQuaternionElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedRotateAxisElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedScaleElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedTransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StackedTranslateElement.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StatsHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\StatsVisitor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Target.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\Timeline.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\TimelineAnimationManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\UpdateBone.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\UpdateMaterial.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\UpdateMatrixTransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\osgAnimation\VertexInfluence.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
