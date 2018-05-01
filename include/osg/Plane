@@ -110,14 +110,20 @@ class OSG_EXPORT Plane
 
         inline void set(const Vec3_type& norm, double d) { set(norm[0],norm[1],norm[2],d); }
 
-        inline void set(const Vec3_type& v1, const Vec3_type& v2, const Vec3_type& v3)
-        {
-            Vec3_type norm = (v2-v1)^(v3-v2);
-            value_type length = norm.length();
-            if (length>1e-6) norm/= length;
-            else norm.set(0.0,0.0,0.0);
-            set(norm[0],norm[1],norm[2],-(v1*norm));
-        }
+		inline void set(const Vec3_type& v1, const Vec3_type& v2, const Vec3_type& v3)
+		{
+			Vec3_type norm = (v2-v1)^(v3-v2);
+			value_type length = norm.length();
+			if (length>1e-6) 
+			{	
+				norm/= length;
+			}
+			else 
+			{
+				norm.set(0.0,0.0,0.0);
+			}
+			set(norm[0],norm[1],norm[2],-(v1*norm));
+		}
 
         inline void set(const Vec3_type& norm, const Vec3_type& point)
         {
@@ -125,7 +131,7 @@ class OSG_EXPORT Plane
             set(norm[0],norm[1],norm[2],d);
         }
 
-        /** flip/reverse the orientation of the plane.*/
+        //翻转面的正反面
         inline void flip()
         {
             _fv[0] = -_fv[0];
@@ -135,8 +141,7 @@ class OSG_EXPORT Plane
             calculateUpperLowerBBCorners();
         }
 
-        /** This method multiplies the coefficients of the plane equation with a constant factor so that the
-          * equation a^2+b^2+c^2 = 1 holds. */
+        //单位化 面的法向量
         inline void makeUnitLength()
         {
             value_type inv_length = 1.0 / sqrt(_fv[0]*_fv[0] + _fv[1]*_fv[1]+ _fv[2]*_fv[2]);
@@ -191,12 +196,10 @@ class OSG_EXPORT Plane
         inline value_type& operator [] (unsigned int i) { return _fv[i]; }
         inline value_type operator [] (unsigned int i) const { return _fv[i]; }
 
-
+		//获取面的法线
         inline Vec3_type getNormal() const { return Vec3_type(_fv[0],_fv[1],_fv[2]); }
 
-        /** Calculate the distance between a point and the plane.
-          * @remark This method only leads to real distance values if the plane's norm is 1.
-          * @sa osg::Plane::makeUnitLength */
+        //计算点到面的距离，面的法向量必须为单位向量。
         inline float distance(const osg::Vec3f& v) const
         {
             return _fv[0]*v.x()+
@@ -204,9 +207,8 @@ class OSG_EXPORT Plane
                    _fv[2]*v.z()+
                    _fv[3];
         }
-        /** Calculate the distance between a point and the plane.
-          * @remark This method only leads to real distance values if the plane's norm is 1.
-          * @sa osg::Plane::makeUnitLength */
+        
+		//计算点到面的距离，面的法向量必须为单位向量。
         inline double distance(const osg::Vec3d& v) const
         {
             return _fv[0]*v.x()+
@@ -235,6 +237,7 @@ class OSG_EXPORT Plane
             return 1 if the bs is completely above plane,
             return 0 if the bs intersects the plane,
             return -1 if the bs is completely below the plane.*/
+		//判断一串顶点是否与面相交
         inline int intersect(const std::vector<Vec3f>& vertices) const
         {
             if (vertices.empty()) return -1;
@@ -264,6 +267,7 @@ class OSG_EXPORT Plane
             return 1 if the bs is completely above plane,
             return 0 if the bs intersects the plane,
             return -1 if the bs is completely below the plane.*/
+		//判断一串顶点是否与面相交
         inline int intersect(const std::vector<Vec3d>& vertices) const
         {
             if (vertices.empty()) return -1;
@@ -293,6 +297,7 @@ class OSG_EXPORT Plane
             return 1 if the bs is completely above plane,
             return 0 if the bs intersects the plane,
             return -1 if the bs is completely below the plane.*/
+		//判断面与包围球是否相交
         inline int intersect(const BoundingSphere& bs) const
         {
             float d = distance(bs.center());
@@ -307,6 +312,8 @@ class OSG_EXPORT Plane
             return 1 if the bs is completely above plane,
             return 0 if the bs intersects the plane,
             return -1 if the bs is completely below the plane.*/
+
+		//判断面与BoundingBox是否相交
         inline int intersect(const BoundingBox& bb) const
         {
             // if lowest point above plane than all above.
@@ -326,17 +333,22 @@ class OSG_EXPORT Plane
           * must be multiplied by the inverse transposed to transform it. This
           * make this operation expensive.  If the inverse has been already
           * calculated elsewhere then use transformProvidingInverse() instead.
-          * See http://www.worldserver.com/turk/computergraphics/NormalTransformations.pdf*/
+          * See http://www.worldserver.com/turk/computegraphics/NormalTransformations.pdf*/
+		 /*
+		  * 平面变换，把平面当作4D向量，并且把它和一个需要的转换矩阵的逆转置形式相乘。
+		  * 注意，平面必须先进行单位化。
+		 /*
         inline void transform(const osg::Matrix& matrix)
         {
             osg::Matrix inverse;
-            inverse.invert(matrix);
+            inverse.invert(matrix);//计算逆矩阵
             transformProvidingInverse(inverse);
         }
 
-        /** Transform the plane by providing a pre inverted matrix.
-          * see transform for details. */
-        inline void transformProvidingInverse(const osg::Matrix& matrix)
+       	 / * 平面变换，把平面当作4D向量，并且把它和一个需要的转换矩阵的逆转置形式相乘阵。
+		   * ,其中matrix是已经计算好的逆矩，这里的平面必须先进行单位化。
+           */
+		inline void transformProvidingInverse(const osg::Matrix& matrix)
         {
             // note pre multiplications, which effectively transposes matrix.
             Vec4_type vec(_fv[0],_fv[1],_fv[2],_fv[3]);
@@ -347,8 +359,11 @@ class OSG_EXPORT Plane
 
     protected:
 
-        /** Vec member variable. */
-        value_type _fv[4];
+        /*
+		 * 平面的方程：Ax +By +Cz + D = 0, 其中n = (A, B, C)是平面的法向量.
+		 *  _fv 分别代表ABCD。
+         */
+		value_type _fv[4];
 
         // variables cached to optimize calcs against bounding boxes.
         unsigned int        _upperBBCorner;
