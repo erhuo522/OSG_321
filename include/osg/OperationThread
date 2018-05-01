@@ -27,6 +27,7 @@
 
 namespace osg {
 
+//线程安全，带引用计数器的Block
 class RefBlock : virtual public osg::Referenced, public OpenThreads::Block
 {
     public:
@@ -35,7 +36,7 @@ class RefBlock : virtual public osg::Referenced, public OpenThreads::Block
             osg::Referenced(true) {}
 
 };
-
+//线程安全，带引用计数器的BlockCount
 class RefBlockCount : virtual public osg::Referenced, public OpenThreads::BlockCount
 {
     public:
@@ -47,6 +48,7 @@ class RefBlockCount : virtual public osg::Referenced, public OpenThreads::BlockC
 };
 
 /** Base class for implementing graphics operations.*/
+//操作的基类
 class Operation : virtual public Referenced
 {
     public:
@@ -88,8 +90,8 @@ class Operation : virtual public Referenced
 
         virtual ~Operation() {}
 
-        std::string _name;
-        bool        _keep;
+        std::string _name; //名字
+        bool        _keep; //是否保持到apply才释放
 };
 
 class OperationThread;
@@ -105,28 +107,35 @@ class OSG_EXPORT OperationQueue : public Referenced
         osg::ref_ptr<Operation> getNextOperation(bool blockIfEmpty = false);
 
         /** Return true if the operation queue is empty. */
+		//判断队列中的操作是否为空
         bool empty();
 
         /** Return the num of pending operations that are sitting in the OperationQueue.*/
+		//获得队列中的操作数量
         unsigned int getNumOperationsInQueue();
 
         /** Add operation to end of OperationQueue, this will be
           * executed by the operation thread once this operation gets to the head of the queue.*/
+		//添加操作
         void add(Operation* operation);
 
         /** Remove operation from OperationQueue.*/
+		//移除操作
         void remove(Operation* operation);
 
         /** Remove named operation from OperationQueue.*/
+		//移除名字为name的操作
         void remove(const std::string& name);
 
         /** Remove all operations from OperationQueue.*/
+		//清空所有操作
         void removeAllOperations();
 
         /** Run the operations. */
         void runOperations(Object* callingObject=0);
 
         /** Call release on all operations. */
+		//释放所有操作
         void releaseAllOperations();
 
         /** Release operations block that is used to block threads that are waiting on an empty operations queue.*/
@@ -143,16 +152,23 @@ class OSG_EXPORT OperationQueue : public Referenced
 
         friend class OperationThread;
 
+		//添加操作线程
         void addOperationThread(OperationThread* thread);
+		//移除操作线程
         void removeOperationThread(OperationThread* thread);
 
         typedef std::list< osg::ref_ptr<Operation> > Operations;
-
+		
+		//互斥对象
         OpenThreads::Mutex          _operationsMutex;
+		//Block对象
         osg::ref_ptr<osg::RefBlock> _operationsBlock;
+		//操作的list链表
         Operations                  _operations;
+		//当前操作的迭代器
         Operations::iterator        _currentOperationIterator;
 
+		//线程set集合
         OperationThreads            _operationThreads;
 };
 
@@ -170,26 +186,33 @@ class OSG_EXPORT OperationThread : public Referenced, public OpenThreads::Thread
 
 
         /** Set the OperationQueue. */
+		//设置操作队列
         void setOperationQueue(OperationQueue* opq);
 
         /** Get the OperationQueue. */
+		//返回操作队列
         OperationQueue* getOperationQueue() { return _operationQueue.get(); }
 
         /** Get the const OperationQueue. */
+		//返回操作队列常亮
         const OperationQueue* getOperationQueue() const { return _operationQueue.get(); }
 
 
         /** Add operation to end of OperationQueue, this will be
           * executed by the graphics thread once this operation gets to the head of the queue.*/
+		//添加操作，操作队列不存在，则创建。
         void add(Operation* operation);
 
         /** Remove operation from OperationQueue.*/
+		//移除操作
         void remove(Operation* operation);
 
         /** Remove named operation from OperationQueue.*/
+		//根据名字，移除操作
         void remove(const std::string& name);
 
         /** Remove all operations from OperationQueue.*/
+		//移除所有操作
         void removeAllOperations();
 
 
@@ -210,13 +233,13 @@ class OSG_EXPORT OperationThread : public Referenced, public OpenThreads::Thread
 
         virtual ~OperationThread();
 
-        observer_ptr<Object>            _parent;
+        observer_ptr<Object>            _parent; //操作线程的父对象
 
         bool                            _done;
 
-        OpenThreads::Mutex              _threadMutex;
-        osg::ref_ptr<OperationQueue>    _operationQueue;
-        osg::ref_ptr<Operation>         _currentOperation;
+        OpenThreads::Mutex              _threadMutex; //互斥对象
+        osg::ref_ptr<OperationQueue>    _operationQueue; //操作队列对象
+        osg::ref_ptr<Operation>         _currentOperation; //当前操作对象
 
 };
 

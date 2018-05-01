@@ -19,6 +19,7 @@
 using namespace osg;
 using namespace OpenThreads;
 
+//Block操作，进行glFlush操作，osg好像没用到。
 struct BlockOperation : public Operation, public Block
 {
     BlockOperation():
@@ -70,6 +71,7 @@ unsigned int OperationQueue::getNumOperationsInQueue()
 
 ref_ptr<Operation> OperationQueue::getNextOperation(bool blockIfEmpty)
 {
+	//操作列表为空时，该函数阻塞
     if (blockIfEmpty && _operations.empty())
     {
         _operationsBlock->block();
@@ -77,6 +79,7 @@ ref_ptr<Operation> OperationQueue::getNextOperation(bool blockIfEmpty)
 
     OpenThreads::ScopedLock<OpenThreads::Mutex> lock(_operationsMutex);
 
+	//如果为空，返回一个NULL指针对象
     if (_operations.empty()) return osg::ref_ptr<Operation>();
 
     if (_currentOperationIterator == _operations.end())
@@ -92,6 +95,7 @@ ref_ptr<Operation> OperationQueue::getNextOperation(bool blockIfEmpty)
         // OSG_INFO<<"removing "<<currentOperation->getName()<<std::endl;
 
         // remove it from the operations queue
+		//移除当前的操作，返回下一个操作的迭代器
         _currentOperationIterator = _operations.erase(_currentOperationIterator);
 
         // OSG_INFO<<"size "<<_operations.size()<<std::endl;
@@ -99,6 +103,7 @@ ref_ptr<Operation> OperationQueue::getNextOperation(bool blockIfEmpty)
         if (_operations.empty())
         {
            // OSG_INFO<<"setting block "<<_operations.size()<<std::endl;
+			//list如果为空，Block设置阻塞模式
            _operationsBlock->set(false);
         }
     }
@@ -123,6 +128,7 @@ void OperationQueue::add(Operation* operation)
     // add the operation to the end of the list
     _operations.push_back(operation);
 
+	//list如果为空，Block设置为释放模式
     _operationsBlock->set(true);
 }
 
@@ -182,12 +188,13 @@ void OperationQueue::removeAllOperations()
     OSG_INFO<<"Doing remove all operations"<<std::endl;
 
     OpenThreads::ScopedLock<OpenThreads::Mutex> lock(_operationsMutex);
-
+	//清空list
     _operations.clear();
 
     // reset current operator.
     _currentOperationIterator = _operations.begin();
-
+		
+	//list如果为空，Block设置阻塞模式
     if (_operations.empty())
     {
         _operationsBlock->set(false);
@@ -222,12 +229,14 @@ void OperationQueue::runOperations(Object* callingObject)
         (*operation)(callingObject);
     }
 
+	//list如果为空，Block设置阻塞模式
     if (_operations.empty())
     {
         _operationsBlock->set(false);
     }
 }
 
+//释放操作Block
 void OperationQueue::releaseOperationsBlock()
 {
     _operationsBlock->release();
@@ -235,8 +244,9 @@ void OperationQueue::releaseOperationsBlock()
 
  void OperationQueue::releaseAllOperations()
 {
+	//加锁
     OpenThreads::ScopedLock<OpenThreads::Mutex> lock(_operationsMutex);
-
+	//释放操作的list列表
     for(Operations::iterator itr = _operations.begin();
         itr!=_operations.end();
         ++itr)
@@ -405,6 +415,7 @@ void OperationThread::run()
         ref_ptr<OperationQueue> operationQueue;
 
         {
+			//此锁在大括号内有效。
             OpenThreads::ScopedLock<OpenThreads::Mutex> lock(_threadMutex);
             operationQueue = _operationQueue;
         }
