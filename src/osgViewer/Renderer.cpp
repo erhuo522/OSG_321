@@ -479,7 +479,9 @@ void Renderer::setGraphicsThreadDoesCull(bool flag)
 
     _graphicsThreadDoesCull = flag;
 }
-
+/* 更新SceneView场景视图的全局渲染状态。根据主摄像机的StateSet渲染状态集，
+ * 更新成员变量_globalStateSet，状态量State，显示设置DisplaySettings。
+ */
 void Renderer::updateSceneView(osgUtil::SceneView* sceneView)
 {
     osg::Camera* masterCamera = _camera->getView() ? _camera->getView()->getCamera() : _camera.get();
@@ -622,8 +624,10 @@ void Renderer::cull()
 
         // pass on the fusion distance settings from the View to the SceneView
         osgViewer::View* view = dynamic_cast<osgViewer::View*>(sceneView->getCamera()->getView());
-        if (view) sceneView->setFusionDistance(view->getFusionDistanceMode(), view->getFusionDistanceValue());
-
+        if (view)
+		{
+			sceneView->setFusionDistance(view->getFusionDistanceMode(), view->getFusionDistanceValue());
+		}
         osg::Stats* stats = sceneView->getCamera()->getStats();
         osg::State* state = sceneView->getState();
         const osg::FrameStamp* fs = state->getFrameStamp();
@@ -644,6 +648,7 @@ void Renderer::cull()
             state->getDynamicObjectRenderingCompletedCallback()->completed(state);
         }
 #endif
+		//日志记录
         if (stats && stats->collectStats("rendering"))
         {
             DEBUG_MESSAGE<<"Collecting rendering stats"<<std::endl;
@@ -652,12 +657,12 @@ void Renderer::cull()
             stats->setAttribute(frameNumber, "Cull traversal end time", osg::Timer::instance()->delta_s(_startTick, afterCullTick));
             stats->setAttribute(frameNumber, "Cull traversal time taken", osg::Timer::instance()->delta_s(beforeCullTick, afterCullTick));
         }
-
+		//日志记录
         if (stats && stats->collectStats("scene"))
         {
             collectSceneViewStats(frameNumber, sceneView, stats);
         }
-
+		//SceneView场景图添加到绘制队列
         _drawQueue.add(sceneView);
 
     }
@@ -670,7 +675,7 @@ void Renderer::draw()
     DEBUG_MESSAGE<<"draw() "<<this<<std::endl;
 
     // osg::Timer_t startDrawTick = osg::Timer::instance()->tick();
-
+	//取出SceneView场景图形，进行渲染
     osgUtil::SceneView* sceneView = _drawQueue.takeFront();
 
     DEBUG_MESSAGE<<"draw() got SceneView "<<sceneView<<std::endl;
