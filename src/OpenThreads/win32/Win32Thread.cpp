@@ -39,6 +39,15 @@ struct Win32ThreadCanceled{};
 
 using namespace OpenThreads;
 
+/*
+DWORD WINAPI WaitForMultipleObjects(
+        DWORD  nCount,          // 内核对象的handle数组大小。
+        const HANDLE *lpHandles,// 内核对象的handle数组首指针。
+        BOOL   bWaitAll,        // bWaitAll为true ，等待所有事件后返回；bWaitAll为false，其返回值减去WAIT_OBJECT_0为lpHandles数组的序号 
+        DWORD  dwMilliseconds   // 超时间隔,INFINITE表示一直等待。
+);
+*/
+
 DWORD OpenThreads::cooperativeWait(HANDLE waitHandle, unsigned long timeout){
     Thread* current = Thread::CurrentThread();
     DWORD dwResult ;

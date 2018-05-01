@@ -32,6 +32,7 @@ namespace OpenThreads {
  *  Note, systems where no support exists for querrying the number of processors, 1 is returned.
  *
  */
+// 获取处理器数量
 extern OPENTHREAD_EXPORT_DIRECTIVE int GetNumberOfProcessors();
 
 /**
@@ -40,12 +41,14 @@ extern OPENTHREAD_EXPORT_DIRECTIVE int GetNumberOfProcessors();
  *  Note, systems where no support exists no affinity will be set, and -1 will be returned.
  *
  */
+//设置当前线程运行在哪一个cpu上
 extern OPENTHREAD_EXPORT_DIRECTIVE int SetProcessorAffinityOfCurrentThread(unsigned int cpunum);
 
 /**
  *  @class Thread
  *  @brief  This class provides an object-oriented thread interface.
  */
+//线程封装的基类
 class OPENTHREAD_EXPORT_DIRECTIVE Thread {
 
 public:
@@ -61,7 +64,8 @@ public:
      *
      *  @return previous concurrency level, -1 indicates no-op.
      */
-    static int SetConcurrency(int concurrencyLevel);
+    //设置线程并发行数
+	static int SetConcurrency(int concurrencyLevel);
 
     /**
      *  Get the concurrency level for a running application.  In this
@@ -70,11 +74,13 @@ public:
      *  of setting an arbitrary concurrency, because it is a one-to-one
      *  execution model (sprocs, linuxThreads)
      */
+	//获取线程并发行数
     static int GetConcurrency();
 
     /**
      *  Enumerated Type for thread priority
      */
+	// 线程优先级
     enum ThreadPriority {
 
 	THREAD_PRIORITY_MAX,      /**< The maximum possible priority  */
@@ -89,6 +95,7 @@ public:
     /**
      *  Enumerated Type for thread scheduling policy
      */
+	// 线程调度策略
     enum ThreadPolicy {
 
 	THREAD_SCHEDULE_FIFO,        /**< First in, First out scheduling         */
@@ -112,6 +119,7 @@ public:
     /**
      *  Return a pointer to the current running thread
      */
+	//返回当前运行线程的指针
     static Thread *CurrentThread();
 
 
@@ -119,6 +127,7 @@ public:
      *  Initialize Threading in a program.  This method must be called before
      *  you can do any threading in a program.
      */
+	//初始化
     static void Init();
 
     /**
@@ -129,6 +138,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	// 主动让出执行权
     static int YieldCurrentThread();
 
     /**
@@ -140,6 +150,7 @@ public:
      *
      *  @return the Thread::ThreadPriority of the master thread.
      */
+	//返回线程优先级
     static ThreadPriority GetMasterPriority() {return s_masterThreadPriority;};
 
 
@@ -148,6 +159,7 @@ public:
      *
      *  @return a unique thread identifier
      */
+	//获取线程ID
     int getThreadId();
 
     /**
@@ -156,6 +168,7 @@ public:
      *
      *  @return thread process id.
      */
+	//获取进程ID
     size_t getProcessId();
 
     /**
@@ -169,6 +182,7 @@ public:
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
     int start();
+	//启动线程
     int startThread();
 
     /**
@@ -186,6 +200,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//取消线程
     virtual int cancel();
 
     /**
@@ -208,6 +223,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//设置线程优先级
     int setSchedulePriority(ThreadPriority priority);
 
     /**
@@ -218,6 +234,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//获取线程优先级
     int getSchedulePriority();
 
     /**
@@ -234,6 +251,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//设置线程调度策略
     int setSchedulePolicy(ThreadPolicy policy);
 
     /**
@@ -244,6 +262,7 @@ public:
      *
      *  @return policy if normal, -1 if errno set, errno code otherwise.
      */
+	// 获取线程调度策略
     int getSchedulePolicy();
 
     /**
@@ -256,6 +275,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//设置堆栈大小
     int setStackSize(size_t size);
 
     /**
@@ -265,11 +285,13 @@ public:
      *   has either not yet been initialized, or not yet been specified by
      *   the application.
      */
+	// 获取堆栈大小
     size_t getStackSize();
 
     /**
      *  Print the thread's scheduling information to stdout.
      */
+	//打印线程调度信息
     void printSchedulingInfo();
 
     /**
@@ -277,6 +299,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//从当前进程分离线程
     int detach();
 
     /**
@@ -284,6 +307,7 @@ public:
      *
      *  @return 0 if normal, -1 if errno set, errno code otherwise.
      */
+	//等待当前线程结束
     int join();
 
     /**
@@ -314,6 +338,7 @@ public:
      *
      *  @return true if running, false if not.
      */
+	//线程是否在运行
     bool isRunning();
 
     /**
@@ -340,6 +365,7 @@ public:
       * platforms this is ignored.  Returns 0 on success, implementation's
       * error on failure, or -1 if ignored.
       */
+    // 设置线程运行性在哪一个cpu上
     int setProcessorAffinity( unsigned int cpunum );
 
     /** microSleep method, equivilant to the posix usleep(microsec).
@@ -349,6 +375,7 @@ public:
       * succes, non-zero on failure (UNIX errno or GetLastError() will give
       * detailed description.
       */
+	//设置线程休眠毫秒数
     static int microSleep( unsigned int microsec);
 
 private:
