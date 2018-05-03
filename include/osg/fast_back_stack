@@ -19,9 +19,9 @@
 namespace osg {
 
 /**  
-  *  一个快速的堆栈实现，堆栈的最后一个值会被缓存下来，
-  *  第二次无参push时，再次push上次缓存下来的值。  
-  *  
+  *  一个快速的堆栈实现，堆栈的最后一个值不会push_back到堆栈，只是暂时被缓存下来，
+  *  第二次带参数push时，才会push_back上次缓存下来的值，并将新值缓存下来。除非调
+  *  用无参push_back，才会将缓存下来的值push到堆栈。  
   */
 
 template<class T>
@@ -85,9 +85,9 @@ class fast_back_stack
             } // else error condition.
         }
 
-        T              _value;
-        std::vector<T> _stack;
-        unsigned int   _size;
+        T              _value; //缓存的值
+        std::vector<T> _stack; //vector模拟的堆栈
+        unsigned int   _size; //等于_stack.size()+1
 };
 
 }
