@@ -22,6 +22,9 @@ namespace osg {
 
 /** A Polytope class for representing convex clipping volumes made up of a set of planes.
   * When adding planes, their normals should point inwards (into the volume) */
+/**
+  * 多面体类，由一系列平面组成的一个凸多面体，添加一个平面时，应该指定一个法线，指向多面体内部
+  */
 class OSG_EXPORT Polytope
 {
 
@@ -99,7 +102,7 @@ class OSG_EXPORT Polytope
 
             unsigned int numActivePlanes = 0;
 
-            // count number of active planes.
+            // 统计pt._planeList中激活面个数
             PlaneList::const_iterator itr;
             for(itr=pt._planeList.begin();
                 itr!=pt._planeList.end();
@@ -113,6 +116,7 @@ class OSG_EXPORT Polytope
             _resultMask = 0;
             selector_mask = 0x1;
             unsigned int index = 0;
+			//将pt._planeList中激活的面，使用矩阵变换后，存储到_planeList数组中。
             for(itr=pt._planeList.begin();
                 itr!=pt._planeList.end();
                 ++itr)
@@ -129,12 +133,13 @@ class OSG_EXPORT Polytope
             _maskStack.back() = _resultMask;
         }
 
+		//设置平面
         inline void set(const PlaneList& pl) { _planeList = pl; setupMask(); }
 
-
+		//添加一个平面多面体
         inline void add(const osg::Plane& pl) { _planeList.push_back(pl); setupMask(); }
 
-        /** flip/reverse the orientation of all the planes.*/
+        //翻转所有裁剪平面
         inline void flip()
         {
             for(PlaneList::iterator itr=_planeList.begin();
@@ -193,6 +198,7 @@ class OSG_EXPORT Polytope
         }
 
         /** Check whether a vertex is contained within clipping set.*/
+		//判断点是否在多面体内
         inline bool contains(const osg::Vec3& v) const
         {
             if (!_maskStack.back()) return true;
@@ -209,6 +215,7 @@ class OSG_EXPORT Polytope
         }
 
         /** Check whether any part of vertex list is contained within clipping set.*/
+		//判断部分顶点是否在多面体内
         inline bool contains(const std::vector<Vec3>& vertices)
         {
             if (!_maskStack.back()) return true;
@@ -221,6 +228,7 @@ class OSG_EXPORT Polytope
             {
                 const osg::Vec3& v = *vitr;
                 bool outside = false;
+
                 ClippingMask selector_mask = 0x1;
                 for(PlaneList::const_iterator itr=_planeList.begin();
                     itr!=_planeList.end() && !outside;
@@ -240,6 +248,7 @@ class OSG_EXPORT Polytope
             modifying the mask to turn off planes which wouldn't contribute to clipping
             of any internal objects.  This feature is used in osgUtil::CullVisitor
             to prevent redundant plane checking.*/
+		//判断包围球部分是否在多面体内
         inline bool contains(const osg::BoundingSphere& bs)
         {
             if (!_maskStack.back()) return true;
@@ -267,6 +276,7 @@ class OSG_EXPORT Polytope
             modifying the mask to turn off planes which wouldn't contribute to clipping
             of any internal objects.  This feature is used in osgUtil::CullVisitor
             to prevent redundant plane checking.*/
+		//判断包围盒部分是否在多面体内
         inline bool contains(const osg::BoundingBox& bb)
         {
             if (!_maskStack.back()) return true;
@@ -290,6 +300,7 @@ class OSG_EXPORT Polytope
         }
 
         /** Check whether all of vertex list is contained with clipping set.*/
+		//判断所有顶点是否都在多面体内
         inline bool containsAllOf(const std::vector<Vec3>& vertices)
         {
             if (!_maskStack.back()) return false;
@@ -313,6 +324,7 @@ class OSG_EXPORT Polytope
         }
 
         /** Check whether the entire bounding sphere is contained within clipping set.*/
+		//判断包围球是否完全在多面体内
         inline bool containsAllOf(const osg::BoundingSphere& bs)
         {
             if (!_maskStack.back()) return false;
@@ -336,6 +348,7 @@ class OSG_EXPORT Polytope
         }
 
         /** Check whether the entire bounding box is contained within clipping set.*/
+		//判断包围盒是否完全在多面体内
         inline bool containsAllOf(const osg::BoundingBox& bb)
         {
             if (!_maskStack.back()) return false;
@@ -365,6 +378,7 @@ class OSG_EXPORT Polytope
           * makes this operation expensive.  If the inverse has been already
           * calculated elsewhere then use transformProvidingInverse() instead.
           * See http://www.worldserver.com/turk/computergraphics/NormalTransformations.pdf*/
+		//多面体的空间变换
         inline void transform(const osg::Matrix& matrix)
         {
             osg::Matrix inverse;
@@ -374,6 +388,7 @@ class OSG_EXPORT Polytope
 
         /** Transform the clipping set by provide a pre inverted matrix.
           * see transform for details. */
+		//多面体的空间变换
         inline void transformProvidingInverse(const osg::Matrix& matrix)
         {
             if (!_maskStack.back()) return;
@@ -394,10 +409,13 @@ class OSG_EXPORT Polytope
 
     protected:
 
-
+		//裁剪掩码堆栈，堆栈中每个裁剪掩码，表示激活的平面，构成多面体
         MaskStack                           _maskStack;
+		//当前的使用的裁剪掩码
         ClippingMask                        _resultMask;
+		//平面列表
         PlaneList                           _planeList;
+		//顶点列表
         VertexList                          _referenceVertexList;
 
 };
