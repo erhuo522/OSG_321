@@ -35,7 +35,17 @@ class OSG_EXPORT Group : public Node
         /** Copy constructor using CopyOp to manage deep vs shallow copy. */
         Group(const Group&,const CopyOp& copyop=CopyOp::SHALLOW_COPY);
 
-        META_Node(osg, Group);
+		META_Object(osg, Group);
+
+		virtual void accept(osg::NodeVisitor& nv) 
+		{ 
+			if (nv.validNodeMask(*this)) 
+			{
+				nv.pushOntoNodePath(this);
+				nv.apply(*this); 
+				nv.popFromNodePath(); 
+			}
+		}
 
         virtual Group* asGroup() { return this; }
         virtual const Group* asGroup() const { return this; }
@@ -162,7 +172,7 @@ class OSG_EXPORT Group : public Node
         virtual void childRemoved(unsigned int /*pos*/, unsigned int /*numChildrenToRemove*/) {}
         virtual void childInserted(unsigned int /*pos*/) {}
 
-        NodeList _children;
+        NodeList _children;  //孩子节点数组
 
 
 };

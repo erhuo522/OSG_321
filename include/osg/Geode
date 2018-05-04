@@ -25,6 +25,7 @@ namespace osg {
   * are represented by objects from the \c Drawable class, so a \c Geode is a
   * \c Node whose purpose is grouping <tt>Drawable</tt>s.
 */
+//几何节点，也是叶子节点
 class OSG_EXPORT Geode : public Node
 {
     public:
@@ -36,11 +37,24 @@ class OSG_EXPORT Geode : public Node
         /** Copy constructor using CopyOp to manage deep vs shallow copy.*/
         Geode(const Geode&,const CopyOp& copyop=CopyOp::SHALLOW_COPY);
 
-        META_Node(osg, Geode);
+        META_Object(osg, Geode);
 
+		virtual void accept(osg::NodeVisitor& nv) 
+		{ 
+			if (nv.validNodeMask(*this)) 
+			{
+				nv.pushOntoNodePath(this); 
+				nv.apply(*this);
+				nv.popFromNodePath(); 
+			}
+		}
+
+
+		//覆盖父类方法，转换指针对象
         virtual Geode* asGeode() { return this; }
         virtual const Geode* asGeode() const { return this; }
 
+		//{{-------------添加删除，更新绘制对象--------
         /** Add a \c Drawable to the \c Geode.
           * If \c drawable is not \c NULL and is not contained in the \c Geode
           * then increment its reference count, add it to the drawables list and
@@ -67,6 +81,7 @@ class OSG_EXPORT Geode : public Node
           * @return \c true if at least one \c Drawable was removed. \c false
           *         otherwise.
         */
+		///移除指定索引开始的N个绘制对象
         virtual bool removeDrawables(unsigned int i,unsigned int numDrawablesToRemove=1);
 
         /** Replace specified Drawable with another Drawable.
@@ -86,19 +101,24 @@ class OSG_EXPORT Geode : public Node
           *         (if node==NULL || i is out of range).
         */
         virtual bool setDrawable( unsigned int i, Drawable* drawable );
+		//-------------添加删除，更新绘制对象-------}}
 
         /** Return the number of <tt>Drawable</tt>s currently attached to the
           * \c Geode.
         */
+		//获取绘制对象数目
         inline unsigned int getNumDrawables() const { return static_cast<unsigned int>(_drawables.size()); }
 
         /** Return the \c Drawable at position \c i.*/
+		//根据索引获取绘制对象
         inline Drawable* getDrawable( unsigned int i ) { return _drawables[i].get(); }
 
         /** Return the \c Drawable at position \c i.*/
+		//根据索引获取绘制对象
         inline const Drawable* getDrawable( unsigned int i ) const { return _drawables[i].get(); }
 
         /** Return \c true if a given \c Drawable is contained within \c Geode.*/
+		//检查此几何节点是否包含指定的绘制对象
         inline bool containsDrawable(const Drawable* gset) const
         {
             for (DrawableList::const_iterator itr=_drawables.begin();
@@ -115,6 +135,7 @@ class OSG_EXPORT Geode : public Node
           *         \c drawable is found; if not found, then
           *         <tt>getNumDrawables()</tt> is returned.
         */
+		//获取绘制对象的索引
         inline unsigned int getDrawableIndex( const Drawable* drawable ) const
         {
             for (unsigned int drawableNum=0;drawableNum<_drawables.size();++drawableNum)
@@ -125,13 +146,16 @@ class OSG_EXPORT Geode : public Node
         }
 
         /** Get the list of drawables.*/
+		//获取绘制对象的列表
         const DrawableList& getDrawableList() const { return _drawables; }
 
         /** Compile OpenGL Display List for each drawable.*/
+		//编译绘制对象
         void compileDrawables(RenderInfo& renderInfo);
 
         /** Return the Geode's bounding box, which is the union of all the
           * bounding boxes of the geode's drawables.*/
+		//获取此几何节点的aaabb
         inline const BoundingBox& getBoundingBox() const
         {
             if(!_boundingSphereComputed) getBound();
@@ -157,8 +181,8 @@ class OSG_EXPORT Geode : public Node
         virtual ~Geode();
 
 
-        mutable osg::BoundingBox        _bbox;
-        DrawableList                    _drawables;
+        mutable osg::BoundingBox        _bbox;     //几何节点的aaabb
+        DrawableList                    _drawables; //绘制对象列表
 
 };
 

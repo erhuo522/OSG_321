@@ -189,8 +189,14 @@ class OSG_EXPORT NodeVisitor : public virtual Referenced
             this method unless they handle traversal directly.*/
         inline void traverse(Node& node)
         {
-            if (_traversalMode==TRAVERSE_PARENTS) node.ascend(*this);
-            else if (_traversalMode!=TRAVERSE_NONE) node.traverse(*this);
+            if (_traversalMode==TRAVERSE_PARENTS) 
+			{
+				node.ascend(*this);
+			}
+			else if (_traversalMode!=TRAVERSE_NONE) 
+			{
+				node.traverse(*this);
+			}
         }
 
         /** Method called by osg::Node::accept() method before
@@ -200,13 +206,33 @@ class OSG_EXPORT NodeVisitor : public virtual Referenced
           * from the top most node applied down the graph to the current node.
           * Note, the user does not typically call pushNodeOnPath() as it
           * will be called automatically by the Node::accept() method.*/
-        inline void pushOntoNodePath(Node* node) { if (_traversalMode!=TRAVERSE_PARENTS) _nodePath.push_back(node); else _nodePath.insert(_nodePath.begin(),node); }
+        inline void pushOntoNodePath(Node* node) 
+		{
+			if (_traversalMode!=TRAVERSE_PARENTS)
+			{
+				_nodePath.push_back(node);
+			}
+			else 
+			{
+				_nodePath.insert(_nodePath.begin(),node); 
+			}
+		}
 
         /** Method called by osg::Node::accept() method after
           * a call to NodeVisitor::apply(..).
           * Note, the user does not typically call popFromNodePath() as it
           * will be called automatically by the Node::accept() method.*/
-        inline void popFromNodePath()            { if (_traversalMode!=TRAVERSE_PARENTS) _nodePath.pop_back(); else _nodePath.erase(_nodePath.begin()); }
+        inline void popFromNodePath()            
+		{
+			if (_traversalMode!=TRAVERSE_PARENTS)
+			{
+				_nodePath.pop_back();
+			}
+			else
+			{
+				_nodePath.erase(_nodePath.begin()); 
+			}
+		}
 
         /** Get the non const NodePath from the top most node applied down
           * to the current Node being visited.*/
