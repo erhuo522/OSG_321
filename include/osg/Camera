@@ -51,7 +51,17 @@ class OSG_EXPORT Camera : public Transform, public CullSettings
         /** Copy constructor using CopyOp to manage deep vs shallow copy.*/
         Camera(const Camera&,const CopyOp& copyop=CopyOp::SHALLOW_COPY);
 
-        META_Node(osg, Camera);
+        META_Object(osg, Camera);
+
+		virtual void accept(osg::NodeVisitor& nv) 
+		{ 
+			if (nv.validNodeMask(*this)) 
+			{
+				nv.pushOntoNodePath(this); 
+				nv.apply(*this); 
+				nv.popFromNodePath();
+			} 
+		}
 
         virtual Camera* asCamera() { return this; }
         virtual const Camera* asCamera() const { return this; }

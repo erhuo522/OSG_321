@@ -149,7 +149,7 @@ class BoundingBoxImpl
           * Each bit selects an axis, X, Y, or Z from least- to
           * most-significant. Unset bits select the minimum value
           * for that axis, and set bits select the maximum. */
-		//求包围盒的角向量，pos[0-7].3bit的整数，每一位表示选择一个轴xyz，1表示最大，表示最小
+		//求包围盒的角向量，pos[0-7].3bit的整数，每一位表示选择一个轴xyz，1表示最大，0表示最小
         inline const vec_type corner(unsigned int pos) const
         {
             return vec_type(pos&1?_max.x():_min.x(),pos&2?_max.y():_min.y(),pos&4?_max.z():_min.z());

@@ -28,9 +28,9 @@ class OSG_EXPORT Billboard : public Geode
     public:
 
         enum Mode {
-            POINT_ROT_EYE,
-            POINT_ROT_WORLD,
-            AXIAL_ROT
+            POINT_ROT_EYE,    //绕视点
+            POINT_ROT_WORLD,  //绕世界坐标
+            AXIAL_ROT         //绕轴  
         };
 
         Billboard();
@@ -38,7 +38,17 @@ class OSG_EXPORT Billboard : public Geode
         /** Copy constructor using CopyOp to manage deep vs shallow copy. */
         Billboard(const Billboard&,const CopyOp& copyop=CopyOp::SHALLOW_COPY);
 
-        META_Node(osg, Billboard);
+		META_Object(osg, Billboard);
+
+		virtual void accept(osg::NodeVisitor& nv)
+		{
+			if (nv.validNodeMask(*this)) 
+			{ 
+				nv.pushOntoNodePath(this);
+				nv.apply(*this);
+				nv.popFromNodePath(); 
+			}
+		}
 
         /** Set the billboard rotation mode. */
         void setMode(Mode mode);

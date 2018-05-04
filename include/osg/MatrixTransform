@@ -34,7 +34,17 @@ class OSG_EXPORT MatrixTransform : public Transform
 
         MatrixTransform(const Matrix& matix);
 
-        META_Node(osg, MatrixTransform);
+        META_Object(osg, MatrixTransform);
+
+		virtual void accept(osg::NodeVisitor& nv) 
+		{ 
+			if (nv.validNodeMask(*this))
+			{
+				nv.pushOntoNodePath(this);
+				nv.apply(*this);
+				nv.popFromNodePath(); 
+			} 
+		} 
 
         virtual MatrixTransform* asMatrixTransform() { return this; }
         virtual const MatrixTransform* asMatrixTransform() const { return this; }

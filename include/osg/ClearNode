@@ -40,7 +40,17 @@ class OSG_EXPORT ClearNode : public Group
             _clearMask(cs._clearMask) {}
 
 
-        META_Node(osg, ClearNode);
+		META_Object(osg, ClearNode);
+   
+		virtual void accept(osg::NodeVisitor& nv) 
+		{
+			if (nv.validNodeMask(*this))
+			{ 
+				nv.pushOntoNodePath(this); 
+				nv.apply(*this); 
+				nv.popFromNodePath();
+			}
+		}
 
         /** Enable/disable clearing via glClear. */
         inline void setRequiresClear(bool requiresClear) { _requiresClear = requiresClear; }
