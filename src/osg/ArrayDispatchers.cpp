@@ -28,8 +28,18 @@ inline void GL_APIENTRY glColor4fv(const GLfloat* c) { glColor4f(c[0], c[1], c[2
 inline void GL_APIENTRY glColor3dv(const GLdouble* c) { glColor4f(c[0], c[1], c[2], 1.0f); }
 inline void GL_APIENTRY glColor4dv(const GLdouble* c) { glColor4f(c[0], c[1], c[2], c[3]); }
 
-inline void GL_APIENTRY glNormal3bv(const GLbyte* n) { const float div = 1.0f/128.0f; glNormal3f(float(n[0])*div, float(n[1])*div, float(n[3])*div); }
-inline void GL_APIENTRY glNormal3sv(const GLshort* n) { const float div = 1.0f/32768.0f; glNormal3f(float(n[0])*div, float(n[1])*div, float(n[3])*div); }
+inline void GL_APIENTRY glNormal3bv(const GLbyte* n) 
+{ 
+	const float div = 1.0f/128.0f; 
+	glNormal3f(float(n[0])*div, float(n[1])*div, float(n[3])*div); 
+}
+
+inline void GL_APIENTRY glNormal3sv(const GLshort* n) 
+{
+	const float div = 1.0f/32768.0f; 
+	glNormal3f(float(n[0])*div, float(n[1])*div, float(n[3])*div); 
+}
+
 inline void GL_APIENTRY glNormal3fv(const GLfloat* n) { glNormal3f(n[0], n[1], n[3]); }
 inline void GL_APIENTRY glNormal3dv(const GLdouble* n) { glNormal3f(n[0], n[1], n[3]); }
 #endif
