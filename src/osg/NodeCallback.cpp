@@ -18,6 +18,12 @@ using namespace osg;
 
 void NodeCallback::traverse(Node* node,NodeVisitor* nv)
 {
-    if (_nestedCallback.valid()) (*_nestedCallback)(node,nv);
-    else nv->traverse(*node);
+	if (_nestedCallback.valid())
+	{
+		(*_nestedCallback)(node,nv);
+	}
+	else
+	{
+		nv->traverse(*node);
+	}
 }

@@ -49,7 +49,9 @@ class OSG_EXPORT NodeCallback : public virtual Object {
         void traverse(Node* node,NodeVisitor* nv);
 
         void setNestedCallback(NodeCallback* nc) { _nestedCallback = nc; }
-        NodeCallback* getNestedCallback() { return _nestedCallback.get(); }
+        
+		NodeCallback* getNestedCallback() { return _nestedCallback.get(); }
+
         const NodeCallback* getNestedCallback() const { return _nestedCallback.get(); }
 
         inline void addNestedCallback(NodeCallback* nc)
@@ -86,7 +88,7 @@ class OSG_EXPORT NodeCallback : public virtual Object {
 
     public:
 
-        ref_ptr<NodeCallback> _nestedCallback;
+        ref_ptr<NodeCallback> _nestedCallback; //ÄÚ²¿Ç¶Ì×µÄNodeCallback
 
     protected:
 
