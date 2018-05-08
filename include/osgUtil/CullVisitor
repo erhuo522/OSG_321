@@ -309,15 +309,27 @@ class OSGUTIL_EXPORT CullVisitor : public osg::NodeVisitor, public osg::CullStac
         inline void handle_cull_callbacks_and_traverse(osg::Node& node)
         {
             osg::NodeCallback* callback = node.getCullCallback();
-            if (callback) (*callback)(&node,this);
-            else traverse(node);
+            if (callback) 
+			{
+				(*callback)(&node,this);
+			}
+			else
+			{
+				traverse(node);
+			}
         }
 
         inline void handle_cull_callbacks_and_accept(osg::Node& node,osg::Node* acceptNode)
         {
             osg::NodeCallback* callback = node.getCullCallback();
-            if (callback) (*callback)(&node,this);
-            else acceptNode->accept(*this);
+            if (callback)
+			{
+				(*callback)(&node,this);
+			}
+			else
+			{
+				acceptNode->accept(*this);
+			}
         }
 
         osg::ref_ptr<StateGraph>                                   _rootStateGraph;

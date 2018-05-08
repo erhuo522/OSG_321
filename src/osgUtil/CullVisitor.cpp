@@ -1083,7 +1083,10 @@ void CullVisitor::apply(Billboard& node)
         node.computeMatrix(*billboard_matrix,eye_local,pos);
 
 
-        if (_computeNearFar && drawable->getBound().valid()) updateCalculatedNearFar(*billboard_matrix,*drawable,true);
+        if (_computeNearFar && drawable->getBound().valid()) 
+		{
+			updateCalculatedNearFar(*billboard_matrix,*drawable,true);
+		}
         float depth = distance(pos,modelview);
 /*
         if (_computeNearFar)

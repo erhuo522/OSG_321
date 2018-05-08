@@ -106,14 +106,21 @@ public:
     template<typename T>
     void assign(Array::Type type, void (GL_APIENTRY *functionPtr) (const T*), unsigned int stride)
     {
-        if ((unsigned int)type >= _attributeDispatchList.size()) _attributeDispatchList.resize(type+1);
+        if ((unsigned int)type >= _attributeDispatchList.size()) 
+		{
+			_attributeDispatchList.resize(type+1);
+		}
+
         _attributeDispatchList[type] = functionPtr ? new TemplateAttributeDispatch<T>(functionPtr, stride) : 0;
     }
 
     template<typename I, typename T>
     void targetAssign(I target, Array::Type type, void (GL_APIENTRY *functionPtr) (I, const T*), unsigned int stride)
     {
-        if ((unsigned int)type >= _attributeDispatchList.size()) _attributeDispatchList.resize(type+1);
+        if ((unsigned int)type >= _attributeDispatchList.size())
+		{
+				_attributeDispatchList.resize(type+1);
+		}
         _attributeDispatchList[type] = functionPtr ? new TemplateTargetAttributeDispatch<I,T>(target, functionPtr, stride) : 0;
     }
 
