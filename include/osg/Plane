@@ -337,7 +337,7 @@ class OSG_EXPORT Plane
 		 /*
 		  * 平面变换，把平面当作4D向量，并且把它和一个需要的转换矩阵的逆转置形式相乘。
 		  * 注意，平面必须先进行单位化。
-		 /*
+		 */
         inline void transform(const osg::Matrix& matrix)
         {
             osg::Matrix inverse;
@@ -345,9 +345,9 @@ class OSG_EXPORT Plane
             transformProvidingInverse(inverse);
         }
 
-       	 / * 平面变换，把平面当作4D向量，并且把它和一个需要的转换矩阵的逆转置形式相乘阵。
-		   * ,其中matrix是已经计算好的逆矩，这里的平面必须先进行单位化。
-           */
+       	 /* 平面变换，把平面当作4D向量，并且把它和一个需要的转换矩阵的逆转置形式相乘阵。
+		  * ,其中matrix是已经计算好的逆矩，这里的平面必须先进行单位化。
+          */
 		inline void transformProvidingInverse(const osg::Matrix& matrix)
         {
             // note pre multiplications, which effectively transposes matrix.

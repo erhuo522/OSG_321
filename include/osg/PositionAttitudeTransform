@@ -38,7 +38,18 @@ class OSG_EXPORT PositionAttitudeTransform : public Transform
             _pivotPoint(pat._pivotPoint) {}
 
 
-        META_Node(osg, PositionAttitudeTransform);
+        META_Object(osg, PositionAttitudeTransform);
+
+		virtual void accept(osg::NodeVisitor& nv) 
+		{ 
+			if (nv.validNodeMask(*this))  
+			{ 
+				nv.pushOntoNodePath(this); 
+				nv.apply(*this); 
+				nv.popFromNodePath();
+			} 
+		} 
+
 
         virtual PositionAttitudeTransform* asPositionAttitudeTransform() { return this; }
         virtual const PositionAttitudeTransform* asPositionAttitudeTransform() const { return this; }
